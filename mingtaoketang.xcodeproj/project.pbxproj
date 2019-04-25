@@ -35,6 +35,13 @@
 		213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B6227173B300C68DCA /* PublicReloadingAnimation.m */; };
 		213492CB227173B300C68DCA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B8227173B300C68DCA /* UIView+Extension.m */; };
 		21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED622717C8600245453 /* BaseNavigationBar.m */; };
+		21A1FEDA22717ED100245453 /* RotationChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED922717ED100245453 /* RotationChartCell.m */; };
+		21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEDC2271866400245453 /* FreeAndRecommendationCell.m */; };
+		21A1FEE022718C8D00245453 /* LiveBroadcastCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEDF22718C8D00245453 /* LiveBroadcastCourseCell.m */; };
+		21A1FEE32271915700245453 /* RecommendedTodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEE22271915700245453 /* RecommendedTodayCell.m */; };
+		21A1FEE62271916900245453 /* FlashSaleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEE52271916900245453 /* FlashSaleCell.m */; };
+		21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEE82271B3FC00245453 /* RecommendedTodayHeaderView.m */; };
+		21A1FEEC2271B42900245453 /* FlashSaleCellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEEB2271B42900245453 /* FlashSaleCellHeaderView.m */; };
 		21B1F6BB227177AA001ADBCD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6BA227177AA001ADBCD /* BaseViewController.m */; };
 		21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6BD227177CF001ADBCD /* HomePageViewController.m */; };
 		21B1F6C1227177E9001ADBCD /* CurriculumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C0227177E9001ADBCD /* CurriculumViewController.m */; };
@@ -117,6 +124,20 @@
 		213492B9227173B300C68DCA /* UIFont+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+runtime.h"; sourceTree = "<group>"; };
 		21A1FED522717C8600245453 /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
 		21A1FED622717C8600245453 /* BaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationBar.m; sourceTree = "<group>"; };
+		21A1FED822717ED100245453 /* RotationChartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationChartCell.h; sourceTree = "<group>"; };
+		21A1FED922717ED100245453 /* RotationChartCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotationChartCell.m; sourceTree = "<group>"; };
+		21A1FEDB2271866400245453 /* FreeAndRecommendationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeAndRecommendationCell.h; sourceTree = "<group>"; };
+		21A1FEDC2271866400245453 /* FreeAndRecommendationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeAndRecommendationCell.m; sourceTree = "<group>"; };
+		21A1FEDE22718C8D00245453 /* LiveBroadcastCourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCourseCell.h; sourceTree = "<group>"; };
+		21A1FEDF22718C8D00245453 /* LiveBroadcastCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCourseCell.m; sourceTree = "<group>"; };
+		21A1FEE12271915700245453 /* RecommendedTodayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedTodayCell.h; sourceTree = "<group>"; };
+		21A1FEE22271915700245453 /* RecommendedTodayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendedTodayCell.m; sourceTree = "<group>"; };
+		21A1FEE42271916900245453 /* FlashSaleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashSaleCell.h; sourceTree = "<group>"; };
+		21A1FEE52271916900245453 /* FlashSaleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashSaleCell.m; sourceTree = "<group>"; };
+		21A1FEE72271B3FC00245453 /* RecommendedTodayHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedTodayHeaderView.h; sourceTree = "<group>"; };
+		21A1FEE82271B3FC00245453 /* RecommendedTodayHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendedTodayHeaderView.m; sourceTree = "<group>"; };
+		21A1FEEA2271B42900245453 /* FlashSaleCellHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashSaleCellHeaderView.h; sourceTree = "<group>"; };
+		21A1FEEB2271B42900245453 /* FlashSaleCellHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashSaleCellHeaderView.m; sourceTree = "<group>"; };
 		21B1F6B9227177AA001ADBCD /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		21B1F6BA227177AA001ADBCD /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		21B1F6BC227177CF001ADBCD /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -402,6 +423,20 @@
 		213492D42271750100C68DCA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21A1FEE72271B3FC00245453 /* RecommendedTodayHeaderView.h */,
+				21A1FEE82271B3FC00245453 /* RecommendedTodayHeaderView.m */,
+				21A1FEEA2271B42900245453 /* FlashSaleCellHeaderView.h */,
+				21A1FEEB2271B42900245453 /* FlashSaleCellHeaderView.m */,
+				21A1FED822717ED100245453 /* RotationChartCell.h */,
+				21A1FED922717ED100245453 /* RotationChartCell.m */,
+				21A1FEDB2271866400245453 /* FreeAndRecommendationCell.h */,
+				21A1FEDC2271866400245453 /* FreeAndRecommendationCell.m */,
+				21A1FEDE22718C8D00245453 /* LiveBroadcastCourseCell.h */,
+				21A1FEDF22718C8D00245453 /* LiveBroadcastCourseCell.m */,
+				21A1FEE12271915700245453 /* RecommendedTodayCell.h */,
+				21A1FEE22271915700245453 /* RecommendedTodayCell.m */,
+				21A1FEE42271916900245453 /* FlashSaleCell.h */,
+				21A1FEE52271916900245453 /* FlashSaleCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -669,23 +704,30 @@
 				213492BA227173B300C68DCA /* UIImage+cornerRadius.m in Sources */,
 				213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */,
 				213492402271561A00C68DCA /* AppDelegate.m in Sources */,
+				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
 				21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */,
+				21A1FEEC2271B42900245453 /* FlashSaleCellHeaderView.m in Sources */,
 				213492C2227173B300C68DCA /* PublicRefreshHeader.m in Sources */,
 				21B1F6C722717812001ADBCD /* MineViewController.m in Sources */,
 				2134928E2271672E00C68DCA /* BaseTabBarController.m in Sources */,
 				213492762271628F00C68DCA /* BaseNavigationController.m in Sources */,
 				213492C7227173B300C68DCA /* HCYRequestManager.m in Sources */,
 				21B1F6C1227177E9001ADBCD /* CurriculumViewController.m in Sources */,
+				21A1FEDA22717ED100245453 /* RotationChartCell.m in Sources */,
 				213492BE227173B300C68DCA /* UIColor+Hex.m in Sources */,
 				21B1F6BB227177AA001ADBCD /* BaseViewController.m in Sources */,
+				21A1FEE022718C8D00245453 /* LiveBroadcastCourseCell.m in Sources */,
 				213492C1227173B300C68DCA /* UIView+Animations.m in Sources */,
 				213492C4227173B300C68DCA /* PublicRefreshFooter.m in Sources */,
 				213492BD227173B300C68DCA /* PublicTextfield.m in Sources */,
+				21A1FEE32271915700245453 /* RecommendedTodayCell.m in Sources */,
 				213492CB227173B300C68DCA /* UIView+Extension.m in Sources */,
 				21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */,
+				21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */,
 				213492C5227173B300C68DCA /* UIFont+runtime.m in Sources */,
 				213492BB227173B300C68DCA /* MBProgressHUD+Add.m in Sources */,
+				21A1FEE62271916900245453 /* FlashSaleCell.m in Sources */,
 				213492C8227173B300C68DCA /* PublicLabel.m in Sources */,
 				21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */,
 			);
