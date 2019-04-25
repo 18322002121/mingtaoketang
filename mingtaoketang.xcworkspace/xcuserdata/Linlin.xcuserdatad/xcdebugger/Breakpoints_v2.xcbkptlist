@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mingtaoketang/PublicModule(&#x516c;&#x5171;&#x6a21;&#x5757;)/BaseViewController.m"
+            timestampString = "577862633.518465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-showCustomNavBar"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BaseViewController showCustomNavBar]"
+                  moduleName = "mingtaoketang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Linlin/Desktop/GitHub/mingtaoketang/mingtaoketang/PublicModule(%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97)/BaseViewController.m"
+                  timestampString = "577862975.6949199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[BaseViewController showCustomNavBar]_block_invoke"
+                  moduleName = "mingtaoketang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Linlin/Desktop/GitHub/mingtaoketang/mingtaoketang/PublicModule(%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97)/BaseViewController.m"
+                  timestampString = "577862975.699463"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
