@@ -14,6 +14,8 @@
 #import "FlashSaleCell.h"
 #import "RecommendedTodayHeaderView.h"
 #import "FlashSaleCellHeaderView.h"
+#import "FreeCourseViewController.h"
+#import "RecommendedCoursesViewController.h"
 
 @interface HomePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)UICollectionView *collectionView;
@@ -32,7 +34,6 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"首页";
     [self loadingViews];
 }
 
@@ -40,7 +41,7 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
 - (void)loadingViews{
     self.collectionView.backgroundColor = [UIColor whiteColor];
-//    [self showCustomNavBar];
+    [self showCustomNavBar];
 }
 
 #pragma mark - 加载不同cell视图
@@ -48,10 +49,6 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout =[[UICollectionViewFlowLayout alloc]init];
-//        //设置cell之间的水平间距
-//        layout.minimumInteritemSpacing = 0;
-        //设置cell之间的垂直间距
-//        layout.minimumLineSpacing = 50;
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, kNavAndStatusHight, KScreenWidth, KScreenHeight - kNavBarHeight - kTabBarHeight - kStatusBarHeight) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -108,18 +105,6 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     }
 }
 
-#pragma mark - 两个cell之间的间距（同一行的cell的间距）
-
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
-//    if (section == 1) {
-//        return 10;
-//    }else if (section == 3){
-//        return 5;
-//    }else{
-//        return 10;
-//    }
-//}
-
 #pragma mark - 每个UICollectionView展示的内容
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -171,31 +156,16 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     return UIEdgeInsetsMake(0, 13, 10, 13);
 }
 
-
-
 #pragma mark -UICollectionView被选中时调用的方法
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    if (indexPath.section ==0){
-    //        NSMutableArray *selectControllerArr = [NSMutableArray arrayWithCapacity:0];
-    //        NSMutableArray *selectTitleArr = [NSMutableArray arrayWithCapacity:0];
-    //        [self.moduleSelectionArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-    //            ModuleSelectionModel *model = obj;
-    //            [selectControllerArr addObject:model.controller];
-    //            [selectTitleArr addObject:model.gridTitle];
-    //        }];
-    //        [collectionView reloadData];
-    //        NSString *className = selectControllerArr[indexPath.row];
-    //        Class class = NSClassFromString(className);
-    //        if (class){
-    //            UIViewController *vc = class.new;
-    //            vc.title = selectTitleArr[indexPath.row];
-    //            [self.navigationController pushViewController:vc animated:YES];
-    //        }
-    //        /*! 点击立刻取消该cell的选中状态 */
-    //        [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    //    }
+    if (indexPath.section == 1) {
+        indexPath.row == 0 ? [self freeCourseView] : [self recommendedCoursesView];
+    }
+    
+
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - 返回这个UICollectionView是否可以被选择
@@ -232,10 +202,6 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     }
 }
 
-//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-//    return UIEdgeInsetsMake(0, 0, 0, 0);
-//}
-
 #pragma mark - 即将进入视图
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -250,6 +216,20 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     [super viewWillDisappear:animated];
     
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
+#pragma mark - 免费课程
+
+- (void)freeCourseView{
+    FreeCourseViewController *freeCourseView = [[FreeCourseViewController alloc]init];
+    [self.navigationController pushViewController:freeCourseView animated:YES];
+}
+
+#pragma mark - 推荐课程
+
+- (void)recommendedCoursesView{
+    RecommendedCoursesViewController *recommendedCoursesView = [[RecommendedCoursesViewController alloc]init];
+    [self.navigationController pushViewController:recommendedCoursesView animated:YES];
 }
 
 @end
