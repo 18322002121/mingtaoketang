@@ -63,7 +63,7 @@
             [self.imageViewLoading rotationAnimation];
             break;
         case MJRefreshStateNoMoreData:
-            self.label.text = @"木有数据了";
+            self.label.text = @"没有更多啦~";
             self.imageViewLoading.hidden = YES;
             [self.imageViewLoading stopRotationAnimation];
             break;

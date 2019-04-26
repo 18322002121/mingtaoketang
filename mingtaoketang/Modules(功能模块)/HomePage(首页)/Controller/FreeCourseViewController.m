@@ -11,14 +11,45 @@
 
 @interface FreeCourseViewController ()
 @property(nonatomic,strong)PublicTableView *tableView;
+@property(nonatomic,strong)NSMutableArray *datas;
 @end
 static NSString *const freeCourseCell =@"FreeCourseCell";
 @implementation FreeCourseViewController
+
+- (NSMutableArray *)datas{
+    if (!_datas) {
+        _datas = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _datas;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self tableView];
     self.title = @"免费课程";
+    [self reloadingRefresh];
+}
+
+#pragma mark -刷新操作
+
+- (void)reloadingRefresh{
+    self.tableView.mj_header = [PublicRefreshHeader headerWithRefreshingBlock:^{
+        //        [self.datas removeAllObjects];
+        //        NSArray *datas = [self hn_modelArrayWithCategory:self.model.category fromModel:x];
+        //        [self.datas addObjectsFromArray:datas];
+        //        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+    }];
+    
+        self.tableView.mj_footer = [PublicRefreshFooter footerWithRefreshingBlock:^{
+            if (self.datas.count == 0 || !self.datas) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            }else {
+                [self.datas addObjectsFromArray:self.datas];
+    [self.tableView.mj_footer endRefreshing];
+            }
+        }];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (PublicTableView *)tableView{
@@ -47,8 +78,6 @@ static NSString *const freeCourseCell =@"FreeCourseCell";
         return normalCell;
     };
     
-//    tableviews.rowHeight = 242;
-    
     tableviews.heightForHeaderInSectionBlock = ^CGFloat(UITableView * _Nonnull tableView, NSInteger section) {
         return 0.01;
     };
@@ -70,7 +99,7 @@ static NSString *const freeCourseCell =@"FreeCourseCell";
     };
     
     tableviews.didSelectRowAtIndexPathBlock = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];//当点击cell时有灰色，松开没灰色
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
     };
     
     tableviews.heightForRowAtIndexPath = ^CGFloat(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {

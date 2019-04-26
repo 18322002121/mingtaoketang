@@ -17,6 +17,15 @@
 #import "FreeCourseViewController.h"
 #import "RecommendedCoursesViewController.h"
 
+typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
+    ShowSectionStatusBanner = 0,    //banner
+    ShowSectionStatusFree,          //免费课程
+    ShowSectionStatusLive,          //直播
+    ShowSectionStatusRecommend,     //今日推荐
+    ShowSectionStatusFlashSale,     //限时抢购
+    ShowSectionStatusInformation    //资讯
+};
+
 @interface HomePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)UICollectionView *collectionView;
 
@@ -90,15 +99,15 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    if (section == 0) {
+    if (section == ShowSectionStatusBanner) {
         return 1;
-    }else if (section == 1){
+    }else if (section == ShowSectionStatusFree){
         return 2;
-    }else if(section == 2){
+    }else if(section == ShowSectionStatusLive){
         return 1;
-    }else if(section == 3){
+    }else if(section == ShowSectionStatusRecommend){
         return 4;
-    }else if (section == 4){
+    }else if (section == ShowSectionStatusFlashSale){
         return 4;
     }else{
         return 1;
@@ -110,40 +119,39 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     UICollectionViewCell *goodsCell = nil;
-    if (indexPath.section == 0) {
+    if (indexPath.section == ShowSectionStatusBanner) {
         RotationChartCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:rotationChartCell forIndexPath:indexPath];
         goodsCell = cell;
-    }else if (indexPath.section ==1){
+    }else if (indexPath.section ==ShowSectionStatusFree){
             FreeAndRecommendationCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:freeAndRecommendationCell forIndexPath:indexPath];
             goodsCell = cell;
-        }else if (indexPath.section == 2){
+        }else if (indexPath.section == ShowSectionStatusLive){
             LiveBroadcastCourseCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:liveBroadcastCourseCell forIndexPath:indexPath];
             goodsCell = cell;
-        }else if (indexPath.section == 3){
+        }else if (indexPath.section == ShowSectionStatusRecommend){
             RecommendedTodayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:recommendedTodayCell forIndexPath:indexPath];
             goodsCell = cell;
-        }else if (indexPath.section == 4){
+        }else if (indexPath.section == ShowSectionStatusFlashSale){
             FlashSaleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:flashSaleCell forIndexPath:indexPath];
             goodsCell = cell;
         }
     
     return goodsCell;
-    
 }
 
 #pragma mark - 定义每个UICollectionView的大小
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.section == 0) {
+    if (indexPath.section == ShowSectionStatusBanner) {
         return CGSizeMake(KScreenWidth - 26, 168);
-    }else if (indexPath.section ==1){
+    }else if (indexPath.section ==ShowSectionStatusFree){
         return CGSizeMake((KScreenWidth - 36)/2, 115);
-    }else if (indexPath.section == 2){
+    }else if (indexPath.section == ShowSectionStatusLive){
         return CGSizeMake(KScreenWidth - 26, 90);
-    }else if (indexPath.section == 3){
+    }else if (indexPath.section == ShowSectionStatusRecommend){
         return CGSizeMake((KScreenWidth - 36)/2, 143);
-    }else if (indexPath.section == 4){
+    }else if (indexPath.section == ShowSectionStatusFlashSale){
         return CGSizeMake(KScreenWidth - 26, 110);
     }else{
         return CGSizeZero;
@@ -163,8 +171,6 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     if (indexPath.section == 1) {
         indexPath.row == 0 ? [self freeCourseView] : [self recommendedCoursesView];
     }
-    
-
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
@@ -180,10 +186,10 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     UICollectionReusableView *reusableview = nil;
         if (kind ==UICollectionElementKindSectionHeader) {
-            if (indexPath.section == 3) {
+            if (indexPath.section == ShowSectionStatusRecommend) {
                 RecommendedTodayHeaderView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:recommendedTodayHeaderView forIndexPath:indexPath];
-                reusableview = headerView;//加载banner图
-            }else{
+                reusableview = headerView;
+            }else if(indexPath.section == ShowSectionStatusFlashSale){
                 FlashSaleCellHeaderView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:flashSaleCellHeaderView forIndexPath:indexPath];
                 reusableview = headerView;
             }
@@ -195,8 +201,8 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     
-    if (section == 3 || section == 4) {
-        return CGSizeMake(KScreenWidth, 50);//banner图宽高
+    if (section == ShowSectionStatusRecommend || section == ShowSectionStatusFlashSale) {
+        return CGSizeMake(KScreenWidth, 50);
     }else{
         return CGSizeZero;
     }

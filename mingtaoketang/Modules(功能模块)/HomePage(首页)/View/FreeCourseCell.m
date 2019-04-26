@@ -25,6 +25,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style
                     reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self bottomView];
         [self showImage];
         [self titles];
@@ -40,6 +41,7 @@
         _bottomView = [[UIView alloc]init];
         _bottomView.layer.cornerRadius = 5;
         _bottomView.backgroundColor = [UIColor colorWithRed:0.94 green:0.95 blue:0.96 alpha:1.00];
+        [self bottomViews:_bottomView];
         [self.contentView addSubview:_bottomView];
     }
     return _bottomView;
@@ -81,7 +83,8 @@
 
 - (PublicLabel *)numberVisitors{
     if (!_numberVisitors) {
-        _numberVisitors = [PublicLabel labelWithText:@"565人已观看" textColor:[UIColor colorWithHexString:@"#999999"] font:[UIFont systemFontOfSize:12] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _numberVisitors = [PublicLabel labelWithText:@"565人已观看" textColor:[UIColor colorWithHexString:@"#2393EE"] font:[UIFont systemFontOfSize:12] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        [self contentStr:_numberVisitors.text numberVisitors:_numberVisitors];
         [self.bottomView addSubview:_numberVisitors];
     }
     return _numberVisitors;
@@ -124,6 +127,25 @@
         make.right.mas_equalTo(self.bottomView.mas_right).offset(-13);
     }];
     
+}
+
+#pragma mark - 修改字符串颜色
+
+- (void)contentStr:(NSString *)strText numberVisitors:(PublicLabel *)numberVisitors{
+    NSMutableAttributedString *textColor = [[NSMutableAttributedString alloc]initWithString:strText];
+    NSRange rangel = [[textColor string] rangeOfString:[strText substringFromIndex:strText.length-4]];
+    [textColor addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"#414141"] range:rangel];
+    [textColor addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:rangel];
+    [numberVisitors setAttributedText:textColor];
+}
+
+#pragma mark - 设置阴影效果
+
+- (void)bottomViews:(UIView *)bottomViews {
+    bottomViews.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
+    bottomViews.layer.shadowOffset = CGSizeMake(0,5);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
+    bottomViews.layer.shadowOpacity = 0.5;//阴影透明度，默认0
+    bottomViews.layer.shadowRadius = 5;//阴影半径，默认3
 }
 
 @end
