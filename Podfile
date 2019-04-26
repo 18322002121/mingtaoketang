@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '8.0'
 target "mingtaoketang" do
     pod 'AFNetworking'
     pod 'Masonry'
@@ -7,4 +7,5 @@ target "mingtaoketang" do
     pod 'FDFullscreenPopGesture', '1.1'
     pod 'YYModel'
     pod 'MJRefresh'
+    pod 'SDCycleScrollView','>= 1.80'
 end
