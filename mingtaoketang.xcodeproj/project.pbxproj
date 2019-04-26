@@ -45,11 +45,17 @@
 		21A1FEEF2271CBEA00245453 /* FreeCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEEE2271CBEA00245453 /* FreeCourseViewController.m */; };
 		21A1FEF22271CEAD00245453 /* RecommendedCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEF12271CEAD00245453 /* RecommendedCoursesViewController.m */; };
 		21A1FEF52271D00100245453 /* FreeCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEF42271D00100245453 /* FreeCourseCell.m */; };
+		21A2A7462272E4A60001BD93 /* IntervalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A7452272E4A60001BD93 /* IntervalView.m */; };
+		21A2A7492272F37C0001BD93 /* CurriculumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A7482272F37C0001BD93 /* CurriculumCell.m */; };
+		21A2A74C2272F9440001BD93 /* CurriculumHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A74B2272F9440001BD93 /* CurriculumHeaderView.m */; };
+		21A2A74F227302780001BD93 /* MineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A74E227302780001BD93 /* MineViewCell.m */; };
+		21A2A752227302C70001BD93 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A751227302C70001BD93 /* MineHeaderView.m */; };
 		21B1F6BB227177AA001ADBCD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6BA227177AA001ADBCD /* BaseViewController.m */; };
 		21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6BD227177CF001ADBCD /* HomePageViewController.m */; };
 		21B1F6C1227177E9001ADBCD /* CurriculumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C0227177E9001ADBCD /* CurriculumViewController.m */; };
 		21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C3227177FF001ADBCD /* LiveBroadcastViewController.m */; };
 		21B1F6C722717812001ADBCD /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C622717812001ADBCD /* MineViewController.m */; };
+		21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +153,16 @@
 		21A1FEF12271CEAD00245453 /* RecommendedCoursesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendedCoursesViewController.m; sourceTree = "<group>"; };
 		21A1FEF32271D00100245453 /* FreeCourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeCourseCell.h; sourceTree = "<group>"; };
 		21A1FEF42271D00100245453 /* FreeCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeCourseCell.m; sourceTree = "<group>"; };
+		21A2A7442272E4A60001BD93 /* IntervalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntervalView.h; sourceTree = "<group>"; };
+		21A2A7452272E4A60001BD93 /* IntervalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntervalView.m; sourceTree = "<group>"; };
+		21A2A7472272F37C0001BD93 /* CurriculumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurriculumCell.h; sourceTree = "<group>"; };
+		21A2A7482272F37C0001BD93 /* CurriculumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurriculumCell.m; sourceTree = "<group>"; };
+		21A2A74A2272F9440001BD93 /* CurriculumHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurriculumHeaderView.h; sourceTree = "<group>"; };
+		21A2A74B2272F9440001BD93 /* CurriculumHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurriculumHeaderView.m; sourceTree = "<group>"; };
+		21A2A74D227302780001BD93 /* MineViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewCell.h; sourceTree = "<group>"; };
+		21A2A74E227302780001BD93 /* MineViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewCell.m; sourceTree = "<group>"; };
+		21A2A750227302C70001BD93 /* MineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
+		21A2A751227302C70001BD93 /* MineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
 		21B1F6B9227177AA001ADBCD /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		21B1F6BA227177AA001ADBCD /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		21B1F6BC227177CF001ADBCD /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -157,6 +173,8 @@
 		21B1F6C3227177FF001ADBCD /* LiveBroadcastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastViewController.m; sourceTree = "<group>"; };
 		21B1F6C522717812001ADBCD /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		21B1F6C622717812001ADBCD /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		21B25F4B2272A132009060D4 /* LiveBroadcastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCell.h; sourceTree = "<group>"; };
+		21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCell.m; sourceTree = "<group>"; };
 		7B9B0C9AC483CB012A7D3B08 /* Pods-mingtaoketang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.release.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.release.xcconfig"; sourceTree = "<group>"; };
 		83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mingtaoketang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D764184BF4CC0816015E77 /* Pods-mingtaoketang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -452,6 +470,8 @@
 				21A1FEE52271916900245453 /* FlashSaleCell.m */,
 				21A1FEF32271D00100245453 /* FreeCourseCell.h */,
 				21A1FEF42271D00100245453 /* FreeCourseCell.m */,
+				21A2A7442272E4A60001BD93 /* IntervalView.h */,
+				21A2A7452272E4A60001BD93 /* IntervalView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +493,10 @@
 		213492D72271752700C68DCA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21A2A7472272F37C0001BD93 /* CurriculumCell.h */,
+				21A2A7482272F37C0001BD93 /* CurriculumCell.m */,
+				21A2A74A2272F9440001BD93 /* CurriculumHeaderView.h */,
+				21A2A74B2272F9440001BD93 /* CurriculumHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -498,6 +522,8 @@
 		213492DA2271754B00C68DCA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21B25F4B2272A132009060D4 /* LiveBroadcastCell.h */,
+				21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,6 +547,10 @@
 		213492DD2271756800C68DCA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21A2A74D227302780001BD93 /* MineViewCell.h */,
+				21A2A74E227302780001BD93 /* MineViewCell.m */,
+				21A2A750227302C70001BD93 /* MineHeaderView.h */,
+				21A2A751227302C70001BD93 /* MineHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -711,6 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A2A752227302C70001BD93 /* MineHeaderView.m in Sources */,
 				213492BC227173B300C68DCA /* PublicButton.m in Sources */,
 				213492C6227173B300C68DCA /* HCYRequestHandler.m in Sources */,
 				213492C9227173B300C68DCA /* PublicTableView.m in Sources */,
@@ -721,10 +752,12 @@
 				213492402271561A00C68DCA /* AppDelegate.m in Sources */,
 				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
+				21A2A74C2272F9440001BD93 /* CurriculumHeaderView.m in Sources */,
 				21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */,
 				21A1FEEC2271B42900245453 /* FlashSaleCellHeaderView.m in Sources */,
 				213492C2227173B300C68DCA /* PublicRefreshHeader.m in Sources */,
 				21B1F6C722717812001ADBCD /* MineViewController.m in Sources */,
+				21A2A7492272F37C0001BD93 /* CurriculumCell.m in Sources */,
 				2134928E2271672E00C68DCA /* BaseTabBarController.m in Sources */,
 				213492762271628F00C68DCA /* BaseNavigationController.m in Sources */,
 				21A1FEF52271D00100245453 /* FreeCourseCell.m in Sources */,
@@ -736,14 +769,17 @@
 				21A1FEE022718C8D00245453 /* LiveBroadcastCourseCell.m in Sources */,
 				213492C1227173B300C68DCA /* UIView+Animations.m in Sources */,
 				213492C4227173B300C68DCA /* PublicRefreshFooter.m in Sources */,
+				21A2A74F227302780001BD93 /* MineViewCell.m in Sources */,
 				213492BD227173B300C68DCA /* PublicTextfield.m in Sources */,
 				21A1FEE32271915700245453 /* RecommendedTodayCell.m in Sources */,
 				213492CB227173B300C68DCA /* UIView+Extension.m in Sources */,
 				21A1FEF22271CEAD00245453 /* RecommendedCoursesViewController.m in Sources */,
+				21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */,
 				21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */,
 				21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */,
 				213492C5227173B300C68DCA /* UIFont+runtime.m in Sources */,
 				213492BB227173B300C68DCA /* MBProgressHUD+Add.m in Sources */,
+				21A2A7462272E4A60001BD93 /* IntervalView.m in Sources */,
 				21A1FEE62271916900245453 /* FlashSaleCell.m in Sources */,
 				213492C8227173B300C68DCA /* PublicLabel.m in Sources */,
 				21A1FEEF2271CBEA00245453 /* FreeCourseViewController.m in Sources */,
