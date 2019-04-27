@@ -7,6 +7,7 @@
 //
 
 #import "MineViewCell.h"
+#import "SettingModel.h"
 @interface MineViewCell ()
 @property (nonatomic,strong) UIView *bottomView;
 @property (nonatomic,strong) UIImageView *iconImage;
@@ -35,6 +36,7 @@
 - (UIImageView *)iconImage{
     if (!_iconImage) {
         _iconImage = [[UIImageView alloc]init];
+        _iconImage.layer.cornerRadius = 5;
         _iconImage.backgroundColor = kRandomColor;
         [self.bottomView addSubview:_iconImage];
     }
@@ -69,4 +71,11 @@
         make.top.mas_equalTo(self.iconImage.mas_bottom).offset(10);
     }];
 }
+
+- (void)setSettingModels:(SettingModel *)settingModels{
+    _settingModels = settingModels;
+    _iconImage.image = [UIImage imageNamed:settingModels.iconImage];
+    _titles.text = settingModels.gridTitle;
+}
+
 @end

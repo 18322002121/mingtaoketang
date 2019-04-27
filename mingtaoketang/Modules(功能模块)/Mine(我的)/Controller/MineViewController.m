@@ -9,9 +9,29 @@
 #import "MineViewController.h"
 #import "MineViewCell.h"
 #import "MineHeaderView.h"
+#import "RechargeViewController.h"
+#import "SettingViewController.h"
+#import "SettingModel.h"
+#import "MyCollectionViewController.h"
+#import "LearningRecordViewController.h"
+#import "MyCourseViewController.h"
+#import "MyNewsViewController.h"
+#import "OnlineConsultationViewController.h"
+#import "InviteCourtesyViewController.h"
+
+typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
+    ShowSectionStatusCollection = 0,    //我的收藏
+    ShowSectionStatusRecord,            //学习记录
+    ShowSectionStatusCourse,            //我的课程
+    ShowSectionStatusNews,              //我的消息
+    ShowSectionStatusConsultation,      //在线咨询
+    ShowSectionStatusInvite             //邀请有礼
+};
 
 @interface MineViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)UICollectionView *collectionView;
+@property(nonatomic,strong)NSMutableArray *moduleSelectionArray;
+@property(nonatomic,strong)NSArray *tempArray;
 @end
 
 static NSString *const mineViewCell = @"MineViewCell";
@@ -21,7 +41,25 @@ static NSString *const mineHeaderView = @"MineHeaderView";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadingViews];
+    [self moduleSelection];
 }
+
+#pragma mark - 请求数据
+- (void)moduleSelection{
+    NSArray *dataArray = @[@{@"iconImage":@"study",@"gridTitle":@"我的收藏"},
+                           @{@"iconImage":@"grade",@"gridTitle":@"学习记录"},
+                           @{@"iconImage":@"test",@"gridTitle":@"我的课程"},
+                           @{@"iconImage":@"checkin",@"gridTitle":@"我的消息"},
+                           @{@"iconImage":@"checkin",@"gridTitle":@"在线咨询"},
+                           @{@"iconImage":@"checkin",@"gridTitle":@"邀请有礼"}
+                           ];
+    _tempArray = dataArray;
+    self.moduleSelectionArray = [NSMutableArray arrayWithCapacity:0];
+    [dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.moduleSelectionArray  addObject:[SettingModel initWithDict:obj]];
+    }];
+}
+
 #pragma mark - 加载瀑布流布局视图
 
 - (void)loadingViews{
@@ -53,7 +91,7 @@ static NSString *const mineHeaderView = @"MineHeaderView";
 #pragma mark - 定义展示的UICollectionViewCell的个数
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 6;
+    return self.moduleSelectionArray.count;
 }
 
 #pragma mark - 每个UICollectionView展示的内容
@@ -62,6 +100,7 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     
     UICollectionViewCell *goodsCell = nil;
     MineViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:mineViewCell forIndexPath:indexPath];
+    [cell setSettingModels:self.moduleSelectionArray[indexPath.row]];
     goodsCell = cell;
     return goodsCell;
 }
@@ -87,6 +126,26 @@ static NSString *const mineHeaderView = @"MineHeaderView";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == ShowSectionStatusCollection) {
+        MyCollectionViewController *myCollectionView = [[MyCollectionViewController alloc]init];
+        [self.navigationController pushViewController:myCollectionView animated:YES];
+    }else if (indexPath.row == ShowSectionStatusRecord){
+        LearningRecordViewController *learningRecordView = [[LearningRecordViewController alloc]init];
+        [self.navigationController pushViewController:learningRecordView animated:YES];
+    }else if (indexPath.row == ShowSectionStatusCourse){
+        MyCourseViewController *myCourseView = [[MyCourseViewController alloc]init];
+        [self.navigationController pushViewController:myCourseView animated:YES];
+    }else if (indexPath.row == ShowSectionStatusNews){
+        MyNewsViewController *myNewsView = [[MyNewsViewController alloc]init];
+        [self.navigationController pushViewController:myNewsView animated:YES];
+    }else if (indexPath.row == ShowSectionStatusConsultation){
+        OnlineConsultationViewController *onlineConsultationView = [[OnlineConsultationViewController alloc]init];
+        [self.navigationController pushViewController:onlineConsultationView animated:YES];
+    }else if (indexPath.row == ShowSectionStatusInvite){
+        #import "InviteCourtesyViewController.h"
+        InviteCourtesyViewController *inviteCourtesyView = [[InviteCourtesyViewController alloc]init];
+        [self.navigationController pushViewController:inviteCourtesyView animated:YES];
+    }
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
@@ -103,7 +162,7 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     UICollectionReusableView *reusableview = nil;
     if (kind ==UICollectionElementKindSectionHeader) {
         MineHeaderView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:mineHeaderView forIndexPath:indexPath];
-        [self rechargeClick:headerView];
+        [self mineHeaderClick:headerView];
         reusableview = headerView;
     }
     return reusableview;
@@ -115,12 +174,27 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     return CGSizeMake(KScreenWidth, 280);
 }
 
-#pragma mark - 充值按钮
-
-- (void)rechargeClick:(MineHeaderView *)headerView{
+#pragma mark - MineHeaderView上按钮操作
+- (void)mineHeaderClick:(MineHeaderView *)headerView{
     headerView.RechargeClickBlock = ^(UIButton * _Nonnull sender) {
-        NSLog(@"充值按钮点击");
+        RechargeViewController *rechargeView = [[RechargeViewController alloc]init];
+        [self.navigationController pushViewController:rechargeView animated:YES];
+    };
+    
+    headerView.SetTingClickBlock = ^(UIButton * _Nonnull sender) {
+        SettingViewController *settingView = [[SettingViewController alloc]init];
+        [self.navigationController pushViewController:settingView animated:YES];
+    };
+    
+    headerView.EducationalInstitutionsClickBlock = ^(UIButton * _Nonnull sender) {
+        NSLog(@"院校登陆");
     };
 }
 
 @end
+
+
+
+
+
+

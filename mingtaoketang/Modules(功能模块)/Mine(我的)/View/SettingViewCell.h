@@ -1,8 +1,8 @@
 //
-//  MineViewCell.h
+//  SettingViewCell.h
 //  mingtaoketang
 //
-//  Created by Linlin Ge on 2019/4/26.
+//  Created by Linlin Ge on 2019/4/27.
 //  Copyright © 2019年 hcy. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class SettingModel;
-@interface MineViewCell : UICollectionViewCell
+@interface SettingViewCell : UITableViewCell
 @property(nonatomic,strong)SettingModel *settingModels;
 @end
 

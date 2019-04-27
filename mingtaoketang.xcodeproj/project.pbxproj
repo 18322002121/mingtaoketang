@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		17D66C5BF4C62AECD5C18531 /* libPods-mingtaoketang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */; };
+		2113C697227433CE00E5F83B /* TransactionRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C696227433CE00E5F83B /* TransactionRecordCell.m */; };
+		2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69922743F4000E5F83B /* MyCollectionViewCell.m */; };
+		2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69C227446E500E5F83B /* AboutUsViewController.m */; };
+		212A3EA22273FDA80027AFEC /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA12273FDA80027AFEC /* SettingViewController.m */; };
+		212A3EA52273FE5B0027AFEC /* SettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA42273FE5B0027AFEC /* SettingViewCell.m */; };
+		212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA72273FEF40027AFEC /* SettingModel.m */; };
+		212A3EAB227402170027AFEC /* RechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EAA227402170027AFEC /* RechargeViewController.m */; };
+		212A3EAE227403AC0027AFEC /* RechargeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EAD227403AC0027AFEC /* RechargeHeaderView.m */; };
+		212A3EB12274046C0027AFEC /* RechargeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EB02274046C0027AFEC /* RechargeViewCell.m */; };
+		212A3EB42274165A0027AFEC /* TransactionRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EB32274165A0027AFEC /* TransactionRecordViewController.m */; };
+		212A3EB7227425040027AFEC /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EB6227425040027AFEC /* MyCollectionViewController.m */; };
+		212A3EBA227425280027AFEC /* LearningRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EB9227425280027AFEC /* LearningRecordViewController.m */; };
+		212A3EBD2274254A0027AFEC /* MyCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EBC2274254A0027AFEC /* MyCourseViewController.m */; };
+		212A3EC0227425860027AFEC /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EBF227425860027AFEC /* MyNewsViewController.m */; };
+		212A3EC3227425A60027AFEC /* OnlineConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EC2227425A60027AFEC /* OnlineConsultationViewController.m */; };
+		212A3EC6227425C70027AFEC /* InviteCourtesyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EC5227425C70027AFEC /* InviteCourtesyViewController.m */; };
 		213492402271561A00C68DCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2134923F2271561A00C68DCA /* AppDelegate.m */; };
 		213492482271561B00C68DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213492472271561B00C68DCA /* Assets.xcassets */; };
 		2134924B2271561B00C68DCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213492492271561B00C68DCA /* LaunchScreen.storyboard */; };
@@ -76,6 +92,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2113C695227433CE00E5F83B /* TransactionRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionRecordCell.h; sourceTree = "<group>"; };
+		2113C696227433CE00E5F83B /* TransactionRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionRecordCell.m; sourceTree = "<group>"; };
+		2113C69822743F4000E5F83B /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		2113C69922743F4000E5F83B /* MyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		2113C69B227446E500E5F83B /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		2113C69C227446E500E5F83B /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		212A3EA02273FDA80027AFEC /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		212A3EA12273FDA80027AFEC /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		212A3EA32273FE5B0027AFEC /* SettingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewCell.h; sourceTree = "<group>"; };
+		212A3EA42273FE5B0027AFEC /* SettingViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewCell.m; sourceTree = "<group>"; };
+		212A3EA62273FEF40027AFEC /* SettingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
+		212A3EA72273FEF40027AFEC /* SettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
+		212A3EA9227402170027AFEC /* RechargeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeViewController.h; sourceTree = "<group>"; };
+		212A3EAA227402170027AFEC /* RechargeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeViewController.m; sourceTree = "<group>"; };
+		212A3EAC227403AC0027AFEC /* RechargeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeHeaderView.h; sourceTree = "<group>"; };
+		212A3EAD227403AC0027AFEC /* RechargeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeHeaderView.m; sourceTree = "<group>"; };
+		212A3EAF2274046C0027AFEC /* RechargeViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeViewCell.h; sourceTree = "<group>"; };
+		212A3EB02274046C0027AFEC /* RechargeViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeViewCell.m; sourceTree = "<group>"; };
+		212A3EB22274165A0027AFEC /* TransactionRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionRecordViewController.h; sourceTree = "<group>"; };
+		212A3EB32274165A0027AFEC /* TransactionRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionRecordViewController.m; sourceTree = "<group>"; };
+		212A3EB5227425040027AFEC /* MyCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
+		212A3EB6227425040027AFEC /* MyCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewController.m; sourceTree = "<group>"; };
+		212A3EB8227425280027AFEC /* LearningRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningRecordViewController.h; sourceTree = "<group>"; };
+		212A3EB9227425280027AFEC /* LearningRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningRecordViewController.m; sourceTree = "<group>"; };
+		212A3EBB2274254A0027AFEC /* MyCourseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCourseViewController.h; sourceTree = "<group>"; };
+		212A3EBC2274254A0027AFEC /* MyCourseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCourseViewController.m; sourceTree = "<group>"; };
+		212A3EBE227425860027AFEC /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
+		212A3EBF227425860027AFEC /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
+		212A3EC1227425A60027AFEC /* OnlineConsultationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnlineConsultationViewController.h; sourceTree = "<group>"; };
+		212A3EC2227425A60027AFEC /* OnlineConsultationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnlineConsultationViewController.m; sourceTree = "<group>"; };
+		212A3EC4227425C70027AFEC /* InviteCourtesyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteCourtesyViewController.h; sourceTree = "<group>"; };
+		212A3EC5227425C70027AFEC /* InviteCourtesyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteCourtesyViewController.m; sourceTree = "<group>"; };
 		2134923B2271561A00C68DCA /* mingtaoketang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mingtaoketang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2134923E2271561A00C68DCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2134923F2271561A00C68DCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -540,6 +588,26 @@
 			children = (
 				21B1F6C522717812001ADBCD /* MineViewController.h */,
 				21B1F6C622717812001ADBCD /* MineViewController.m */,
+				212A3EA02273FDA80027AFEC /* SettingViewController.h */,
+				212A3EA12273FDA80027AFEC /* SettingViewController.m */,
+				212A3EA9227402170027AFEC /* RechargeViewController.h */,
+				212A3EAA227402170027AFEC /* RechargeViewController.m */,
+				212A3EB22274165A0027AFEC /* TransactionRecordViewController.h */,
+				212A3EB32274165A0027AFEC /* TransactionRecordViewController.m */,
+				212A3EB5227425040027AFEC /* MyCollectionViewController.h */,
+				212A3EB6227425040027AFEC /* MyCollectionViewController.m */,
+				212A3EB8227425280027AFEC /* LearningRecordViewController.h */,
+				212A3EB9227425280027AFEC /* LearningRecordViewController.m */,
+				212A3EBB2274254A0027AFEC /* MyCourseViewController.h */,
+				212A3EBC2274254A0027AFEC /* MyCourseViewController.m */,
+				212A3EBE227425860027AFEC /* MyNewsViewController.h */,
+				212A3EBF227425860027AFEC /* MyNewsViewController.m */,
+				212A3EC1227425A60027AFEC /* OnlineConsultationViewController.h */,
+				212A3EC2227425A60027AFEC /* OnlineConsultationViewController.m */,
+				212A3EC4227425C70027AFEC /* InviteCourtesyViewController.h */,
+				212A3EC5227425C70027AFEC /* InviteCourtesyViewController.m */,
+				2113C69B227446E500E5F83B /* AboutUsViewController.h */,
+				2113C69C227446E500E5F83B /* AboutUsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -551,6 +619,16 @@
 				21A2A74E227302780001BD93 /* MineViewCell.m */,
 				21A2A750227302C70001BD93 /* MineHeaderView.h */,
 				21A2A751227302C70001BD93 /* MineHeaderView.m */,
+				212A3EA32273FE5B0027AFEC /* SettingViewCell.h */,
+				212A3EA42273FE5B0027AFEC /* SettingViewCell.m */,
+				212A3EAC227403AC0027AFEC /* RechargeHeaderView.h */,
+				212A3EAD227403AC0027AFEC /* RechargeHeaderView.m */,
+				212A3EAF2274046C0027AFEC /* RechargeViewCell.h */,
+				212A3EB02274046C0027AFEC /* RechargeViewCell.m */,
+				2113C695227433CE00E5F83B /* TransactionRecordCell.h */,
+				2113C696227433CE00E5F83B /* TransactionRecordCell.m */,
+				2113C69822743F4000E5F83B /* MyCollectionViewCell.h */,
+				2113C69922743F4000E5F83B /* MyCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -558,6 +636,8 @@
 		213492DE2271757000C68DCA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				212A3EA62273FEF40027AFEC /* SettingModel.h */,
+				212A3EA72273FEF40027AFEC /* SettingModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -743,38 +823,53 @@
 			files = (
 				21A2A752227302C70001BD93 /* MineHeaderView.m in Sources */,
 				213492BC227173B300C68DCA /* PublicButton.m in Sources */,
+				212A3EB12274046C0027AFEC /* RechargeViewCell.m in Sources */,
 				213492C6227173B300C68DCA /* HCYRequestHandler.m in Sources */,
+				2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */,
 				213492C9227173B300C68DCA /* PublicTableView.m in Sources */,
 				2134924E2271561B00C68DCA /* main.m in Sources */,
 				213492BF227173B300C68DCA /* PublicVideoPlayController.m in Sources */,
 				213492BA227173B300C68DCA /* UIImage+cornerRadius.m in Sources */,
 				213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */,
 				213492402271561A00C68DCA /* AppDelegate.m in Sources */,
+				212A3EA52273FE5B0027AFEC /* SettingViewCell.m in Sources */,
+				212A3EBA227425280027AFEC /* LearningRecordViewController.m in Sources */,
 				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
 				21A2A74C2272F9440001BD93 /* CurriculumHeaderView.m in Sources */,
 				21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */,
+				212A3EAB227402170027AFEC /* RechargeViewController.m in Sources */,
 				21A1FEEC2271B42900245453 /* FlashSaleCellHeaderView.m in Sources */,
 				213492C2227173B300C68DCA /* PublicRefreshHeader.m in Sources */,
 				21B1F6C722717812001ADBCD /* MineViewController.m in Sources */,
 				21A2A7492272F37C0001BD93 /* CurriculumCell.m in Sources */,
+				212A3EC6227425C70027AFEC /* InviteCourtesyViewController.m in Sources */,
+				212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */,
+				212A3EAE227403AC0027AFEC /* RechargeHeaderView.m in Sources */,
 				2134928E2271672E00C68DCA /* BaseTabBarController.m in Sources */,
 				213492762271628F00C68DCA /* BaseNavigationController.m in Sources */,
+				212A3EB42274165A0027AFEC /* TransactionRecordViewController.m in Sources */,
 				21A1FEF52271D00100245453 /* FreeCourseCell.m in Sources */,
 				213492C7227173B300C68DCA /* HCYRequestManager.m in Sources */,
 				21B1F6C1227177E9001ADBCD /* CurriculumViewController.m in Sources */,
 				21A1FEDA22717ED100245453 /* RotationChartCell.m in Sources */,
 				213492BE227173B300C68DCA /* UIColor+Hex.m in Sources */,
 				21B1F6BB227177AA001ADBCD /* BaseViewController.m in Sources */,
+				2113C697227433CE00E5F83B /* TransactionRecordCell.m in Sources */,
 				21A1FEE022718C8D00245453 /* LiveBroadcastCourseCell.m in Sources */,
 				213492C1227173B300C68DCA /* UIView+Animations.m in Sources */,
 				213492C4227173B300C68DCA /* PublicRefreshFooter.m in Sources */,
 				21A2A74F227302780001BD93 /* MineViewCell.m in Sources */,
+				212A3EBD2274254A0027AFEC /* MyCourseViewController.m in Sources */,
 				213492BD227173B300C68DCA /* PublicTextfield.m in Sources */,
+				2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */,
 				21A1FEE32271915700245453 /* RecommendedTodayCell.m in Sources */,
+				212A3EA22273FDA80027AFEC /* SettingViewController.m in Sources */,
 				213492CB227173B300C68DCA /* UIView+Extension.m in Sources */,
 				21A1FEF22271CEAD00245453 /* RecommendedCoursesViewController.m in Sources */,
+				212A3EC3227425A60027AFEC /* OnlineConsultationViewController.m in Sources */,
 				21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */,
+				212A3EB7227425040027AFEC /* MyCollectionViewController.m in Sources */,
 				21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */,
 				21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */,
 				213492C5227173B300C68DCA /* UIFont+runtime.m in Sources */,
@@ -782,6 +877,7 @@
 				21A2A7462272E4A60001BD93 /* IntervalView.m in Sources */,
 				21A1FEE62271916900245453 /* FlashSaleCell.m in Sources */,
 				213492C8227173B300C68DCA /* PublicLabel.m in Sources */,
+				212A3EC0227425860027AFEC /* MyNewsViewController.m in Sources */,
 				21A1FEEF2271CBEA00245453 /* FreeCourseViewController.m in Sources */,
 				21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */,
 			);

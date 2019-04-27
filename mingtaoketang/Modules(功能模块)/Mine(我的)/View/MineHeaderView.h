@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MineHeaderView : UICollectionReusableView
 @property (nonatomic,strong) void (^RechargeClickBlock)(UIButton *sender);
+@property (nonatomic,strong) void (^SetTingClickBlock)(UIButton *sender);
+@property (nonatomic,strong) void (^EducationalInstitutionsClickBlock)(UIButton *sender);
+
 @end
 
 NS_ASSUME_NONNULL_END

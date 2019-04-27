@@ -23,8 +23,10 @@
 @property (nonatomic,strong) PublicLabel *moneyBalance;
 /** 充值按钮 */
 @property (nonatomic,strong) PublicButton *rechargeButton;
-
-
+/** 设置按钮 */
+@property (nonatomic,strong) PublicButton *setTingButton;
+/** 院校按钮 */
+@property (nonatomic,strong) PublicButton *educationalInstitutionsButton;
 @end
 
 @implementation MineHeaderView
@@ -39,6 +41,8 @@
         [self moneyIcon];
         [self moneyBalance];
         [self rechargeButton];
+        [self setTingButton];
+        [self educationalInstitutionsButton];
     }
     return self;
 }
@@ -116,6 +120,20 @@
     return _rechargeButton;
 }
 
+- (PublicButton *)setTingButton{
+    if (!_setTingButton) {
+        _setTingButton = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"" titleColor:[UIColor whiteColor] textFont:[UIFont systemFontOfSize:13] backgroundColor:kRandomColor addView:self.bottomView target:self action:@selector(setTingClick:)];
+        _setTingButton.layer.cornerRadius = 10;
+    }
+    return _setTingButton;
+}
+
+- (PublicButton *)educationalInstitutionsButton{
+    if (!_educationalInstitutionsButton) {
+        _educationalInstitutionsButton = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"院校" titleColor:[UIColor whiteColor] textFont:[UIFont systemFontOfSize:15] backgroundColor:[UIColor clearColor] addView:self.bottomView target:self action:@selector(educationalInstitutionsClick:)];
+    }
+    return _educationalInstitutionsButton;
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -167,6 +185,18 @@
         make.centerY.mas_equalTo(self.rechargebottomView.mas_centerY).offset(0);
         make.size.mas_equalTo(CGSizeMake(60, 22));
     }];
+    
+    [_setTingButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.bottomView.mas_right).offset(-12);
+        make.top.mas_equalTo(self.bottomView.mas_top).offset(16);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
+    
+    [_educationalInstitutionsButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.bottomView.mas_left).offset(16);
+        make.top.mas_equalTo(self.bottomView.mas_top).offset(19);
+        make.size.mas_equalTo(CGSizeMake(30, 15));
+    }];
 
 }
 
@@ -179,8 +209,22 @@
     bottomViews.layer.shadowRadius = 5;//阴影半径，默认3
 }
 
+#pragma mark -充值按钮
+
 - (void)rechargeClick:(UIButton *)sender{
     !_RechargeClickBlock ? : _RechargeClickBlock(sender);
+}
+
+#pragma mark - 设置按钮
+
+- (void)setTingClick:(UIButton *)sender{
+    !_SetTingClickBlock ? : _SetTingClickBlock(sender);
+}
+
+#pragma mark - 院校按钮
+
+- (void)educationalInstitutionsClick:(UIButton *)sender{
+    !_EducationalInstitutionsClickBlock ? : _EducationalInstitutionsClickBlock(sender);
 }
 
 @end
