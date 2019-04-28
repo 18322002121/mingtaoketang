@@ -11,6 +11,10 @@
 		2113C697227433CE00E5F83B /* TransactionRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C696227433CE00E5F83B /* TransactionRecordCell.m */; };
 		2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69922743F4000E5F83B /* MyCollectionViewCell.m */; };
 		2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69C227446E500E5F83B /* AboutUsViewController.m */; };
+		2113C6A02274486200E5F83B /* AboutUsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69F2274486200E5F83B /* AboutUsViewCell.m */; };
+		2113C6A322744ACB00E5F83B /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C6A222744ACB00E5F83B /* ClearCacheViewController.m */; };
+		2113C6A622744B1200E5F83B /* ChangePasswordeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C6A522744B1200E5F83B /* ChangePasswordeViewController.m */; };
+		2113C6A922744B5700E5F83B /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C6A822744B5700E5F83B /* FeedbackViewController.m */; };
 		212A3EA22273FDA80027AFEC /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA12273FDA80027AFEC /* SettingViewController.m */; };
 		212A3EA52273FE5B0027AFEC /* SettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA42273FE5B0027AFEC /* SettingViewCell.m */; };
 		212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA72273FEF40027AFEC /* SettingModel.m */; };
@@ -50,6 +54,9 @@
 		213492C9227173B300C68DCA /* PublicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B3227173B300C68DCA /* PublicTableView.m */; };
 		213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B6227173B300C68DCA /* PublicReloadingAnimation.m */; };
 		213492CB227173B300C68DCA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B8227173B300C68DCA /* UIView+Extension.m */; };
+		218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477AE227546880048CAE9 /* MyCourseViewCell.m */; };
+		218477B22275552A0048CAE9 /* LearningRecordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B12275552A0048CAE9 /* LearningRecordViewCell.m */; };
+		218477B522755AE80048CAE9 /* LearningRecordHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */; };
 		21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED622717C8600245453 /* BaseNavigationBar.m */; };
 		21A1FEDA22717ED100245453 /* RotationChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED922717ED100245453 /* RotationChartCell.m */; };
 		21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEDC2271866400245453 /* FreeAndRecommendationCell.m */; };
@@ -98,6 +105,14 @@
 		2113C69922743F4000E5F83B /* MyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		2113C69B227446E500E5F83B /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		2113C69C227446E500E5F83B /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		2113C69E2274486200E5F83B /* AboutUsViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewCell.h; sourceTree = "<group>"; };
+		2113C69F2274486200E5F83B /* AboutUsViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewCell.m; sourceTree = "<group>"; };
+		2113C6A122744ACB00E5F83B /* ClearCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
+		2113C6A222744ACB00E5F83B /* ClearCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
+		2113C6A422744B1200E5F83B /* ChangePasswordeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordeViewController.h; sourceTree = "<group>"; };
+		2113C6A522744B1200E5F83B /* ChangePasswordeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordeViewController.m; sourceTree = "<group>"; };
+		2113C6A722744B5700E5F83B /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		2113C6A822744B5700E5F83B /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		212A3EA02273FDA80027AFEC /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		212A3EA12273FDA80027AFEC /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		212A3EA32273FE5B0027AFEC /* SettingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewCell.h; sourceTree = "<group>"; };
@@ -179,6 +194,12 @@
 		213492B7227173B300C68DCA /* PublicReloadingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicReloadingAnimation.h; sourceTree = "<group>"; };
 		213492B8227173B300C68DCA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		213492B9227173B300C68DCA /* UIFont+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+runtime.h"; sourceTree = "<group>"; };
+		218477AD227546880048CAE9 /* MyCourseViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCourseViewCell.h; sourceTree = "<group>"; };
+		218477AE227546880048CAE9 /* MyCourseViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCourseViewCell.m; sourceTree = "<group>"; };
+		218477B02275552A0048CAE9 /* LearningRecordViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningRecordViewCell.h; sourceTree = "<group>"; };
+		218477B12275552A0048CAE9 /* LearningRecordViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningRecordViewCell.m; sourceTree = "<group>"; };
+		218477B322755AE80048CAE9 /* LearningRecordHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningRecordHeaderView.h; sourceTree = "<group>"; };
+		218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningRecordHeaderView.m; sourceTree = "<group>"; };
 		21A1FED522717C8600245453 /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
 		21A1FED622717C8600245453 /* BaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationBar.m; sourceTree = "<group>"; };
 		21A1FED822717ED100245453 /* RotationChartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationChartCell.h; sourceTree = "<group>"; };
@@ -394,8 +415,8 @@
 		21349297227173B300C68DCA /* 视频播放 */ = {
 			isa = PBXGroup;
 			children = (
-				21349298227173B300C68DCA /* PublicVideoPlayController.m */,
 				21349299227173B300C68DCA /* PublicVideoPlayController.h */,
+				21349298227173B300C68DCA /* PublicVideoPlayController.m */,
 			);
 			path = "视频播放";
 			sourceTree = "<group>";
@@ -426,11 +447,11 @@
 		213492A7227173B300C68DCA /* Network(网络请求) */ = {
 			isa = PBXGroup;
 			children = (
-				213492A8227173B300C68DCA /* HCYRequestHandler.m */,
 				213492A9227173B300C68DCA /* HCYRequestManager.h */,
+				213492A8227173B300C68DCA /* HCYRequestHandler.m */,
 				213492AA227173B300C68DCA /* HCYRequestUrl.h */,
-				213492AB227173B300C68DCA /* HCYRequestManager.m */,
 				213492AC227173B300C68DCA /* HCYRequestHandler.h */,
+				213492AB227173B300C68DCA /* HCYRequestManager.m */,
 			);
 			path = "Network(网络请求)";
 			sourceTree = "<group>";
@@ -439,9 +460,9 @@
 			isa = PBXGroup;
 			children = (
 				213492B5227173B300C68DCA /* UIView+Extension.h */,
+				213492B8227173B300C68DCA /* UIView+Extension.m */,
 				213492B6227173B300C68DCA /* PublicReloadingAnimation.m */,
 				213492B7227173B300C68DCA /* PublicReloadingAnimation.h */,
-				213492B8227173B300C68DCA /* UIView+Extension.m */,
 			);
 			path = "网络加载动画";
 			sourceTree = "<group>";
@@ -608,6 +629,12 @@
 				212A3EC5227425C70027AFEC /* InviteCourtesyViewController.m */,
 				2113C69B227446E500E5F83B /* AboutUsViewController.h */,
 				2113C69C227446E500E5F83B /* AboutUsViewController.m */,
+				2113C6A122744ACB00E5F83B /* ClearCacheViewController.h */,
+				2113C6A222744ACB00E5F83B /* ClearCacheViewController.m */,
+				2113C6A422744B1200E5F83B /* ChangePasswordeViewController.h */,
+				2113C6A522744B1200E5F83B /* ChangePasswordeViewController.m */,
+				2113C6A722744B5700E5F83B /* FeedbackViewController.h */,
+				2113C6A822744B5700E5F83B /* FeedbackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -629,6 +656,14 @@
 				2113C696227433CE00E5F83B /* TransactionRecordCell.m */,
 				2113C69822743F4000E5F83B /* MyCollectionViewCell.h */,
 				2113C69922743F4000E5F83B /* MyCollectionViewCell.m */,
+				2113C69E2274486200E5F83B /* AboutUsViewCell.h */,
+				2113C69F2274486200E5F83B /* AboutUsViewCell.m */,
+				218477AD227546880048CAE9 /* MyCourseViewCell.h */,
+				218477AE227546880048CAE9 /* MyCourseViewCell.m */,
+				218477B02275552A0048CAE9 /* LearningRecordViewCell.h */,
+				218477B12275552A0048CAE9 /* LearningRecordViewCell.m */,
+				218477B322755AE80048CAE9 /* LearningRecordHeaderView.h */,
+				218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -836,7 +871,10 @@
 				212A3EBA227425280027AFEC /* LearningRecordViewController.m in Sources */,
 				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
+				2113C6A622744B1200E5F83B /* ChangePasswordeViewController.m in Sources */,
+				218477B522755AE80048CAE9 /* LearningRecordHeaderView.m in Sources */,
 				21A2A74C2272F9440001BD93 /* CurriculumHeaderView.m in Sources */,
+				2113C6A922744B5700E5F83B /* FeedbackViewController.m in Sources */,
 				21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */,
 				212A3EAB227402170027AFEC /* RechargeViewController.m in Sources */,
 				21A1FEEC2271B42900245453 /* FlashSaleCellHeaderView.m in Sources */,
@@ -847,6 +885,7 @@
 				212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */,
 				212A3EAE227403AC0027AFEC /* RechargeHeaderView.m in Sources */,
 				2134928E2271672E00C68DCA /* BaseTabBarController.m in Sources */,
+				218477B22275552A0048CAE9 /* LearningRecordViewCell.m in Sources */,
 				213492762271628F00C68DCA /* BaseNavigationController.m in Sources */,
 				212A3EB42274165A0027AFEC /* TransactionRecordViewController.m in Sources */,
 				21A1FEF52271D00100245453 /* FreeCourseCell.m in Sources */,
@@ -855,8 +894,10 @@
 				21A1FEDA22717ED100245453 /* RotationChartCell.m in Sources */,
 				213492BE227173B300C68DCA /* UIColor+Hex.m in Sources */,
 				21B1F6BB227177AA001ADBCD /* BaseViewController.m in Sources */,
+				2113C6A02274486200E5F83B /* AboutUsViewCell.m in Sources */,
 				2113C697227433CE00E5F83B /* TransactionRecordCell.m in Sources */,
 				21A1FEE022718C8D00245453 /* LiveBroadcastCourseCell.m in Sources */,
+				2113C6A322744ACB00E5F83B /* ClearCacheViewController.m in Sources */,
 				213492C1227173B300C68DCA /* UIView+Animations.m in Sources */,
 				213492C4227173B300C68DCA /* PublicRefreshFooter.m in Sources */,
 				21A2A74F227302780001BD93 /* MineViewCell.m in Sources */,
@@ -880,6 +921,7 @@
 				212A3EC0227425860027AFEC /* MyNewsViewController.m in Sources */,
 				21A1FEEF2271CBEA00245453 /* FreeCourseViewController.m in Sources */,
 				21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */,
+				218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

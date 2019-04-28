@@ -9,6 +9,17 @@
 #import "SettingViewController.h"
 #import "SettingViewCell.h"
 #import "SettingModel.h"
+#import "ClearCacheViewController.h"
+#import "ChangePasswordeViewController.h"
+#import "AboutUsViewController.h"
+#import "FeedbackViewController.h"
+
+typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
+    ShowSectionStatusClearCache = 0,        //清理缓存
+    ShowSectionStatusChangePassworde,       //修改密码
+    ShowSectionStatusAboutUs,               //关于我们
+    ShowSectionStatusFeedback               //意见反馈
+};
 
 @interface SettingViewController ()
 @property(nonatomic,strong)PublicTableView *tableView;
@@ -24,6 +35,7 @@ static NSString *const settingViewCell =@"SettingViewCell";
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self moduleSelection];
     self.title = @"设置";
+    [self logoutButton];
 }
 
 #pragma mark - 请求数据
@@ -92,8 +104,38 @@ static NSString *const settingViewCell =@"SettingViewCell";
     };
     
     tableviews.didSelectRowAtIndexPathBlock = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];//当点击cell时有灰色，松开没灰色
+        if (indexPath.row == ShowSectionStatusClearCache) {
+            ClearCacheViewController *clearCacheView = [[ClearCacheViewController alloc]init];
+            [self.navigationController pushViewController:clearCacheView animated:YES];
+        }else if (indexPath.row == ShowSectionStatusChangePassworde){
+            ChangePasswordeViewController *changePasswordeView = [[ChangePasswordeViewController alloc]init];
+            [self.navigationController pushViewController:changePasswordeView animated:YES];
+        }else if (indexPath.row == ShowSectionStatusAboutUs){
+            AboutUsViewController *aboutUsView = [[AboutUsViewController alloc]init];
+            [self.navigationController pushViewController:aboutUsView animated:YES];
+        }else if (indexPath.row == ShowSectionStatusFeedback){
+            FeedbackViewController *feedbackView = [[FeedbackViewController alloc]init];
+            [self.navigationController pushViewController:feedbackView animated:YES];
+        }
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
     };
-    
 }
+
+#pragma mark - 退出登陆
+- (void)logoutButton{
+    PublicButton *logout = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"退出登录" titleColor:[UIColor colorWithHexString:@"#333333"] textFont:[UIFont systemFontOfSize:16] backgroundColor:[UIColor colorWithHexString:@"#DDDDDD"] addView:self.view target:self action:@selector(logoutClick)];
+    logout.layer.cornerRadius = 18;
+    
+    [logout mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-49);
+        make.left.mas_equalTo(self.view.mas_left).offset(40);
+        make.right.mas_equalTo(self.view.mas_right).offset(-40);
+        make.height.mas_offset(@35);
+    }];
+}
+
+- (void)logoutClick{
+    NSLog(@"退出登陆");
+}
+
 @end
