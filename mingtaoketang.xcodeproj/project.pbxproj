@@ -57,6 +57,8 @@
 		218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477AE227546880048CAE9 /* MyCourseViewCell.m */; };
 		218477B22275552A0048CAE9 /* LearningRecordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B12275552A0048CAE9 /* LearningRecordViewCell.m */; };
 		218477B522755AE80048CAE9 /* LearningRecordHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */; };
+		218477B822756EC20048CAE9 /* OnlineConsultationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B722756EC20048CAE9 /* OnlineConsultationCell.m */; };
+		218477BB2275AAC40048CAE9 /* PersonalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477BA2275AAC40048CAE9 /* PersonalInformationViewController.m */; };
 		21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED622717C8600245453 /* BaseNavigationBar.m */; };
 		21A1FEDA22717ED100245453 /* RotationChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED922717ED100245453 /* RotationChartCell.m */; };
 		21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEDC2271866400245453 /* FreeAndRecommendationCell.m */; };
@@ -200,6 +202,10 @@
 		218477B12275552A0048CAE9 /* LearningRecordViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningRecordViewCell.m; sourceTree = "<group>"; };
 		218477B322755AE80048CAE9 /* LearningRecordHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningRecordHeaderView.h; sourceTree = "<group>"; };
 		218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningRecordHeaderView.m; sourceTree = "<group>"; };
+		218477B622756EC20048CAE9 /* OnlineConsultationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnlineConsultationCell.h; sourceTree = "<group>"; };
+		218477B722756EC20048CAE9 /* OnlineConsultationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnlineConsultationCell.m; sourceTree = "<group>"; };
+		218477B92275AAC40048CAE9 /* PersonalInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalInformationViewController.h; sourceTree = "<group>"; };
+		218477BA2275AAC40048CAE9 /* PersonalInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalInformationViewController.m; sourceTree = "<group>"; };
 		21A1FED522717C8600245453 /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
 		21A1FED622717C8600245453 /* BaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationBar.m; sourceTree = "<group>"; };
 		21A1FED822717ED100245453 /* RotationChartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationChartCell.h; sourceTree = "<group>"; };
@@ -635,6 +641,8 @@
 				2113C6A522744B1200E5F83B /* ChangePasswordeViewController.m */,
 				2113C6A722744B5700E5F83B /* FeedbackViewController.h */,
 				2113C6A822744B5700E5F83B /* FeedbackViewController.m */,
+				218477B92275AAC40048CAE9 /* PersonalInformationViewController.h */,
+				218477BA2275AAC40048CAE9 /* PersonalInformationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -664,6 +672,8 @@
 				218477B12275552A0048CAE9 /* LearningRecordViewCell.m */,
 				218477B322755AE80048CAE9 /* LearningRecordHeaderView.h */,
 				218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */,
+				218477B622756EC20048CAE9 /* OnlineConsultationCell.h */,
+				218477B722756EC20048CAE9 /* OnlineConsultationCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -839,10 +849,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/PYSearch/PYSearch/PYSearch.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYSearch.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -905,7 +917,9 @@
 				213492BD227173B300C68DCA /* PublicTextfield.m in Sources */,
 				2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */,
 				21A1FEE32271915700245453 /* RecommendedTodayCell.m in Sources */,
+				218477B822756EC20048CAE9 /* OnlineConsultationCell.m in Sources */,
 				212A3EA22273FDA80027AFEC /* SettingViewController.m in Sources */,
+				218477BB2275AAC40048CAE9 /* PersonalInformationViewController.m in Sources */,
 				213492CB227173B300C68DCA /* UIView+Extension.m in Sources */,
 				21A1FEF22271CEAD00245453 /* RecommendedCoursesViewController.m in Sources */,
 				212A3EC3227425A60027AFEC /* OnlineConsultationViewController.m in Sources */,

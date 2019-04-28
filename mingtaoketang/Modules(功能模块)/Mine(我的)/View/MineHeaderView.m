@@ -27,6 +27,8 @@
 @property (nonatomic,strong) PublicButton *setTingButton;
 /** 院校按钮 */
 @property (nonatomic,strong) PublicButton *educationalInstitutionsButton;
+/** 查看个人信息按钮 */
+@property (nonatomic,strong) PublicButton *personalInformation;
 @end
 
 @implementation MineHeaderView
@@ -43,6 +45,7 @@
         [self rechargeButton];
         [self setTingButton];
         [self educationalInstitutionsButton];
+        [self personalInformation];
     }
     return self;
 }
@@ -63,6 +66,14 @@
         [self.bottomView addSubview:_iconImage];
     }
     return _iconImage;
+}
+
+- (PublicButton *)personalInformation{
+    if (!_personalInformation) {
+        _personalInformation = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"" titleColor:[UIColor whiteColor] textFont:[UIFont systemFontOfSize:13] backgroundColor:kRandomColor addView:self.bottomView target:self action:@selector(personalInformationClick:)];
+        _personalInformation.layer.cornerRadius = 38;
+    }
+    return _personalInformation;
 }
 
 - (UIImageView *)headPortrait{
@@ -157,6 +168,13 @@
         make.size.mas_equalTo(CGSizeMake(76, 76));
     }];
     
+    [_personalInformation mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.headPortrait.mas_left).offset(0);
+        make.right.mas_equalTo(self.headPortrait.mas_right).offset(0);
+        make.top.mas_equalTo(self.headPortrait.mas_top).offset(0);
+        make.bottom.mas_equalTo(self.headPortrait.mas_bottom).offset(0);
+    }];
+    
     [_userName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.bottomView.mas_centerX).offset(0);
         make.top.mas_equalTo(self.headPortrait.mas_bottom).offset(5);
@@ -225,6 +243,12 @@
 
 - (void)educationalInstitutionsClick:(UIButton *)sender{
     !_EducationalInstitutionsClickBlock ? : _EducationalInstitutionsClickBlock(sender);
+}
+
+#pragma mark - 查看个人信息按钮
+
+- (void)personalInformationClick:(UIButton *)sender{
+    !_PersonalInformationClickBlock ? : _PersonalInformationClickBlock(sender);
 }
 
 @end

@@ -18,6 +18,7 @@
 #import "MyNewsViewController.h"
 #import "OnlineConsultationViewController.h"
 #import "InviteCourtesyViewController.h"
+#import "PersonalInformationViewController.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusCollection = 0,    //我的收藏
@@ -188,6 +189,11 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     
     headerView.EducationalInstitutionsClickBlock = ^(UIButton * _Nonnull sender) {
         NSLog(@"院校登陆");
+    };
+    
+    headerView.PersonalInformationClickBlock = ^(UIButton * _Nonnull sender) {
+        PersonalInformationViewController *personalInformationView = [[PersonalInformationViewController alloc]init];
+        [self.navigationController pushViewController:personalInformationView animated:YES];
     };
 }
 

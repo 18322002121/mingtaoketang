@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) void (^RechargeClickBlock)(UIButton *sender);
 @property (nonatomic,strong) void (^SetTingClickBlock)(UIButton *sender);
 @property (nonatomic,strong) void (^EducationalInstitutionsClickBlock)(UIButton *sender);
-
+@property (nonatomic,strong) void (^PersonalInformationClickBlock)(UIButton *sender);
 @end
 
 NS_ASSUME_NONNULL_END

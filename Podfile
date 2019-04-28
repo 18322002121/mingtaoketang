@@ -8,4 +8,5 @@ target "mingtaoketang" do
     pod 'YYModel'
     pod 'MJRefresh'
     pod 'SDCycleScrollView','>= 1.80'
+    pod 'PYSearch'
 end
