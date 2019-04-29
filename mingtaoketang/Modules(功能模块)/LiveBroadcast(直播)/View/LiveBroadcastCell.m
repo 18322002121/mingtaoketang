@@ -288,7 +288,7 @@
 - (void)countDown{
     
     // 倒计时的时间 测试数据
-    NSString *deadlineStr = @"2019-04-29 15:00:00";
+    NSString *deadlineStr = @"2019-05-29 15:00:00";
     // 当前时间的时间戳
     NSString *nowStr = [self getCurrentTimeyyyymmdd];
     // 计算时间差值
