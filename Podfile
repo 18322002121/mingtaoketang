@@ -9,4 +9,5 @@ target "mingtaoketang" do
     pod 'MJRefresh'
     pod 'SDCycleScrollView','>= 1.80'
     pod 'PYSearch'
+    pod 'SuperPlayer'
 end

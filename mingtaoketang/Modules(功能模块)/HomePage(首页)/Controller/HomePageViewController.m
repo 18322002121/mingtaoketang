@@ -16,6 +16,7 @@
 #import "FlashSaleCellHeaderView.h"
 #import "FreeCourseViewController.h"
 #import "RecommendedCoursesViewController.h"
+#import "SearchResultViewController.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusBanner = 0,    //banner
@@ -26,7 +27,7 @@ typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusInformation    //资讯
 };
 
-@interface HomePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface HomePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,PYSearchViewControllerDelegate>
 @property(nonatomic,strong)UICollectionView *collectionView;
 
 @end
@@ -50,7 +51,35 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
 - (void)loadingViews{
     self.collectionView.backgroundColor = [UIColor whiteColor];
-    [self showCustomNavBar];
+    [self showCustomNavBar:^(UITextField * _Nonnull senders) {
+        NSArray *hotSeaches = @[@"电商", @"航空培训", @"电商产品", @"网络营销", @"网络营销", @"3D设计"];
+        // 2. 创建搜索控制器
+        PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:hotSeaches searchBarPlaceholder:@"请输入您想搜索产品的关键词" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
+            [searchViewController.navigationController pushViewController:[[SearchResultViewController alloc] init] animated:YES];
+        }];
+        searchViewController.hotSearchStyle = PYHotSearchStyleColorfulTag;//设置热门搜索为彩色标签风格
+        searchViewController.searchHistoryStyle = PYSearchHistoryStyleBorderTag;//设置搜索历史为带边框标签风格
+        searchViewController.searchTextField.font=[UIFont systemFontOfSize:13.0];
+        searchViewController.delegate = self;
+        // 3. 跳转到搜索控制器
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+        [self presentViewController:nav  animated:NO completion:nil];
+    }];
+}
+
+#pragma mark - pysearch搜索联想代理
+- (void)searchViewController:(PYSearchViewController *)searchViewController searchTextDidChange:(UISearchBar *)seachBar searchText:(NSString *)searchText
+{
+    if (searchText.length) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSMutableArray *searchSuggestionsM = [NSMutableArray array];
+            for (int i = 0; i < arc4random_uniform(5) + 10; i++) {
+                NSString *searchSuggestion = [NSString stringWithFormat:@"Search suggestion %d", i];
+                [searchSuggestionsM addObject:searchSuggestion];
+            }
+            searchViewController.searchSuggestions = searchSuggestionsM;
+        });
+    }
 }
 
 #pragma mark - 加载不同cell视图

@@ -8,6 +8,7 @@
 
 #import "FreeCourseViewController.h"
 #import "FreeCourseCell.h"
+#import "VideoPlayerViewController.h"
 
 @interface FreeCourseViewController ()
 @property(nonatomic,strong)PublicTableView *tableView;
@@ -99,6 +100,8 @@ static NSString *const freeCourseCell =@"FreeCourseCell";
     };
     
     tableviews.didSelectRowAtIndexPathBlock = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        VideoPlayerViewController *videoPlayerView = [[VideoPlayerViewController alloc]init];
+        [self.navigationController pushViewController:videoPlayerView animated:YES];
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     };
     

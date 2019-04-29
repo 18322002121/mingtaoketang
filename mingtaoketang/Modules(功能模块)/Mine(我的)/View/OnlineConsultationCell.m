@@ -64,14 +64,11 @@
         _inputBoxTextfield = [[UITextField alloc]init];
         _inputBoxTextfield.placeholder = @"请输入文字";
         _inputBoxTextfield.borderStyle = UITextBorderStyleRoundedRect;
+        [_inputBoxTextfield setValue:[UIFont boldSystemFontOfSize:12] forKeyPath:@"_placeholderLabel.font"];
         [self.bottomView addSubview:_inputBoxTextfield];
     }
     return _inputBoxTextfield;
 }
-
-
-
-
 
 - (void)layoutSubviews{
     [super layoutSubviews];

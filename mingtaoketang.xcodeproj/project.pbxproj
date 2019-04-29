@@ -54,11 +54,14 @@
 		213492C9227173B300C68DCA /* PublicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B3227173B300C68DCA /* PublicTableView.m */; };
 		213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B6227173B300C68DCA /* PublicReloadingAnimation.m */; };
 		213492CB227173B300C68DCA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B8227173B300C68DCA /* UIView+Extension.m */; };
+		215CF3AB2276A9BC004FD67D /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215CF3AA2276A9BC004FD67D /* SearchResultViewController.m */; };
+		215CF3AF2276C67F004FD67D /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215CF3AE2276C67F004FD67D /* VideoPlayerViewController.m */; };
 		218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477AE227546880048CAE9 /* MyCourseViewCell.m */; };
 		218477B22275552A0048CAE9 /* LearningRecordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B12275552A0048CAE9 /* LearningRecordViewCell.m */; };
 		218477B522755AE80048CAE9 /* LearningRecordHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */; };
 		218477B822756EC20048CAE9 /* OnlineConsultationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477B722756EC20048CAE9 /* OnlineConsultationCell.m */; };
 		218477BB2275AAC40048CAE9 /* PersonalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477BA2275AAC40048CAE9 /* PersonalInformationViewController.m */; };
+		218477BE2275AD330048CAE9 /* PersonalInformationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477BD2275AD330048CAE9 /* PersonalInformationViewCell.m */; };
 		21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED622717C8600245453 /* BaseNavigationBar.m */; };
 		21A1FEDA22717ED100245453 /* RotationChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FED922717ED100245453 /* RotationChartCell.m */; };
 		21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A1FEDC2271866400245453 /* FreeAndRecommendationCell.m */; };
@@ -196,6 +199,10 @@
 		213492B7227173B300C68DCA /* PublicReloadingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicReloadingAnimation.h; sourceTree = "<group>"; };
 		213492B8227173B300C68DCA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		213492B9227173B300C68DCA /* UIFont+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+runtime.h"; sourceTree = "<group>"; };
+		215CF3A92276A9BC004FD67D /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		215CF3AA2276A9BC004FD67D /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		215CF3AD2276C67F004FD67D /* VideoPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		215CF3AE2276C67F004FD67D /* VideoPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 		218477AD227546880048CAE9 /* MyCourseViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCourseViewCell.h; sourceTree = "<group>"; };
 		218477AE227546880048CAE9 /* MyCourseViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCourseViewCell.m; sourceTree = "<group>"; };
 		218477B02275552A0048CAE9 /* LearningRecordViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningRecordViewCell.h; sourceTree = "<group>"; };
@@ -206,6 +213,8 @@
 		218477B722756EC20048CAE9 /* OnlineConsultationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnlineConsultationCell.m; sourceTree = "<group>"; };
 		218477B92275AAC40048CAE9 /* PersonalInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalInformationViewController.h; sourceTree = "<group>"; };
 		218477BA2275AAC40048CAE9 /* PersonalInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalInformationViewController.m; sourceTree = "<group>"; };
+		218477BC2275AD330048CAE9 /* PersonalInformationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalInformationViewCell.h; sourceTree = "<group>"; };
+		218477BD2275AD330048CAE9 /* PersonalInformationViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalInformationViewCell.m; sourceTree = "<group>"; };
 		21A1FED522717C8600245453 /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
 		21A1FED622717C8600245453 /* BaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationBar.m; sourceTree = "<group>"; };
 		21A1FED822717ED100245453 /* RotationChartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotationChartCell.h; sourceTree = "<group>"; };
@@ -522,6 +531,10 @@
 				21A1FEEE2271CBEA00245453 /* FreeCourseViewController.m */,
 				21A1FEF02271CEAD00245453 /* RecommendedCoursesViewController.h */,
 				21A1FEF12271CEAD00245453 /* RecommendedCoursesViewController.m */,
+				215CF3A92276A9BC004FD67D /* SearchResultViewController.h */,
+				215CF3AA2276A9BC004FD67D /* SearchResultViewController.m */,
+				215CF3AD2276C67F004FD67D /* VideoPlayerViewController.h */,
+				215CF3AE2276C67F004FD67D /* VideoPlayerViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -674,6 +687,8 @@
 				218477B422755AE80048CAE9 /* LearningRecordHeaderView.m */,
 				218477B622756EC20048CAE9 /* OnlineConsultationCell.h */,
 				218477B722756EC20048CAE9 /* OnlineConsultationCell.m */,
+				218477BC2275AD330048CAE9 /* PersonalInformationViewCell.h */,
+				218477BD2275AD330048CAE9 /* PersonalInformationViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -873,6 +888,7 @@
 				212A3EB12274046C0027AFEC /* RechargeViewCell.m in Sources */,
 				213492C6227173B300C68DCA /* HCYRequestHandler.m in Sources */,
 				2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */,
+				218477BE2275AD330048CAE9 /* PersonalInformationViewCell.m in Sources */,
 				213492C9227173B300C68DCA /* PublicTableView.m in Sources */,
 				2134924E2271561B00C68DCA /* main.m in Sources */,
 				213492BF227173B300C68DCA /* PublicVideoPlayController.m in Sources */,
@@ -897,6 +913,7 @@
 				212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */,
 				212A3EAE227403AC0027AFEC /* RechargeHeaderView.m in Sources */,
 				2134928E2271672E00C68DCA /* BaseTabBarController.m in Sources */,
+				215CF3AF2276C67F004FD67D /* VideoPlayerViewController.m in Sources */,
 				218477B22275552A0048CAE9 /* LearningRecordViewCell.m in Sources */,
 				213492762271628F00C68DCA /* BaseNavigationController.m in Sources */,
 				212A3EB42274165A0027AFEC /* TransactionRecordViewController.m in Sources */,
@@ -934,6 +951,7 @@
 				213492C8227173B300C68DCA /* PublicLabel.m in Sources */,
 				212A3EC0227425860027AFEC /* MyNewsViewController.m in Sources */,
 				21A1FEEF2271CBEA00245453 /* FreeCourseViewController.m in Sources */,
+				215CF3AB2276A9BC004FD67D /* SearchResultViewController.m in Sources */,
 				21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */,
 				218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */,
 			);

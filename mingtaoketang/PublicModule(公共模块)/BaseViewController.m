@@ -34,11 +34,12 @@
 
 #pragma mark - 自定义导航栏搜索框
 
-- (BaseNavigationBar *)showCustomNavBar {
+- (BaseNavigationBar *)showCustomNavBar:(void (^)(UITextField *senders))senderBlock {
+
     self.navigationController.navigationBar.hidden = YES;
     BaseNavigationBar *bar = [BaseNavigationBar navigationBar];
     bar.SearchClickBlock = ^(UITextField * _Nonnull sender) {
-        NSLog(@"hcy点击");
+        !senderBlock ? : senderBlock(sender);
     };
     [self.view addSubview:bar];
     return bar;
