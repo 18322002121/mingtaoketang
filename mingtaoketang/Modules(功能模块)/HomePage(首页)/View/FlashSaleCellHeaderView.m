@@ -48,7 +48,7 @@
     }];
     
     [_titles mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.bottomView.mas_centerX).offset(0);
+        make.left.mas_equalTo(self.bottomView.mas_left).offset(13);
         make.centerY.mas_equalTo(self.bottomView.mas_centerY).offset(0);
     }];
     

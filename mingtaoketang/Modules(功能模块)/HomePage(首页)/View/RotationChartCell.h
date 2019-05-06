@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RotationChartCell : UICollectionViewCell
-
+/** banner数组 */
+@property (nonatomic,strong) NSMutableArray *bannerArray;
+@property (nonatomic,strong) void (^DidSelectItemAtIndex)(NSInteger index);
 @end
 
 NS_ASSUME_NONNULL_END

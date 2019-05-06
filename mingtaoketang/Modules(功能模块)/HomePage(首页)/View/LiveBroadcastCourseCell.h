@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LiveBroadcastCourseCell : UICollectionViewCell
-
+/** 直播模型数组 */
+@property (nonatomic,strong) NSMutableArray *liveBroadcastaArray;
 @end
 
 NS_ASSUME_NONNULL_END

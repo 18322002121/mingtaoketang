@@ -15,6 +15,9 @@
 		2113C6A322744ACB00E5F83B /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C6A222744ACB00E5F83B /* ClearCacheViewController.m */; };
 		2113C6A622744B1200E5F83B /* ChangePasswordeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C6A522744B1200E5F83B /* ChangePasswordeViewController.m */; };
 		2113C6A922744B5700E5F83B /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C6A822744B5700E5F83B /* FeedbackViewController.m */; };
+		21226FE7227ED3AA00AE5EEA /* PasswordLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21226FE6227ED3AA00AE5EEA /* PasswordLoginViewController.m */; };
+		21226FEA227ED3F200AE5EEA /* MessageLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21226FE9227ED3F200AE5EEA /* MessageLoginViewController.m */; };
+		21226FED227EDE2300AE5EEA /* HomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21226FEC227EDE2300AE5EEA /* HomeBannerModel.m */; };
 		212A3EA22273FDA80027AFEC /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA12273FDA80027AFEC /* SettingViewController.m */; };
 		212A3EA52273FE5B0027AFEC /* SettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA42273FE5B0027AFEC /* SettingViewCell.m */; };
 		212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A3EA72273FEF40027AFEC /* SettingModel.m */; };
@@ -54,6 +57,9 @@
 		213492C9227173B300C68DCA /* PublicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B3227173B300C68DCA /* PublicTableView.m */; };
 		213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B6227173B300C68DCA /* PublicReloadingAnimation.m */; };
 		213492CB227173B300C68DCA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B8227173B300C68DCA /* UIView+Extension.m */; };
+		214E8D8A227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214E8D89227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m */; };
+		214E8DCF228023B4008CC8A0 /* RecommendedTodayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214E8DCE228023B4008CC8A0 /* RecommendedTodayModel.m */; };
+		214E8DD2228025E5008CC8A0 /* FlashSaleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214E8DD1228025E5008CC8A0 /* FlashSaleModel.m */; };
 		215CF3AB2276A9BC004FD67D /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215CF3AA2276A9BC004FD67D /* SearchResultViewController.m */; };
 		215CF3AF2276C67F004FD67D /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215CF3AE2276C67F004FD67D /* VideoPlayerViewController.m */; };
 		218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218477AE227546880048CAE9 /* MyCourseViewCell.m */; };
@@ -84,6 +90,7 @@
 		21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C3227177FF001ADBCD /* LiveBroadcastViewController.m */; };
 		21B1F6C722717812001ADBCD /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C622717812001ADBCD /* MineViewController.m */; };
 		21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */; };
+		21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +125,12 @@
 		2113C6A522744B1200E5F83B /* ChangePasswordeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordeViewController.m; sourceTree = "<group>"; };
 		2113C6A722744B5700E5F83B /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		2113C6A822744B5700E5F83B /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		21226FE5227ED3AA00AE5EEA /* PasswordLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordLoginViewController.h; sourceTree = "<group>"; };
+		21226FE6227ED3AA00AE5EEA /* PasswordLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordLoginViewController.m; sourceTree = "<group>"; };
+		21226FE8227ED3F200AE5EEA /* MessageLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageLoginViewController.h; sourceTree = "<group>"; };
+		21226FE9227ED3F200AE5EEA /* MessageLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageLoginViewController.m; sourceTree = "<group>"; };
+		21226FEB227EDE2300AE5EEA /* HomeBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeBannerModel.h; path = "mingtaoketang/Modules(功能模块)/HomePage(首页)/Model/HomeBannerModel.h"; sourceTree = SOURCE_ROOT; };
+		21226FEC227EDE2300AE5EEA /* HomeBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeBannerModel.m; path = "mingtaoketang/Modules(功能模块)/HomePage(首页)/Model/HomeBannerModel.m"; sourceTree = SOURCE_ROOT; };
 		212A3EA02273FDA80027AFEC /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		212A3EA12273FDA80027AFEC /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		212A3EA32273FE5B0027AFEC /* SettingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewCell.h; sourceTree = "<group>"; };
@@ -199,6 +212,12 @@
 		213492B7227173B300C68DCA /* PublicReloadingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicReloadingAnimation.h; sourceTree = "<group>"; };
 		213492B8227173B300C68DCA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		213492B9227173B300C68DCA /* UIFont+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+runtime.h"; sourceTree = "<group>"; };
+		214E8D88227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LiveBroadcastCourseShowModel.h; path = "mingtaoketang/Modules(功能模块)/HomePage(首页)/Model/LiveBroadcastCourseShowModel.h"; sourceTree = SOURCE_ROOT; };
+		214E8D89227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LiveBroadcastCourseShowModel.m; path = "mingtaoketang/Modules(功能模块)/HomePage(首页)/Model/LiveBroadcastCourseShowModel.m"; sourceTree = SOURCE_ROOT; };
+		214E8DCD228023B4008CC8A0 /* RecommendedTodayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedTodayModel.h; sourceTree = "<group>"; };
+		214E8DCE228023B4008CC8A0 /* RecommendedTodayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendedTodayModel.m; sourceTree = "<group>"; };
+		214E8DD0228025E5008CC8A0 /* FlashSaleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashSaleModel.h; sourceTree = "<group>"; };
+		214E8DD1228025E5008CC8A0 /* FlashSaleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashSaleModel.m; sourceTree = "<group>"; };
 		215CF3A92276A9BC004FD67D /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		215CF3AA2276A9BC004FD67D /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		215CF3AD2276C67F004FD67D /* VideoPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
@@ -259,6 +278,8 @@
 		21B1F6C622717812001ADBCD /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		21B25F4B2272A132009060D4 /* LiveBroadcastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCell.h; sourceTree = "<group>"; };
 		21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCell.m; sourceTree = "<group>"; };
+		21B9FE03227FCBE200D6822C /* LiveBroadcastCourseShowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCourseShowCell.h; sourceTree = "<group>"; };
+		21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCourseShowCell.m; sourceTree = "<group>"; };
 		7B9B0C9AC483CB012A7D3B08 /* Pods-mingtaoketang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.release.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.release.xcconfig"; sourceTree = "<group>"; };
 		83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mingtaoketang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D764184BF4CC0816015E77 /* Pods-mingtaoketang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -386,6 +407,10 @@
 				213492722271628F00C68DCA /* BaseNavigationController.m */,
 				21B1F6B9227177AA001ADBCD /* BaseViewController.h */,
 				21B1F6BA227177AA001ADBCD /* BaseViewController.m */,
+				21226FE5227ED3AA00AE5EEA /* PasswordLoginViewController.h */,
+				21226FE6227ED3AA00AE5EEA /* PasswordLoginViewController.m */,
+				21226FE8227ED3F200AE5EEA /* MessageLoginViewController.h */,
+				21226FE9227ED3F200AE5EEA /* MessageLoginViewController.m */,
 			);
 			path = "PublicModule(公共模块)";
 			sourceTree = "<group>";
@@ -463,10 +488,10 @@
 			isa = PBXGroup;
 			children = (
 				213492A9227173B300C68DCA /* HCYRequestManager.h */,
+				213492AB227173B300C68DCA /* HCYRequestManager.m */,
+				213492AC227173B300C68DCA /* HCYRequestHandler.h */,
 				213492A8227173B300C68DCA /* HCYRequestHandler.m */,
 				213492AA227173B300C68DCA /* HCYRequestUrl.h */,
-				213492AC227173B300C68DCA /* HCYRequestHandler.h */,
-				213492AB227173B300C68DCA /* HCYRequestManager.m */,
 			);
 			path = "Network(网络请求)";
 			sourceTree = "<group>";
@@ -485,7 +510,7 @@
 		213492CC2271744800C68DCA /* HomePage(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				213492D52271750A00C68DCA /* Model */,
+				214E8DCC2280237B008CC8A0 /* Model */,
 				213492D42271750100C68DCA /* View */,
 				213492D3227174F300C68DCA /* Controller */,
 			);
@@ -560,15 +585,10 @@
 				21A1FEF42271D00100245453 /* FreeCourseCell.m */,
 				21A2A7442272E4A60001BD93 /* IntervalView.h */,
 				21A2A7452272E4A60001BD93 /* IntervalView.m */,
+				21B9FE03227FCBE200D6822C /* LiveBroadcastCourseShowCell.h */,
+				21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		213492D52271750A00C68DCA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		213492D62271751E00C68DCA /* Model */ = {
@@ -698,6 +718,21 @@
 			children = (
 				212A3EA62273FEF40027AFEC /* SettingModel.h */,
 				212A3EA72273FEF40027AFEC /* SettingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		214E8DCC2280237B008CC8A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21226FEB227EDE2300AE5EEA /* HomeBannerModel.h */,
+				21226FEC227EDE2300AE5EEA /* HomeBannerModel.m */,
+				214E8D88227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.h */,
+				214E8D89227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m */,
+				214E8DCD228023B4008CC8A0 /* RecommendedTodayModel.h */,
+				214E8DCE228023B4008CC8A0 /* RecommendedTodayModel.m */,
+				214E8DD0228025E5008CC8A0 /* FlashSaleModel.h */,
+				214E8DD1228025E5008CC8A0 /* FlashSaleModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -894,6 +929,7 @@
 				212A3EB12274046C0027AFEC /* RechargeViewCell.m in Sources */,
 				213492C6227173B300C68DCA /* HCYRequestHandler.m in Sources */,
 				2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */,
+				214E8DCF228023B4008CC8A0 /* RecommendedTodayModel.m in Sources */,
 				218477BE2275AD330048CAE9 /* PersonalInformationViewCell.m in Sources */,
 				213492C9227173B300C68DCA /* PublicTableView.m in Sources */,
 				2134924E2271561B00C68DCA /* main.m in Sources */,
@@ -903,6 +939,7 @@
 				213492402271561A00C68DCA /* AppDelegate.m in Sources */,
 				212A3EA52273FE5B0027AFEC /* SettingViewCell.m in Sources */,
 				212A3EBA227425280027AFEC /* LearningRecordViewController.m in Sources */,
+				214E8DD2228025E5008CC8A0 /* FlashSaleModel.m in Sources */,
 				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
 				2113C6A622744B1200E5F83B /* ChangePasswordeViewController.m in Sources */,
@@ -913,7 +950,9 @@
 				212A3EAB227402170027AFEC /* RechargeViewController.m in Sources */,
 				21A1FEEC2271B42900245453 /* FlashSaleCellHeaderView.m in Sources */,
 				213492C2227173B300C68DCA /* PublicRefreshHeader.m in Sources */,
+				21226FED227EDE2300AE5EEA /* HomeBannerModel.m in Sources */,
 				21B1F6C722717812001ADBCD /* MineViewController.m in Sources */,
+				21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */,
 				21A2A7492272F37C0001BD93 /* CurriculumCell.m in Sources */,
 				212A3EC6227425C70027AFEC /* InviteCourtesyViewController.m in Sources */,
 				212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */,
@@ -948,9 +987,12 @@
 				212A3EC3227425A60027AFEC /* OnlineConsultationViewController.m in Sources */,
 				21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */,
 				212A3EB7227425040027AFEC /* MyCollectionViewController.m in Sources */,
+				21226FE7227ED3AA00AE5EEA /* PasswordLoginViewController.m in Sources */,
 				21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */,
+				214E8D8A227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m in Sources */,
 				21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */,
 				213492C5227173B300C68DCA /* UIFont+runtime.m in Sources */,
+				21226FEA227ED3F200AE5EEA /* MessageLoginViewController.m in Sources */,
 				213492BB227173B300C68DCA /* MBProgressHUD+Add.m in Sources */,
 				21A2A7462272E4A60001BD93 /* IntervalView.m in Sources */,
 				21A1FEE62271916900245453 /* FlashSaleCell.m in Sources */,

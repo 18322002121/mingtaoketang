@@ -7,6 +7,7 @@
 //
 
 #import "FreeAndRecommendationCell.h"
+#import "HomeBannerModel.h"
 
 @interface FreeAndRecommendationCell ()
 @property (nonatomic,strong) UIView *bottomView;
@@ -34,7 +35,6 @@
 - (UIImageView *)curriculumIcon{
     if (!_curriculumIcon) {
         _curriculumIcon = [[UIImageView alloc]init];
-        _curriculumIcon.backgroundColor = kRandomColor;
         _curriculumIcon.layer.cornerRadius =5;
         [self.bottomView addSubview:_curriculumIcon];
     }
@@ -56,6 +56,11 @@
         make.bottom.mas_equalTo(self.bottomView.mas_bottom).offset(0);
         make.right.mas_equalTo(self.bottomView.mas_right).offset(0);
     }];
-    
 }
+
+- (void)setBannerModel:(HomeData *)bannerModel{
+    _bannerModel = bannerModel;
+    [_curriculumIcon sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",bannerModel.www,bannerModel.path]] placeholderImage:[UIImage imageNamed:@""]];
+}
+
 @end

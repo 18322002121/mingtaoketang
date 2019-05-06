@@ -7,11 +7,14 @@
 //
 
 #import "RecommendedTodayCell.h"
+#import "RecommendedTodayModel.h"
+
 @interface RecommendedTodayCell ()
 @property (nonatomic,strong) UIView *bottomView;
 @property (nonatomic,strong) UIView *iconImage;
 @property (nonatomic,strong) PublicLabel *titles;
 @end
+
 @implementation RecommendedTodayCell
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -70,6 +73,11 @@
         make.centerX.mas_equalTo(self.contentView.mas_centerX).offset(0);
         make.top.mas_equalTo(self.iconImage.mas_bottom).offset(5);
     }];
+}
+
+- (void)setRecommendedModel:(RecommendedTodayData *)recommendedModel{
+    _recommendedModel = recommendedModel;
+    _titles.text = recommendedModel.cat_name;
 }
 
 @end

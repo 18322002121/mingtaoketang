@@ -26,6 +26,7 @@
     /** 请求网络并行异步加载 */
     [self parallelAsynchronous];
     self.automaticallyAdjustsScrollViewInsets = NO;
+
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

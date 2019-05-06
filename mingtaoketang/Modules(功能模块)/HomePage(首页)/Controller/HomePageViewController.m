@@ -18,6 +18,11 @@
 #import "RecommendedCoursesViewController.h"
 #import "SearchResultViewController.h"
 
+#import "HomeBannerModel.h"
+#import "LiveBroadcastCourseShowModel.h"
+#import "RecommendedTodayModel.h"
+#import "FlashSaleModel.h"
+
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusBanner = 0,    //banner
     ShowSectionStatusFree,          //免费课程
@@ -29,6 +34,16 @@ typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
 
 @interface HomePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,PYSearchViewControllerDelegate>
 @property(nonatomic,strong)UICollectionView *collectionView;
+/** banner数组 */
+@property (nonatomic,strong) NSMutableArray *bannerArray;
+/** banner数组2 */
+@property (nonatomic,strong) NSMutableArray *bannerArray2;
+/** 首页直播数组 */
+@property (nonatomic,strong) NSMutableArray *liveBroadcastaArray;
+/** 今日推荐数组 */
+@property (nonatomic,strong) NSMutableArray *recommendedTodayArray;
+/** 限时抢购 */
+@property (nonatomic,strong) NSMutableArray *flashSaleArray;
 
 @end
 
@@ -42,9 +57,168 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
 @implementation HomePageViewController
 
+- (NSMutableArray *)bannerArray{
+    if (!_bannerArray) {
+        _bannerArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _bannerArray;
+}
+
+- (NSMutableArray *)bannerArray2{
+    if (!_bannerArray2) {
+        _bannerArray2 = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _bannerArray2;
+}
+
+- (NSMutableArray *)liveBroadcastaArray{
+    if (!_liveBroadcastaArray) {
+        _liveBroadcastaArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _liveBroadcastaArray;
+}
+
+- (NSMutableArray *)recommendedTodayArray{
+    if (!_recommendedTodayArray) {
+        _recommendedTodayArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _recommendedTodayArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self reloadingRefresh];
     [self loadingViews];
+}
+
+- (void)reloadingRefresh{
+    self.collectionView.mj_header = [PublicRefreshHeader headerWithRefreshingBlock:^{
+        //        [self.datas removeAllObjects];
+        //        NSArray *datas = [self hn_modelArrayWithCategory:self.model.category fromModel:x];
+        //        [self.datas addObjectsFromArray:datas];
+        //        [self.tableView reloadData];
+        [self networkRequest];
+        [self.collectionView.mj_header endRefreshing];
+    }];
+    
+    self.collectionView.mj_footer = [PublicRefreshFooter footerWithRefreshingBlock:^{
+        //        if (self.datas.count == 0 || !self.datas) {
+        //            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        //        }else {
+        //            [self.datas addObjectsFromArray:self.datas];
+        //            [self.tableView.mj_footer endRefreshing];
+        //        }
+    }];
+    [self.collectionView.mj_header beginRefreshing];
+}
+
+
+- (void)networkRequest{
+    [super networkRequest];
+    
+    /** 获取banner图 */
+    [HCYRequestManager banner_type:@"10" success:^(id responseObject) {
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.bannerArray removeAllObjects];
+                HomeBannerModel *model = [HomeBannerModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(HomeData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    HomeData *dataModel = obj;
+                    [self.bannerArray addObject:[NSString stringWithFormat:@"%@%@",dataModel.www,dataModel.path]];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+        NSLog(@"%@",errorMessage);
+    }];
+    
+    /** 获取banner图2 */
+    [HCYRequestManager banner_type:@"5" success:^(id responseObject) {
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.bannerArray2 removeAllObjects];
+                HomeBannerModel *model = [HomeBannerModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(HomeData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    HomeData *dataModel = obj;
+                    [self.bannerArray2 addObject:dataModel];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+        
+    }];
+    
+    /** 直播 */
+    [HCYRequestManager uid:@"33487" success:^(id responseObject) {
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.liveBroadcastaArray removeAllObjects];
+                LiveBroadcastCourseShowModel *model = [LiveBroadcastCourseShowModel yy_modelWithJSON:dict];
+                [model.data enumerateObjectsUsingBlock:^(LiveBroadcastCourseShowData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    LiveBroadcastCourseShowData *dataModel = obj;
+                    [self.liveBroadcastaArray addObject:dataModel];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+
+    }];
+    
+    /** 今日推荐 */
+    [HCYRequestManager appTuijianSuccess:^(id responseObject) {
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.recommendedTodayArray removeAllObjects];
+                RecommendedTodayModel * model = [RecommendedTodayModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(RecommendedTodayData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    RecommendedTodayData *dataModel = obj;
+                    [self.recommendedTodayArray addObject:dataModel];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+
+    }];
+    
+    /** 限时抢购 */
+    [HCYRequestManager appQianggouSuccess:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.flashSaleArray removeAllObjects];
+                FlashSaleModel *model = [FlashSaleModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(FlashSaleData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    FlashSaleData *dataModel = obj;
+                    [self.flashSaleArray addObject:dataModel];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+
+    }];
+    
+    
+    
 }
 
 #pragma mark - 加载瀑布流布局视图
@@ -131,13 +305,13 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     if (section == ShowSectionStatusBanner) {
         return 1;
     }else if (section == ShowSectionStatusFree){
-        return 2;
+        return self.bannerArray2.count;
     }else if(section == ShowSectionStatusLive){
         return 1;
     }else if(section == ShowSectionStatusRecommend){
-        return 4;
+        return self.recommendedTodayArray.count;
     }else if (section == ShowSectionStatusFlashSale){
-        return 4;
+        return self.flashSaleArray.count;
     }else{
         return 1;
     }
@@ -150,15 +324,19 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     UICollectionViewCell *goodsCell = nil;
     if (indexPath.section == ShowSectionStatusBanner) {
         RotationChartCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:rotationChartCell forIndexPath:indexPath];
+        [cell setBannerArray:self.bannerArray];
         goodsCell = cell;
     }else if (indexPath.section ==ShowSectionStatusFree){
             FreeAndRecommendationCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:freeAndRecommendationCell forIndexPath:indexPath];
+        [cell setBannerModel:self.bannerArray2[indexPath.row]];
             goodsCell = cell;
         }else if (indexPath.section == ShowSectionStatusLive){
             LiveBroadcastCourseCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:liveBroadcastCourseCell forIndexPath:indexPath];
+            [cell setLiveBroadcastaArray:self.liveBroadcastaArray];
             goodsCell = cell;
         }else if (indexPath.section == ShowSectionStatusRecommend){
             RecommendedTodayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:recommendedTodayCell forIndexPath:indexPath];
+            [cell setRecommendedModel:self.recommendedTodayArray[indexPath.row]];
             goodsCell = cell;
         }else if (indexPath.section == ShowSectionStatusFlashSale){
             FlashSaleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:flashSaleCell forIndexPath:indexPath];

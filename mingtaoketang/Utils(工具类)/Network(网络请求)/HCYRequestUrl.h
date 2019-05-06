@@ -15,28 +15,17 @@
 
 
 #pragma mark-测试库
-#define API_HOST @"https://app.mingtaokeji.com/index.php"
+#define API_HOST @"http://192.168.1.102/mt/public"
 
 
-//首页轮播图测试成功
-#define banner [NSString stringWithFormat:@"%@/Api/Notetwo/banner",API_HOST]
-
-//检查用户名
-#define appCheckName [NSString stringWithFormat:@"%@/Api/Notetwo/banner",API_HOST]
-
-//检查手机号
-#define appCheckMobile [NSString stringWithFormat:@"%@AppRegister/appCheckMobile",API_HOST]
-
-//检查email
-#define appCheckEmail [NSString stringWithFormat:@"%@AppRegister/appCheckEmail",API_HOST]
-
-//注册提交
-#define appRegisterMethod [NSString stringWithFormat:@"%@AppRegister/appRegisterMethod",API_HOST]
-
-//登陆
-#define appLogin [NSString stringWithFormat:@"%@appLogin/appLogin",API_HOST]
-
-
+/** 首页轮播图 */
+#define banner [NSString stringWithFormat:@"%@/api/Index/banner",API_HOST]
+/** 首页直播 */
+#define home_live [NSString stringWithFormat:@"%@/api/Index/home_live",API_HOST]
+/** 今日推荐 */
+#define tuijian [NSString stringWithFormat:@"%@/api/Index/tuijian",API_HOST]
+/** 限时抢购 */
+#define qianggou [NSString stringWithFormat:@"%@/api/Index/qianggou",API_HOST]
 
 
 

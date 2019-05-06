@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HomeData;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FreeAndRecommendationCell : UICollectionViewCell
+/** banner模型 */
+@property (nonatomic,strong) HomeData *bannerModel;
 
 @end
 
