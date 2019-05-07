@@ -32,6 +32,7 @@
 #import "PublicTextfield.h"
 #import "PublicRefreshFooter.h"
 #import "PublicRefreshHeader.h"
+#import "PublicSegmentedControl.h"
 #import "UIView+Animations.h"
 
 #endif /* mingtaoketang_pch */

@@ -1,14 +1,14 @@
 //
-//  HomeBannerModel.m
+//  InformationViewModel.m
 //  mingtaoketang
 //
-//  Created by Linlin Ge on 2019/5/5.
+//  Created by Linlin Ge on 2019/5/7.
 //  Copyright © 2019年 hcy. All rights reserved.
 //
 
-#import "HomeBannerModel.h"
+#import "InformationViewModel.h"
 
-@implementation HomeData
+@implementation InformationViewData
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{
              @"iid":@"id"
@@ -16,9 +16,8 @@
 }
 @end
 
-@implementation HomeBannerModel
+@implementation InformationViewModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"data" : [HomeData class]};
+    return @{@"data" : [InformationViewData class]};
 }
-
 @end

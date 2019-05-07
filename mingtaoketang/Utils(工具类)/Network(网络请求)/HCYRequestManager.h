@@ -38,4 +38,14 @@ typedef void (^failureBlock)(NSError * errorMessage);
 /** 限时抢购 */
 + (void)appQianggouSuccess:(successBlock)success failure:(failureBlock)failure;
 
+/** 资讯,助手,开班 */
++ (void)appArticle_catSuccess:(successBlock)success failure:(failureBlock)failure;
+
+/** 资讯助手文章 */
++ (void)appcat_id:(NSString *)cat_ids success:(successBlock)success failure:(failureBlock)failure;
+
+/** 免费视频列表 */
++ (void)appTaste_videoSuccess:(successBlock)success failure:(failureBlock)failure;
+
+
 @end

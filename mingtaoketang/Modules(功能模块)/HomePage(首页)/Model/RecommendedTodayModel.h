@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RecommendedTodayData :NSObject
+@property (nonatomic , copy) NSString              * cat_thumb;
 @property (nonatomic , copy) NSString              * cat_id;
 @property (nonatomic , copy) NSString              * cat_name;
 

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FlashSaleData :NSObject
 @property (nonatomic , copy) NSString              * market_price;
+@property (nonatomic , copy) NSString              * cat_thumb;
 @property (nonatomic , copy) NSString              * cat_name;
 @property (nonatomic , copy) NSString              * shop_price;
 @property (nonatomic , copy) NSString              * cat_id;

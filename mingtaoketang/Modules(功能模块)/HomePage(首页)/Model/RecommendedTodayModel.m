@@ -11,9 +11,9 @@
 @implementation RecommendedTodayData
 
 @end
-
 @implementation RecommendedTodayModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"data" : [RecommendedTodayData class]};
 }
 @end
+

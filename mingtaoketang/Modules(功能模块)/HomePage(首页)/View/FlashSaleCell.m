@@ -7,6 +7,8 @@
 //
 
 #import "FlashSaleCell.h"
+#import "FlashSaleModel.h"
+
 @interface FlashSaleCell ()
 @property (nonatomic,strong) UIView *bottomView;
 @property (nonatomic,strong) UIImageView *iconImage;
@@ -45,7 +47,6 @@
 - (UIImageView *)iconImage{
     if (!_iconImage) {
         _iconImage = [[UIImageView alloc]init];
-        _iconImage.backgroundColor = kRandomColor;
         _iconImage.layer.cornerRadius = 5;
         [self.bottomView addSubview:_iconImage];
     }
@@ -136,6 +137,13 @@
     label.attributedText = str;
 }
 
-
+- (void)setFlashSaleModel:(FlashSaleData *)flashSaleModel{
+    _flashSaleModel = flashSaleModel;
+    [_iconImage sd_setImageWithURL:[NSURL URLWithString:flashSaleModel.cat_thumb] placeholderImage:[UIImage imageNamed:@""]];
+    _titles.text = flashSaleModel.cat_name;
+    _originalPrice.text = flashSaleModel.market_price;
+    _presentPrice.text = flashSaleModel.shop_price;
+    
+}
 
 @end

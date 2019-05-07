@@ -101,7 +101,7 @@ static NSString *const liveBroadcastCourseShowCell = @"LiveBroadcastCourseShowCe
 - (void)bottomViews:(UIView *)bottomViews {
     bottomViews.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
     bottomViews.layer.shadowOffset = CGSizeMake(0,5);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
-    bottomViews.layer.shadowOpacity = 0.5;//阴影透明度，默认0
+    bottomViews.layer.shadowOpacity = 0.2;//阴影透明度，默认0
     bottomViews.layer.shadowRadius = 5;//阴影半径，默认3
 }
 

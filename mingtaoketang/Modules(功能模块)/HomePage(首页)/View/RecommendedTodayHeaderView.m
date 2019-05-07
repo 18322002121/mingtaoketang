@@ -7,10 +7,12 @@
 //
 
 #import "RecommendedTodayHeaderView.h"
+
 @interface RecommendedTodayHeaderView ()
 @property (nonatomic,strong) UIView *bottomView;
 @property (nonatomic,strong) PublicLabel *titles;
 @end
+
 @implementation RecommendedTodayHeaderView
 
 - (instancetype)initWithFrame:(CGRect)frame{

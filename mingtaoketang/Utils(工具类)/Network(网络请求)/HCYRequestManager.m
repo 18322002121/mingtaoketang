@@ -75,4 +75,23 @@
     [[HCYRequestHandler shareManager]sendRequestServerUrl:qianggou requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
 }
 
+/** 资讯,助手,开班 */
++ (void)appArticle_catSuccess:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:article_cat requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
+}
+
+/** 资讯助手文章 */
++ (void)appcat_id:(NSString *)cat_ids success:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setValue:cat_ids forKey:@"cat_id"];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:appCat_id requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
+}
+
+/** 免费视频列表 */
++ (void)appTaste_videoSuccess:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:taste_video requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
+}
+
 @end

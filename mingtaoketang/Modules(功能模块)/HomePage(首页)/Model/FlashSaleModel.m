@@ -11,7 +11,6 @@
 @implementation FlashSaleData
 
 @end
-
 @implementation FlashSaleModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"data" : [FlashSaleData class]};

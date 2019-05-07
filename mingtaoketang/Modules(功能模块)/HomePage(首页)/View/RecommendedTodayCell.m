@@ -11,7 +11,7 @@
 
 @interface RecommendedTodayCell ()
 @property (nonatomic,strong) UIView *bottomView;
-@property (nonatomic,strong) UIView *iconImage;
+@property (nonatomic,strong) UIImageView *iconImage;
 @property (nonatomic,strong) PublicLabel *titles;
 @end
 
@@ -34,10 +34,9 @@
     return _bottomView;
 }
 
-- (UIView *)iconImage{
+- (UIImageView *)iconImage{
     if (!_iconImage) {
         _iconImage = [[UIImageView alloc]init];
-        _iconImage.backgroundColor = kRandomColor;
         _iconImage.layer.cornerRadius = 5;
         [self.bottomView addSubview:_iconImage];
     }
@@ -46,7 +45,7 @@
 
 - (PublicLabel *)titles{
     if (!_titles) {
-        _titles = [PublicLabel labelWithText:@"客服接待必备基础设置" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _titles = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.bottomView addSubview:_titles];
     }
     return _titles;
@@ -78,6 +77,7 @@
 - (void)setRecommendedModel:(RecommendedTodayData *)recommendedModel{
     _recommendedModel = recommendedModel;
     _titles.text = recommendedModel.cat_name;
+    [_iconImage sd_setImageWithURL:[NSURL URLWithString:recommendedModel.cat_thumb] placeholderImage:[UIImage imageNamed:@""]];
 }
 
 @end

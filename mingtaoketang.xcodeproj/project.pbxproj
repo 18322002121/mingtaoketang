@@ -90,7 +90,12 @@
 		21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C3227177FF001ADBCD /* LiveBroadcastViewController.m */; };
 		21B1F6C722717812001ADBCD /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C622717812001ADBCD /* MineViewController.m */; };
 		21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */; };
+		21B74FF422803B2F00DEBBDA /* InformationClassAssistantHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */; };
 		21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */; };
+		21F5B66A2281233600B04D9A /* InformationClassAssistantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B6692281233600B04D9A /* InformationClassAssistantModel.m */; };
+		21F5B670228133FC00B04D9A /* InformationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B66F228133FC00B04D9A /* InformationViewCell.m */; };
+		21F5B673228139E900B04D9A /* InformationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B672228139E900B04D9A /* InformationViewModel.m */; };
+		21F5B6762281526E00B04D9A /* FreeCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B6752281526E00B04D9A /* FreeCourseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,8 +283,18 @@
 		21B1F6C622717812001ADBCD /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		21B25F4B2272A132009060D4 /* LiveBroadcastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCell.h; sourceTree = "<group>"; };
 		21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCell.m; sourceTree = "<group>"; };
+		21B74FF222803B2F00DEBBDA /* InformationClassAssistantHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationClassAssistantHeaderView.h; sourceTree = "<group>"; };
+		21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationClassAssistantHeaderView.m; sourceTree = "<group>"; };
 		21B9FE03227FCBE200D6822C /* LiveBroadcastCourseShowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCourseShowCell.h; sourceTree = "<group>"; };
 		21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCourseShowCell.m; sourceTree = "<group>"; };
+		21F5B6682281233600B04D9A /* InformationClassAssistantModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationClassAssistantModel.h; sourceTree = "<group>"; };
+		21F5B6692281233600B04D9A /* InformationClassAssistantModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationClassAssistantModel.m; sourceTree = "<group>"; };
+		21F5B66E228133FC00B04D9A /* InformationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationViewCell.h; sourceTree = "<group>"; };
+		21F5B66F228133FC00B04D9A /* InformationViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationViewCell.m; sourceTree = "<group>"; };
+		21F5B671228139E900B04D9A /* InformationViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationViewModel.h; sourceTree = "<group>"; };
+		21F5B672228139E900B04D9A /* InformationViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationViewModel.m; sourceTree = "<group>"; };
+		21F5B6742281526E00B04D9A /* FreeCourseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeCourseModel.h; sourceTree = "<group>"; };
+		21F5B6752281526E00B04D9A /* FreeCourseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeCourseModel.m; sourceTree = "<group>"; };
 		7B9B0C9AC483CB012A7D3B08 /* Pods-mingtaoketang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.release.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.release.xcconfig"; sourceTree = "<group>"; };
 		83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mingtaoketang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D764184BF4CC0816015E77 /* Pods-mingtaoketang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -587,6 +602,10 @@
 				21A2A7452272E4A60001BD93 /* IntervalView.m */,
 				21B9FE03227FCBE200D6822C /* LiveBroadcastCourseShowCell.h */,
 				21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */,
+				21B74FF222803B2F00DEBBDA /* InformationClassAssistantHeaderView.h */,
+				21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */,
+				21F5B66E228133FC00B04D9A /* InformationViewCell.h */,
+				21F5B66F228133FC00B04D9A /* InformationViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -733,6 +752,12 @@
 				214E8DCE228023B4008CC8A0 /* RecommendedTodayModel.m */,
 				214E8DD0228025E5008CC8A0 /* FlashSaleModel.h */,
 				214E8DD1228025E5008CC8A0 /* FlashSaleModel.m */,
+				21F5B6682281233600B04D9A /* InformationClassAssistantModel.h */,
+				21F5B6692281233600B04D9A /* InformationClassAssistantModel.m */,
+				21F5B671228139E900B04D9A /* InformationViewModel.h */,
+				21F5B672228139E900B04D9A /* InformationViewModel.m */,
+				21F5B6742281526E00B04D9A /* FreeCourseModel.h */,
+				21F5B6752281526E00B04D9A /* FreeCourseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -944,6 +969,7 @@
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
 				2113C6A622744B1200E5F83B /* ChangePasswordeViewController.m in Sources */,
 				218477B522755AE80048CAE9 /* LearningRecordHeaderView.m in Sources */,
+				21F5B670228133FC00B04D9A /* InformationViewCell.m in Sources */,
 				21A2A74C2272F9440001BD93 /* CurriculumHeaderView.m in Sources */,
 				2113C6A922744B5700E5F83B /* FeedbackViewController.m in Sources */,
 				21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */,
@@ -953,8 +979,10 @@
 				21226FED227EDE2300AE5EEA /* HomeBannerModel.m in Sources */,
 				21B1F6C722717812001ADBCD /* MineViewController.m in Sources */,
 				21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */,
+				21F5B673228139E900B04D9A /* InformationViewModel.m in Sources */,
 				21A2A7492272F37C0001BD93 /* CurriculumCell.m in Sources */,
 				212A3EC6227425C70027AFEC /* InviteCourtesyViewController.m in Sources */,
+				21F5B6762281526E00B04D9A /* FreeCourseModel.m in Sources */,
 				212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */,
 				212A3EAE227403AC0027AFEC /* RechargeHeaderView.m in Sources */,
 				2134928E2271672E00C68DCA /* BaseTabBarController.m in Sources */,
@@ -974,6 +1002,7 @@
 				2113C6A322744ACB00E5F83B /* ClearCacheViewController.m in Sources */,
 				213492C1227173B300C68DCA /* UIView+Animations.m in Sources */,
 				213492C4227173B300C68DCA /* PublicRefreshFooter.m in Sources */,
+				21F5B66A2281233600B04D9A /* InformationClassAssistantModel.m in Sources */,
 				21A2A74F227302780001BD93 /* MineViewCell.m in Sources */,
 				212A3EBD2274254A0027AFEC /* MyCourseViewController.m in Sources */,
 				213492BD227173B300C68DCA /* PublicTextfield.m in Sources */,
@@ -991,6 +1020,7 @@
 				21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */,
 				214E8D8A227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m in Sources */,
 				21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */,
+				21B74FF422803B2F00DEBBDA /* InformationClassAssistantHeaderView.m in Sources */,
 				213492C5227173B300C68DCA /* UIFont+runtime.m in Sources */,
 				21226FEA227ED3F200AE5EEA /* MessageLoginViewController.m in Sources */,
 				213492BB227173B300C68DCA /* MBProgressHUD+Add.m in Sources */,

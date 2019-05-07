@@ -17,11 +17,15 @@
 #import "FreeCourseViewController.h"
 #import "RecommendedCoursesViewController.h"
 #import "SearchResultViewController.h"
-
+#import "RecommendedTodayHeaderView.h"
+#import "InformationClassAssistantHeaderView.h"
+#import "InformationViewCell.h"
 #import "HomeBannerModel.h"
 #import "LiveBroadcastCourseShowModel.h"
 #import "RecommendedTodayModel.h"
 #import "FlashSaleModel.h"
+#import "InformationClassAssistantModel.h"
+#import "InformationViewModel.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusBanner = 0,    //banner
@@ -44,7 +48,10 @@ typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
 @property (nonatomic,strong) NSMutableArray *recommendedTodayArray;
 /** 限时抢购 */
 @property (nonatomic,strong) NSMutableArray *flashSaleArray;
-
+/** 资讯,开班,助手数组 */
+@property (nonatomic,strong) NSMutableArray *informationClassAssistantArray;
+/** 资讯助手文章 */
+@property (nonatomic,strong) NSMutableArray *informationViewArray;
 @end
 
 static NSString *const rotationChartCell = @"RotationChartCell";
@@ -54,7 +61,8 @@ static NSString *const recommendedTodayCell = @"RecommendedTodayCell";
 static NSString *const flashSaleCell = @"FlashSaleCell";
 static NSString *const recommendedTodayHeaderView = @"RecommendedTodayHeaderView";
 static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
-
+static NSString *const informationClassAssistantHeaderView = @"InformationClassAssistantHeaderView";
+static NSString *const informationViewCell = @"InformationViewCell";
 @implementation HomePageViewController
 
 - (NSMutableArray *)bannerArray{
@@ -85,6 +93,27 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     return _recommendedTodayArray;
 }
 
+- (NSMutableArray *)flashSaleArray{
+    if (!_flashSaleArray) {
+        _flashSaleArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _flashSaleArray;
+}
+
+- (NSMutableArray *)informationClassAssistantArray{
+    if (!_informationClassAssistantArray) {
+        _informationClassAssistantArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _informationClassAssistantArray;
+}
+
+- (NSMutableArray *)informationViewArray{
+    if (!_informationViewArray) {
+        _informationViewArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _informationViewArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self reloadingRefresh];
@@ -101,15 +130,15 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
         [self.collectionView.mj_header endRefreshing];
     }];
     
-    self.collectionView.mj_footer = [PublicRefreshFooter footerWithRefreshingBlock:^{
-        //        if (self.datas.count == 0 || !self.datas) {
-        //            [self.tableView.mj_footer endRefreshingWithNoMoreData];
-        //        }else {
-        //            [self.datas addObjectsFromArray:self.datas];
-        //            [self.tableView.mj_footer endRefreshing];
-        //        }
-    }];
-    [self.collectionView.mj_header beginRefreshing];
+//    self.collectionView.mj_footer = [PublicRefreshFooter footerWithRefreshingBlock:^{
+//        //        if (self.datas.count == 0 || !self.datas) {
+//        //            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+//        //        }else {
+//        //            [self.datas addObjectsFromArray:self.datas];
+//        //            [self.tableView.mj_footer endRefreshing];
+//        //        }
+//    }];
+//    [self.collectionView.mj_header beginRefreshing];
 }
 
 
@@ -198,7 +227,6 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     
     /** 限时抢购 */
     [HCYRequestManager appQianggouSuccess:^(id responseObject) {
-        NSLog(@"%@",responseObject);
         NSDictionary *dict = responseObject;
         if (kDictIsEmpty(dict)) {
             
@@ -217,7 +245,25 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
     }];
     
-    
+    /** 资讯,开班,助手 */
+    [HCYRequestManager appArticle_catSuccess:^(id responseObject) {
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.informationClassAssistantArray removeAllObjects];
+                InformationClassAssistantModel *model = [InformationClassAssistantModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(InformationClassAssistantData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    InformationClassAssistantData *dataModel = obj;
+                    [self.informationClassAssistantArray addObject:dataModel];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+        NSLog(@"%@",errorMessage);
+    }];
     
 }
 
@@ -261,6 +307,11 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout =[[UICollectionViewFlowLayout alloc]init];
+        if (@available(iOS 9.0, *)) {
+            layout.sectionHeadersPinToVisibleBounds = YES;
+        } else {
+            // Fallback on earlier versions
+        }
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, kNavAndStatusHight, KScreenWidth, KScreenHeight - kNavBarHeight - kTabBarHeight - kStatusBarHeight) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -287,7 +338,13 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
         //限时抢购header
         [_collectionView registerClass:[FlashSaleCellHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:flashSaleCellHeaderView];
         
+        //资讯
+        [_collectionView registerClass:[InformationClassAssistantHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:informationClassAssistantHeaderView];
+        
+        [_collectionView registerClass:[InformationViewCell class] forCellWithReuseIdentifier:informationViewCell];
+        
         [self.view addSubview:_collectionView];
+
     }
     return _collectionView;
 }
@@ -295,7 +352,7 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 #pragma mark - 定义展示的Section的个数
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 5;
+    return 6;
 }
 
 #pragma mark - 定义展示的UICollectionViewCell的个数
@@ -312,6 +369,8 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
         return self.recommendedTodayArray.count;
     }else if (section == ShowSectionStatusFlashSale){
         return self.flashSaleArray.count;
+    }else if (section == ShowSectionStatusInformation){
+        return self.informationViewArray.count;
     }else{
         return 1;
     }
@@ -340,6 +399,11 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
             goodsCell = cell;
         }else if (indexPath.section == ShowSectionStatusFlashSale){
             FlashSaleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:flashSaleCell forIndexPath:indexPath];
+            [cell setFlashSaleModel:self.flashSaleArray[indexPath.row]];
+            goodsCell = cell;
+        }else if (indexPath.section == ShowSectionStatusInformation){
+            InformationViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:informationViewCell forIndexPath:indexPath];
+            [cell setInformationModel:self.informationViewArray[indexPath.row]];
             goodsCell = cell;
         }
     
@@ -360,6 +424,8 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
         return CGSizeMake((KScreenWidth - 36)/2, 143);
     }else if (indexPath.section == ShowSectionStatusFlashSale){
         return CGSizeMake(KScreenWidth - 26, 110);
+    }else if (indexPath.section == ShowSectionStatusInformation){
+        return CGSizeMake(KScreenWidth - 26, 300);
     }else{
         return CGSizeZero;
     }
@@ -399,6 +465,11 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
             }else if(indexPath.section == ShowSectionStatusFlashSale){
                 FlashSaleCellHeaderView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:flashSaleCellHeaderView forIndexPath:indexPath];
                 reusableview = headerView;
+            }else if (indexPath.section == ShowSectionStatusInformation){
+                InformationClassAssistantHeaderView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:informationClassAssistantHeaderView forIndexPath:indexPath];
+                [headerView setInformationClassAssistantArray:self.informationClassAssistantArray];
+                [self reloadInformationClassAssistantHeaderView:headerView];
+                reusableview = headerView;
             }
         }
     return reusableview;
@@ -408,7 +479,7 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     
-    if (section == ShowSectionStatusRecommend || section == ShowSectionStatusFlashSale) {
+    if (section == ShowSectionStatusRecommend || section == ShowSectionStatusFlashSale || section == ShowSectionStatusInformation) {
         return CGSizeMake(KScreenWidth, 50);
     }else{
         return CGSizeZero;
@@ -444,5 +515,49 @@ static NSString *const flashSaleCellHeaderView = @"FlashSaleCellHeaderView";
     RecommendedCoursesViewController *recommendedCoursesView = [[RecommendedCoursesViewController alloc]init];
     [self.navigationController pushViewController:recommendedCoursesView animated:YES];
 }
+
+#pragma mark - 加载 资讯,开班,助手
+
+- (void)reloadInformationClassAssistantHeaderView:(InformationClassAssistantHeaderView *)header{
+    /** 资讯按钮回调 */
+    header.informationButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        [HCYRequestManager appcat_id:[NSString stringWithFormat:@"%ld",(long)sender.tag] success:^(id responseObject) {
+            NSDictionary *dict = responseObject;
+            if (kDictIsEmpty(dict)) {
+                
+            }else{
+                if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                    [self.informationViewArray removeAllObjects];
+                    InformationViewModel *model = [InformationViewModel yy_modelWithJSON:responseObject];
+                    [model.data enumerateObjectsUsingBlock:^(InformationViewData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        InformationViewData *dataModel = obj;
+                        [self.informationViewArray addObject:dataModel];
+                    }];
+                    [self.collectionView reloadData];
+                }
+            }
+        } failure:^(NSError *errorMessage) {
+            NSLog(@"%@",errorMessage);
+        }];
+    };
+    /** 开班按钮回调 */
+    header.offerCourseButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        [HCYRequestManager appcat_id:[NSString stringWithFormat:@"%ld",(long)sender.tag] success:^(id responseObject) {
+            NSLog(@"%@",responseObject);
+        } failure:^(NSError *errorMessage) {
+            NSLog(@"%@",errorMessage);
+        }];
+    };
+    /** 助手按钮回调 */
+    header.assistantButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        [HCYRequestManager appcat_id:[NSString stringWithFormat:@"%ld",(long)sender.tag] success:^(id responseObject) {
+            NSLog(@"%@",responseObject);
+        } failure:^(NSError *errorMessage) {
+            NSLog(@"%@",errorMessage);
+        }];
+    };
+}
+
+
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "FreeCourseCell.h"
+#import "FreeCourseModel.h"
+
 @interface FreeCourseCell ()
 @property (nonatomic,strong) UIView *bottomView;
 @property (nonatomic,strong) UIImageView *showImage;
@@ -59,7 +61,7 @@
 
 - (PublicLabel *)titles{
     if (!_titles) {
-        _titles = [PublicLabel labelWithText:@"客保存文件格式" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:18] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _titles = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:18] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.bottomView addSubview:_titles];
     }
     return _titles;
@@ -83,8 +85,7 @@
 
 - (PublicLabel *)numberVisitors{
     if (!_numberVisitors) {
-        _numberVisitors = [PublicLabel labelWithText:@"565人已观看" textColor:[UIColor colorWithHexString:@"#2393EE"] font:[UIFont systemFontOfSize:12] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
-        [self contentStr:_numberVisitors.text numberVisitors:_numberVisitors];
+        _numberVisitors = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#2393EE"] font:[UIFont systemFontOfSize:12] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.bottomView addSubview:_numberVisitors];
     }
     return _numberVisitors;
@@ -146,6 +147,14 @@
     bottomViews.layer.shadowOffset = CGSizeMake(0,5);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
     bottomViews.layer.shadowOpacity = 0.5;//阴影透明度，默认0
     bottomViews.layer.shadowRadius = 5;//阴影半径，默认3
+}
+
+- (void)setFreeCourseModel:(FreeCourseData *)freeCourseModel{
+    _freeCourseModel = freeCourseModel;
+    [_showImage sd_setImageWithURL:[NSURL URLWithString:freeCourseModel.goods_thumb] placeholderImage:[UIImage imageNamed:@""]];
+    _titles.text = freeCourseModel.goods_name;
+    _numberVisitors.text = [NSString stringWithFormat:@"%@人已观看",freeCourseModel.click_count];
+    [self contentStr:_numberVisitors.text numberVisitors:_numberVisitors];
 }
 
 @end

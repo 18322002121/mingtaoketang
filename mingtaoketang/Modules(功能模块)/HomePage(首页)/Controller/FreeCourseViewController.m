@@ -9,19 +9,21 @@
 #import "FreeCourseViewController.h"
 #import "FreeCourseCell.h"
 #import "VideoPlayerViewController.h"
+#import "FreeCourseModel.h"
 
 @interface FreeCourseViewController ()
 @property(nonatomic,strong)PublicTableView *tableView;
-@property(nonatomic,strong)NSMutableArray *datas;
+/** 视频列表模型数组 */
+@property(nonatomic,strong)NSMutableArray *freeCourseArray;
 @end
 static NSString *const freeCourseCell =@"FreeCourseCell";
 @implementation FreeCourseViewController
 
-- (NSMutableArray *)datas{
-    if (!_datas) {
-        _datas = [NSMutableArray arrayWithCapacity:0];
+- (NSMutableArray *)freeCourseArray{
+    if (!_freeCourseArray) {
+        _freeCourseArray = [NSMutableArray arrayWithCapacity:0];
     }
-    return _datas;
+    return _freeCourseArray;
 }
 
 - (void)viewDidLoad {
@@ -29,6 +31,27 @@ static NSString *const freeCourseCell =@"FreeCourseCell";
     [self tableView];
     self.title = @"免费课程";
     [self reloadingRefresh];
+}
+
+- (void)networkRequest{
+    [super networkRequest];
+    [HCYRequestManager appTaste_videoSuccess:^(id responseObject) {
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                FreeCourseModel *model = [FreeCourseModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(FreeCourseData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    FreeCourseData *dataModel = obj;
+                    [self.freeCourseArray addObject:dataModel];
+                }];
+                [self.tableView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+        NSLog(@"%@",errorMessage);
+    }];
 }
 
 #pragma mark -刷新操作
@@ -43,10 +66,10 @@ static NSString *const freeCourseCell =@"FreeCourseCell";
     }];
     
         self.tableView.mj_footer = [PublicRefreshFooter footerWithRefreshingBlock:^{
-            if (self.datas.count == 0 || !self.datas) {
+            if (self.freeCourseArray.count == 0 || !self.freeCourseArray) {
                 [self.tableView.mj_footer endRefreshingWithNoMoreData];
             }else {
-                [self.datas addObjectsFromArray:self.datas];
+                [self.freeCourseArray addObjectsFromArray:self.freeCourseArray];
     [self.tableView.mj_footer endRefreshing];
             }
         }];
@@ -69,12 +92,13 @@ static NSString *const freeCourseCell =@"FreeCourseCell";
     };
     
     tableviews.numberOfRowsInSectionBlock = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
-        return 4;
+        return self.freeCourseArray.count;
     };
     
     tableviews.cellForRowAtIndexPathBlock = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
         UITableViewCell *normalCell = nil;
         FreeCourseCell *cell =[tableView dequeueReusableCellWithIdentifier:freeCourseCell forIndexPath:indexPath];
+        [cell setFreeCourseModel:self.freeCourseArray[indexPath.row]];
         normalCell = cell;
         return normalCell;
     };

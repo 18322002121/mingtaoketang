@@ -26,7 +26,12 @@
 #define tuijian [NSString stringWithFormat:@"%@/api/Index/tuijian",API_HOST]
 /** 限时抢购 */
 #define qianggou [NSString stringWithFormat:@"%@/api/Index/qianggou",API_HOST]
-
+/** 资讯,助手,开班 */
+#define article_cat [NSString stringWithFormat:@"%@/api/Index/article_cat",API_HOST]
+/** 资讯助手文章 */
+#define appCat_id [NSString stringWithFormat:@"%@/api/Index/article",API_HOST]
+/** 免费视频列表 */
+#define taste_video [NSString stringWithFormat:@"%@/api/Index/taste_video",API_HOST]
 
 
 

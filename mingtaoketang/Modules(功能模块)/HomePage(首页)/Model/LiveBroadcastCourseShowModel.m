@@ -9,15 +9,14 @@
 #import "LiveBroadcastCourseShowModel.h"
 
 @implementation LiveBroadcastCourseShowData
-
-@end
-@implementation LiveBroadcastCourseShowModel
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{
              @"iid":@"id"
              };
 }
+@end
 
+@implementation LiveBroadcastCourseShowModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"data" : [LiveBroadcastCourseShowData class]};
 }
