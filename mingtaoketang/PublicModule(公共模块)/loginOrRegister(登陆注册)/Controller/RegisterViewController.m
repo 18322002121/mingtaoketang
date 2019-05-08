@@ -13,8 +13,6 @@
 /** 初始化注册view */
 @property (nonatomic,strong) RegisterView *registerView;
 
-
-
 @end
 
 @implementation RegisterViewController
@@ -35,6 +33,18 @@
 }
 
 - (void)reloadRegisterView:(RegisterView *)registerView{
+    /** 发送验证码按钮回调 */
+    registerView.sendVerificationButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        NSLog(@"发送验证码按钮回调");
+    };
+    /** 注册按钮回调 */
+    registerView.registerButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        NSLog(@"注册按钮回调");
+    };
     
+    /** 密码显示与隐藏按钮回调 */
+    registerView.hideOrShowButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        NSLog(@"密码显示与隐藏按钮回调");
+    };
 }
 @end

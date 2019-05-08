@@ -92,6 +92,16 @@
 		21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */; };
 		21B74FF422803B2F00DEBBDA /* InformationClassAssistantHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */; };
 		21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */; };
+		21ED7AC7228267630014D178 /* AppDelegate+BootPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7AC6228267630014D178 /* AppDelegate+BootPage.m */; };
+		21ED7ACF22826ACA0014D178 /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 21ED7ACA22826ACA0014D178 /* GuideImage.bundle */; };
+		21ED7AD022826ACA0014D178 /* DHGifImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ACB22826ACA0014D178 /* DHGifImageOperation.m */; };
+		21ED7AD122826ACA0014D178 /* DHGuidePageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ACE22826ACA0014D178 /* DHGuidePageHUD.m */; };
+		21ED7AD622826D450014D178 /* guideImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ED7AD322826D440014D178 /* guideImage2.png */; };
+		21ED7AD722826D450014D178 /* guideImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ED7AD422826D440014D178 /* guideImage3.png */; };
+		21ED7AD822826D450014D178 /* guideImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ED7AD522826D440014D178 /* guideImage1.png */; };
+		21ED7ADB228273CB0014D178 /* MessageLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ADA228273CB0014D178 /* MessageLoginView.m */; };
+		21ED7AE022827D480014D178 /* EducationalInstitutionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ADF22827D480014D178 /* EducationalInstitutionsViewController.m */; };
+		21ED7AE322827E3C0014D178 /* EducationalInstitutionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7AE222827E3C0014D178 /* EducationalInstitutionsView.m */; };
 		21F5B66A2281233600B04D9A /* InformationClassAssistantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B6692281233600B04D9A /* InformationClassAssistantModel.m */; };
 		21F5B670228133FC00B04D9A /* InformationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B66F228133FC00B04D9A /* InformationViewCell.m */; };
 		21F5B673228139E900B04D9A /* InformationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B672228139E900B04D9A /* InformationViewModel.m */; };
@@ -291,6 +301,22 @@
 		21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationClassAssistantHeaderView.m; sourceTree = "<group>"; };
 		21B9FE03227FCBE200D6822C /* LiveBroadcastCourseShowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCourseShowCell.h; sourceTree = "<group>"; };
 		21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCourseShowCell.m; sourceTree = "<group>"; };
+		21ED7AC5228267630014D178 /* AppDelegate+BootPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BootPage.h"; sourceTree = "<group>"; };
+		21ED7AC6228267630014D178 /* AppDelegate+BootPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BootPage.m"; sourceTree = "<group>"; };
+		21ED7ACA22826ACA0014D178 /* GuideImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuideImage.bundle; sourceTree = "<group>"; };
+		21ED7ACB22826ACA0014D178 /* DHGifImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGifImageOperation.m; sourceTree = "<group>"; };
+		21ED7ACC22826ACA0014D178 /* DHGuidePageHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGuidePageHUD.h; sourceTree = "<group>"; };
+		21ED7ACD22826ACA0014D178 /* DHGifImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGifImageOperation.h; sourceTree = "<group>"; };
+		21ED7ACE22826ACA0014D178 /* DHGuidePageHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGuidePageHUD.m; sourceTree = "<group>"; };
+		21ED7AD322826D440014D178 /* guideImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guideImage2.png; sourceTree = "<group>"; };
+		21ED7AD422826D440014D178 /* guideImage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guideImage3.png; sourceTree = "<group>"; };
+		21ED7AD522826D440014D178 /* guideImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guideImage1.png; sourceTree = "<group>"; };
+		21ED7AD9228273CB0014D178 /* MessageLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageLoginView.h; sourceTree = "<group>"; };
+		21ED7ADA228273CB0014D178 /* MessageLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageLoginView.m; sourceTree = "<group>"; };
+		21ED7ADE22827D480014D178 /* EducationalInstitutionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EducationalInstitutionsViewController.h; sourceTree = "<group>"; };
+		21ED7ADF22827D480014D178 /* EducationalInstitutionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationalInstitutionsViewController.m; sourceTree = "<group>"; };
+		21ED7AE122827E3C0014D178 /* EducationalInstitutionsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EducationalInstitutionsView.h; sourceTree = "<group>"; };
+		21ED7AE222827E3C0014D178 /* EducationalInstitutionsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationalInstitutionsView.m; sourceTree = "<group>"; };
 		21F5B6682281233600B04D9A /* InformationClassAssistantModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationClassAssistantModel.h; sourceTree = "<group>"; };
 		21F5B6692281233600B04D9A /* InformationClassAssistantModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationClassAssistantModel.m; sourceTree = "<group>"; };
 		21F5B66E228133FC00B04D9A /* InformationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationViewCell.h; sourceTree = "<group>"; };
@@ -372,6 +398,7 @@
 		2134923D2271561A00C68DCA /* mingtaoketang */ = {
 			isa = PBXGroup;
 			children = (
+				21ED7AC822826AA70014D178 /* resource(资源) */,
 				2134927D2271631700C68DCA /* other(程序启动模块) */,
 				2134927C2271630B00C68DCA /* PublicModule(公共模块) */,
 				2134927B227162FA00C68DCA /* Modules(功能模块) */,
@@ -426,6 +453,7 @@
 		2134927C2271630B00C68DCA /* PublicModule(公共模块) */ = {
 			isa = PBXGroup;
 			children = (
+				21ED7ADC22827CA80014D178 /* loginOrRegister(登陆注册) */,
 				2134928C2271672E00C68DCA /* BaseTabBarController.h */,
 				2134928D2271672E00C68DCA /* BaseTabBarController.m */,
 				21A1FED522717C8600245453 /* BaseNavigationBar.h */,
@@ -434,13 +462,6 @@
 				213492722271628F00C68DCA /* BaseNavigationController.m */,
 				21B1F6B9227177AA001ADBCD /* BaseViewController.h */,
 				21B1F6BA227177AA001ADBCD /* BaseViewController.m */,
-				21226FE5227ED3AA00AE5EEA /* PasswordLoginViewController.h */,
-				21226FE6227ED3AA00AE5EEA /* PasswordLoginViewController.m */,
-				21226FE8227ED3F200AE5EEA /* MessageLoginViewController.h */,
-				21226FE9227ED3F200AE5EEA /* MessageLoginViewController.m */,
-				21F5B67F22819EA200B04D9A /* RegisterViewController.h */,
-				21F5B68022819EA200B04D9A /* RegisterViewController.m */,
-				21F5B67722815E1B00B04D9A /* View */,
 			);
 			path = "PublicModule(公共模块)";
 			sourceTree = "<group>";
@@ -450,6 +471,8 @@
 			children = (
 				2134923E2271561A00C68DCA /* AppDelegate.h */,
 				2134923F2271561A00C68DCA /* AppDelegate.m */,
+				21ED7AC5228267630014D178 /* AppDelegate+BootPage.h */,
+				21ED7AC6228267630014D178 /* AppDelegate+BootPage.m */,
 			);
 			path = "other(程序启动模块)";
 			sourceTree = "<group>";
@@ -762,6 +785,61 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		21ED7AC822826AA70014D178 /* resource(资源) */ = {
+			isa = PBXGroup;
+			children = (
+				21ED7AC922826ACA0014D178 /* DHGuidePageHUD */,
+			);
+			path = "resource(资源)";
+			sourceTree = "<group>";
+		};
+		21ED7AC922826ACA0014D178 /* DHGuidePageHUD */ = {
+			isa = PBXGroup;
+			children = (
+				21ED7AD222826D300014D178 /* images */,
+				21ED7ACA22826ACA0014D178 /* GuideImage.bundle */,
+				21ED7ACB22826ACA0014D178 /* DHGifImageOperation.m */,
+				21ED7ACC22826ACA0014D178 /* DHGuidePageHUD.h */,
+				21ED7ACD22826ACA0014D178 /* DHGifImageOperation.h */,
+				21ED7ACE22826ACA0014D178 /* DHGuidePageHUD.m */,
+			);
+			path = DHGuidePageHUD;
+			sourceTree = "<group>";
+		};
+		21ED7AD222826D300014D178 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				21ED7AD522826D440014D178 /* guideImage1.png */,
+				21ED7AD322826D440014D178 /* guideImage2.png */,
+				21ED7AD422826D440014D178 /* guideImage3.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		21ED7ADC22827CA80014D178 /* loginOrRegister(登陆注册) */ = {
+			isa = PBXGroup;
+			children = (
+				21F5B67722815E1B00B04D9A /* View */,
+				21ED7ADD22827CD70014D178 /* Controller */,
+			);
+			path = "loginOrRegister(登陆注册)";
+			sourceTree = "<group>";
+		};
+		21ED7ADD22827CD70014D178 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21226FE5227ED3AA00AE5EEA /* PasswordLoginViewController.h */,
+				21226FE6227ED3AA00AE5EEA /* PasswordLoginViewController.m */,
+				21226FE8227ED3F200AE5EEA /* MessageLoginViewController.h */,
+				21226FE9227ED3F200AE5EEA /* MessageLoginViewController.m */,
+				21F5B67F22819EA200B04D9A /* RegisterViewController.h */,
+				21F5B68022819EA200B04D9A /* RegisterViewController.m */,
+				21ED7ADE22827D480014D178 /* EducationalInstitutionsViewController.h */,
+				21ED7ADF22827D480014D178 /* EducationalInstitutionsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		21F5B67722815E1B00B04D9A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -769,6 +847,10 @@
 				21F5B67922815E3C00B04D9A /* PasswordLoginView.m */,
 				21F5B6822281A54A00B04D9A /* RegisterView.h */,
 				21F5B6832281A54A00B04D9A /* RegisterView.m */,
+				21ED7AD9228273CB0014D178 /* MessageLoginView.h */,
+				21ED7ADA228273CB0014D178 /* MessageLoginView.m */,
+				21ED7AE122827E3C0014D178 /* EducationalInstitutionsView.h */,
+				21ED7AE222827E3C0014D178 /* EducationalInstitutionsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -896,7 +978,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				213492C3227173B300C68DCA /* Refresh.xcassets in Resources */,
+				21ED7AD622826D450014D178 /* guideImage2.png in Resources */,
+				21ED7AD722826D450014D178 /* guideImage3.png in Resources */,
 				2134924B2271561B00C68DCA /* LaunchScreen.storyboard in Resources */,
+				21ED7ACF22826ACA0014D178 /* GuideImage.bundle in Resources */,
+				21ED7AD822826D450014D178 /* guideImage1.png in Resources */,
 				213492482271561B00C68DCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1010,6 +1096,7 @@
 				212A3EAE227403AC0027AFEC /* RechargeHeaderView.m in Sources */,
 				2134928E2271672E00C68DCA /* BaseTabBarController.m in Sources */,
 				215CF3AF2276C67F004FD67D /* VideoPlayerViewController.m in Sources */,
+				21ED7AC7228267630014D178 /* AppDelegate+BootPage.m in Sources */,
 				218477B22275552A0048CAE9 /* LearningRecordViewCell.m in Sources */,
 				213492762271628F00C68DCA /* BaseNavigationController.m in Sources */,
 				212A3EB42274165A0027AFEC /* TransactionRecordViewController.m in Sources */,
@@ -1027,12 +1114,15 @@
 				213492C4227173B300C68DCA /* PublicRefreshFooter.m in Sources */,
 				21F5B66A2281233600B04D9A /* InformationClassAssistantModel.m in Sources */,
 				21A2A74F227302780001BD93 /* MineViewCell.m in Sources */,
+				21ED7AE022827D480014D178 /* EducationalInstitutionsViewController.m in Sources */,
 				212A3EBD2274254A0027AFEC /* MyCourseViewController.m in Sources */,
+				21ED7AE322827E3C0014D178 /* EducationalInstitutionsView.m in Sources */,
 				213492BD227173B300C68DCA /* PublicTextfield.m in Sources */,
 				2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */,
 				21A1FEE32271915700245453 /* RecommendedTodayCell.m in Sources */,
 				218477B822756EC20048CAE9 /* OnlineConsultationCell.m in Sources */,
 				212A3EA22273FDA80027AFEC /* SettingViewController.m in Sources */,
+				21ED7AD022826ACA0014D178 /* DHGifImageOperation.m in Sources */,
 				218477BB2275AAC40048CAE9 /* PersonalInformationViewController.m in Sources */,
 				213492CB227173B300C68DCA /* UIView+Extension.m in Sources */,
 				21A1FEF22271CEAD00245453 /* RecommendedCoursesViewController.m in Sources */,
@@ -1056,6 +1146,8 @@
 				215CF3AB2276A9BC004FD67D /* SearchResultViewController.m in Sources */,
 				21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */,
 				218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */,
+				21ED7ADB228273CB0014D178 /* MessageLoginView.m in Sources */,
+				21ED7AD122826ACA0014D178 /* DHGuidePageHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

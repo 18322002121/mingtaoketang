@@ -31,6 +31,8 @@
 @property (nonatomic,strong) PublicTextfield *passwordTextfield;
 /** 注册按钮 */
 @property (nonatomic,strong) PublicButton *registerButton;
+/** 密码显示与隐藏按钮 */
+@property (nonatomic,strong) PublicButton *hideOrShow;
 @end
 
 @implementation RegisterView
@@ -48,6 +50,7 @@
         [self registerButton];
         [self passwordIcon];
         [self passwordTextfield];
+        [self hideOrShow];
     }
     return self;
 }
@@ -74,12 +77,12 @@
 - (PublicTextfield *)phoneTextfield{
     if (!_phoneTextfield) {
         _phoneTextfield = [PublicTextfield textFieldBackground:[UIImage imageNamed:@""] secureTextEntry:NO placeholder:@"" clearsOnBeginEditing:NO];
-        [self.phoneView addSubview:_phoneTextfield];
         NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"手机号" attributes:
                                                  @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#A7A7A7"],
                                                    NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}
                                                  ];
         _phoneTextfield.attributedPlaceholder = attrString;
+        [self.phoneView addSubview:_phoneTextfield];
     }
     return _phoneTextfield;
 }
@@ -163,6 +166,13 @@
     return _registerButton;
 }
 
+- (PublicButton *)hideOrShow{
+    if (!_hideOrShow) {
+        _hideOrShow = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:13] backgroundColor:kRandomColor addView:self target:self action:@selector(hideOrShowButtonClick:)];
+    }
+    return _hideOrShow;
+}
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     [_phoneView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -231,11 +241,17 @@
         make.size.mas_equalTo(CGSizeMake(13, 15));
     }];
     
-    [_phoneTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_passwordTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.passwordIcon.mas_right).offset(7);
         make.centerY.mas_equalTo(self.passwordView.mas_centerY).offset(0);
-        make.right.mas_equalTo(self.passwordView.mas_right).offset(-10);
+        make.right.mas_equalTo(self.hideOrShow.mas_left).offset(-10);
         make.height.mas_offset(@30);
+    }];
+    
+    [_hideOrShow mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.passwordView.mas_right).offset(-30);
+        make.size.mas_equalTo(CGSizeMake(15, 11));
+        make.centerY.mas_equalTo(self.passwordView.mas_centerY).offset(0);
     }];
 }
 
@@ -245,6 +261,10 @@
 
 - (void)registerButtonClick:(UIButton *)sender{
     !_registerButtonClickBlock ? : _registerButtonClickBlock(sender);
+}
+
+- (void)hideOrShowButtonClick:(UIButton *)sender{
+    !_hideOrShowButtonClickBlock ? : _hideOrShowButtonClickBlock(sender);
 }
 
 @end

@@ -1,14 +1,14 @@
 //
-//  PasswordLoginView.m
+//  MessageLoginView.m
 //  mingtaoketang
 //
-//  Created by Linlin Ge on 2019/5/7.
+//  Created by Linlin Ge on 2019/5/8.
 //  Copyright © 2019年 hcy. All rights reserved.
 //
 
-#import "PasswordLoginView.h"
+#import "MessageLoginView.h"
 
-@interface PasswordLoginView ()
+@interface MessageLoginView ()
 /** 程序icon */
 @property (nonatomic,strong) UIImageView *iconImage;
 /** 程序描述 */
@@ -39,7 +39,7 @@
 @property (nonatomic,strong) PublicButton *countyLoginButton;
 @end
 
-@implementation PasswordLoginView
+@implementation MessageLoginView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {

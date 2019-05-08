@@ -8,6 +8,8 @@
 
 #import "PasswordLoginViewController.h"
 #import "RegisterViewController.h"
+#import "MessageLoginViewController.h"
+#import "EducationalInstitutionsViewController.h"
 #import "PasswordLoginView.h"
 
 @interface PasswordLoginViewController ()
@@ -41,21 +43,25 @@
         RegisterViewController *registerView = [[RegisterViewController alloc]init];
         [self.navigationController pushViewController:registerView animated:YES];
     };
-    /** 密码登录按钮回调 */
-    loginView.passwordLoginButtonClickBlock = ^(UIButton * _Nonnull sender) {
-        NSLog(@"密码登录按钮回调");
+    /** 短信登录按钮回调 */
+    loginView.messageLoginButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        NSLog(@"短信登录按钮回调");
+        MessageLoginViewController *messageLoginView = [[MessageLoginViewController alloc]init];
+        [self.navigationController pushViewController:messageLoginView animated:YES];
     };
     /** 院校登录按钮回调 */
     loginView.educationalLoginButtonClickBlock = ^(UIButton * _Nonnull sender) {
         NSLog(@"院校登录按钮回调");
+        EducationalInstitutionsViewController *educationalInstitutionsView = [[EducationalInstitutionsViewController alloc]init];
+        [self.navigationController pushViewController:educationalInstitutionsView animated:YES];
     };
     /** 区县登录按钮回调 */
     loginView.countyLoginButtonClickBlock = ^(UIButton * _Nonnull sender) {
         NSLog(@"区县登录按钮回调");
     };
-    /** 发送验证码按钮回调 */
-    loginView.sendVerificationButtonClickBlock = ^(UIButton * _Nonnull sender) {
-        NSLog(@"发送验证码按钮回调");
+    /** 密码展示与隐藏按钮回调*/
+    loginView.hideOrShowButtonClickBlock = ^(UIButton * _Nonnull sender) {
+        NSLog(@"密码展示与隐藏按钮回调");
     };
 }
 

@@ -15,14 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) void (^loginButtonClickBlock)(UIButton *sender);
 /** 注册按钮回调 */
 @property (nonatomic,strong) void (^registerButtonClickBlock)(UIButton *sender);
-/** 密码登录按钮回调 */
-@property (nonatomic,strong) void (^passwordLoginButtonClickBlock)(UIButton *sender);
+/** 短信登录按钮回调 */
+@property (nonatomic,strong) void (^messageLoginButtonClickBlock)(UIButton *sender);
 /** 院校登录按钮回调 */
 @property (nonatomic,strong) void (^educationalLoginButtonClickBlock)(UIButton *sender);
 /** 区县登录按钮回调 */
 @property (nonatomic,strong) void (^countyLoginButtonClickBlock)(UIButton *sender);
-/** 发送验证码按钮回调 */
-@property (nonatomic,strong) void (^sendVerificationButtonClickBlock)(UIButton *sender);
+/** 密码展示与隐藏按钮回调 */
+@property (nonatomic,strong) void (^hideOrShowButtonClickBlock)(UIButton *sender);
 
 @end
 

@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) void (^sendVerificationButtonClickBlock)(UIButton *sender);
 /** 注册按钮回调 */
 @property (nonatomic,strong) void (^registerButtonClickBlock)(UIButton *sender);
+/** 密码显示与隐藏按钮回调 */
+@property (nonatomic,strong) void (^hideOrShowButtonClickBlock)(UIButton *sender);
 
 @end
 

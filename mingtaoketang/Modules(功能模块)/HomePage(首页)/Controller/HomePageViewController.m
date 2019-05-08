@@ -26,7 +26,7 @@
 #import "FlashSaleModel.h"
 #import "InformationClassAssistantModel.h"
 #import "InformationViewModel.h"
-#import "PasswordLoginViewController.h"
+#import "MessageLoginViewController.h"
 #import "BaseNavigationController.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
@@ -563,8 +563,8 @@ static NSString *const informationViewCell = @"InformationViewCell";
 
 #pragma mark - 登录
 - (void)login{
-    PasswordLoginViewController *passwordLoginView = [[PasswordLoginViewController alloc]init];
-    BaseNavigationController *rootNav = [[BaseNavigationController alloc]initWithRootViewController:passwordLoginView];
+    MessageLoginViewController *messageLoginView = [[MessageLoginViewController alloc]init];
+    BaseNavigationController *rootNav = [[BaseNavigationController alloc]initWithRootViewController:messageLoginView];
     [self presentViewController:rootNav animated:YES completion:nil];
 }
 

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BaseNavigationController.h"
 #import "BaseTabBarController.h"
+#import "AppDelegate+BootPage.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[BaseTabBarController alloc]init];
     [self.window makeKeyAndVisible];
+    [self reloadGuidePage];
     return YES;
 }
 
