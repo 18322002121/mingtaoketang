@@ -9,19 +9,65 @@
 #import "CurriculumViewController.h"
 #import "CurriculumCell.h"
 #import "CurriculumHeaderView.h"
+#import "CurriculumViewModel.h"
 
 @interface CurriculumViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)UICollectionView *collectionView;
+/** 数据模型数组 */
+@property (nonatomic,strong) NSMutableArray *curriculumDataArray;
+@property (nonatomic,strong) NSMutableArray *curriculumChildrenArray;
+
 @end
 
 static NSString *const curriculumCell = @"CurriculumCell";
 static NSString *const curriculumHeaderView = @"CurriculumHeaderView";
 @implementation CurriculumViewController
 
+- (NSMutableArray *)curriculumDataArray{
+    if (!_curriculumDataArray) {
+        _curriculumDataArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _curriculumDataArray;
+}
+
+- (NSMutableArray *)curriculumChildrenArray{
+    if (!_curriculumChildrenArray) {
+        _curriculumChildrenArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _curriculumChildrenArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"课程";
     [self loadingViews];
+}
+
+- (void)networkRequest{
+    [super networkRequest];
+    /** 课程套餐分类列表 */
+    [HCYRequestManager appCourse_listSuccess:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.curriculumDataArray removeAllObjects];
+                [self.curriculumChildrenArray removeAllObjects];
+                CurriculumViewModel *model = [CurriculumViewModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(CurriculumViewData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    CurriculumViewData *dataModel = obj;
+                    [self.curriculumDataArray addObject:dataModel];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+        
+    } failure:^(NSError *errorMessage) {
+        NSLog(@"%@",errorMessage);
+    }];
+    
 }
 
 #pragma mark - 加载瀑布流布局视图
@@ -49,13 +95,18 @@ static NSString *const curriculumHeaderView = @"CurriculumHeaderView";
 #pragma mark - 定义展示的Section的个数
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 5;
+    return self.curriculumDataArray.count;
 }
 
 #pragma mark - 定义展示的UICollectionViewCell的个数
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 4;
+    CurriculumViewData *dataModel = self.curriculumDataArray[section];
+    [dataModel.children enumerateObjectsUsingBlock:^(CurriculumViewChildren * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CurriculumViewChildren *childrenModel = obj;
+        [self.curriculumChildrenArray addObject:childrenModel];
+    }];
+    return self.curriculumChildrenArray.count;
 }
 
 #pragma mark - 每个UICollectionView展示的内容
@@ -64,6 +115,7 @@ static NSString *const curriculumHeaderView = @"CurriculumHeaderView";
     
     UICollectionViewCell *goodsCell = nil;
     CurriculumCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:curriculumCell forIndexPath:indexPath];
+    [cell setChildrenModel:self.curriculumChildrenArray[indexPath.row]];
     goodsCell = cell;
     return goodsCell;
 }
@@ -105,6 +157,7 @@ static NSString *const curriculumHeaderView = @"CurriculumHeaderView";
     UICollectionReusableView *reusableview = nil;
     if (kind ==UICollectionElementKindSectionHeader) {
         CurriculumHeaderView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:curriculumHeaderView forIndexPath:indexPath];
+        [headerView setCurriculumDataModel:self.curriculumDataArray[indexPath.section]];
         reusableview = headerView;
     }
     return reusableview;

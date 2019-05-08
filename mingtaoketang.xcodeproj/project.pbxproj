@@ -96,6 +96,10 @@
 		21F5B670228133FC00B04D9A /* InformationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B66F228133FC00B04D9A /* InformationViewCell.m */; };
 		21F5B673228139E900B04D9A /* InformationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B672228139E900B04D9A /* InformationViewModel.m */; };
 		21F5B6762281526E00B04D9A /* FreeCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B6752281526E00B04D9A /* FreeCourseModel.m */; };
+		21F5B67A22815E3C00B04D9A /* PasswordLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B67922815E3C00B04D9A /* PasswordLoginView.m */; };
+		21F5B67E22818FF100B04D9A /* CurriculumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B67D22818FF100B04D9A /* CurriculumViewModel.m */; };
+		21F5B68122819EA200B04D9A /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B68022819EA200B04D9A /* RegisterViewController.m */; };
+		21F5B6842281A54A00B04D9A /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B6832281A54A00B04D9A /* RegisterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,6 +299,14 @@
 		21F5B672228139E900B04D9A /* InformationViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationViewModel.m; sourceTree = "<group>"; };
 		21F5B6742281526E00B04D9A /* FreeCourseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeCourseModel.h; sourceTree = "<group>"; };
 		21F5B6752281526E00B04D9A /* FreeCourseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeCourseModel.m; sourceTree = "<group>"; };
+		21F5B67822815E3C00B04D9A /* PasswordLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordLoginView.h; sourceTree = "<group>"; };
+		21F5B67922815E3C00B04D9A /* PasswordLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordLoginView.m; sourceTree = "<group>"; };
+		21F5B67C22818FF100B04D9A /* CurriculumViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurriculumViewModel.h; sourceTree = "<group>"; };
+		21F5B67D22818FF100B04D9A /* CurriculumViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurriculumViewModel.m; sourceTree = "<group>"; };
+		21F5B67F22819EA200B04D9A /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		21F5B68022819EA200B04D9A /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		21F5B6822281A54A00B04D9A /* RegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
+		21F5B6832281A54A00B04D9A /* RegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		7B9B0C9AC483CB012A7D3B08 /* Pods-mingtaoketang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.release.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.release.xcconfig"; sourceTree = "<group>"; };
 		83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mingtaoketang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D764184BF4CC0816015E77 /* Pods-mingtaoketang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -426,6 +438,9 @@
 				21226FE6227ED3AA00AE5EEA /* PasswordLoginViewController.m */,
 				21226FE8227ED3F200AE5EEA /* MessageLoginViewController.h */,
 				21226FE9227ED3F200AE5EEA /* MessageLoginViewController.m */,
+				21F5B67F22819EA200B04D9A /* RegisterViewController.h */,
+				21F5B68022819EA200B04D9A /* RegisterViewController.m */,
+				21F5B67722815E1B00B04D9A /* View */,
 			);
 			path = "PublicModule(公共模块)";
 			sourceTree = "<group>";
@@ -535,7 +550,7 @@
 		213492CD2271746400C68DCA /* Curriculum(课程) */ = {
 			isa = PBXGroup;
 			children = (
-				213492D62271751E00C68DCA /* Model */,
+				21F5B67B22818FDD00B04D9A /* Model */,
 				213492D72271752700C68DCA /* View */,
 				213492D82271753000C68DCA /* Controller */,
 			);
@@ -545,7 +560,6 @@
 		213492CE2271747E00C68DCA /* LiveBroadcast(直播) */ = {
 			isa = PBXGroup;
 			children = (
-				213492DB2271755400C68DCA /* Model */,
 				213492DA2271754B00C68DCA /* View */,
 				213492D92271754100C68DCA /* Controller */,
 			);
@@ -610,13 +624,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		213492D62271751E00C68DCA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		213492D72271752700C68DCA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,13 +660,6 @@
 				21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		213492DB2271755400C68DCA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		213492DC2271755F00C68DCA /* Controller */ = {
@@ -758,6 +758,26 @@
 				21F5B672228139E900B04D9A /* InformationViewModel.m */,
 				21F5B6742281526E00B04D9A /* FreeCourseModel.h */,
 				21F5B6752281526E00B04D9A /* FreeCourseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21F5B67722815E1B00B04D9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21F5B67822815E3C00B04D9A /* PasswordLoginView.h */,
+				21F5B67922815E3C00B04D9A /* PasswordLoginView.m */,
+				21F5B6822281A54A00B04D9A /* RegisterView.h */,
+				21F5B6832281A54A00B04D9A /* RegisterView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21F5B67B22818FDD00B04D9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21F5B67C22818FF100B04D9A /* CurriculumViewModel.h */,
+				21F5B67D22818FF100B04D9A /* CurriculumViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -954,6 +974,7 @@
 				212A3EB12274046C0027AFEC /* RechargeViewCell.m in Sources */,
 				213492C6227173B300C68DCA /* HCYRequestHandler.m in Sources */,
 				2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */,
+				21F5B68122819EA200B04D9A /* RegisterViewController.m in Sources */,
 				214E8DCF228023B4008CC8A0 /* RecommendedTodayModel.m in Sources */,
 				218477BE2275AD330048CAE9 /* PersonalInformationViewCell.m in Sources */,
 				213492C9227173B300C68DCA /* PublicTableView.m in Sources */,
@@ -963,6 +984,7 @@
 				213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */,
 				213492402271561A00C68DCA /* AppDelegate.m in Sources */,
 				212A3EA52273FE5B0027AFEC /* SettingViewCell.m in Sources */,
+				21F5B67E22818FF100B04D9A /* CurriculumViewModel.m in Sources */,
 				212A3EBA227425280027AFEC /* LearningRecordViewController.m in Sources */,
 				214E8DD2228025E5008CC8A0 /* FlashSaleModel.m in Sources */,
 				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
@@ -982,6 +1004,7 @@
 				21F5B673228139E900B04D9A /* InformationViewModel.m in Sources */,
 				21A2A7492272F37C0001BD93 /* CurriculumCell.m in Sources */,
 				212A3EC6227425C70027AFEC /* InviteCourtesyViewController.m in Sources */,
+				21F5B6842281A54A00B04D9A /* RegisterView.m in Sources */,
 				21F5B6762281526E00B04D9A /* FreeCourseModel.m in Sources */,
 				212A3EA82273FEF40027AFEC /* SettingModel.m in Sources */,
 				212A3EAE227403AC0027AFEC /* RechargeHeaderView.m in Sources */,
@@ -1022,6 +1045,7 @@
 				21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */,
 				21B74FF422803B2F00DEBBDA /* InformationClassAssistantHeaderView.m in Sources */,
 				213492C5227173B300C68DCA /* UIFont+runtime.m in Sources */,
+				21F5B67A22815E3C00B04D9A /* PasswordLoginView.m in Sources */,
 				21226FEA227ED3F200AE5EEA /* MessageLoginViewController.m in Sources */,
 				213492BB227173B300C68DCA /* MBProgressHUD+Add.m in Sources */,
 				21A2A7462272E4A60001BD93 /* IntervalView.m in Sources */,

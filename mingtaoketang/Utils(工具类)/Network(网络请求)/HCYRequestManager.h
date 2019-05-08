@@ -47,5 +47,7 @@ typedef void (^failureBlock)(NSError * errorMessage);
 /** 免费视频列表 */
 + (void)appTaste_videoSuccess:(successBlock)success failure:(failureBlock)failure;
 
+/** 课程套餐分类列表 */
++ (void)appCourse_listSuccess:(successBlock)success failure:(failureBlock)failure;
 
 @end

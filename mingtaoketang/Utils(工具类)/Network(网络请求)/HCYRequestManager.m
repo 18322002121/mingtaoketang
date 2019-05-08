@@ -94,4 +94,10 @@
     [[HCYRequestHandler shareManager]sendRequestServerUrl:taste_video requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
 }
 
+/** 课程套餐分类列表 */
++ (void)appCourse_listSuccess:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:course_list requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
+}
+
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "CurriculumHeaderView.h"
+#import "CurriculumViewModel.h"
+
 @interface CurriculumHeaderView ()
 @property (nonatomic,strong) UIView *bottomView;
 @property (nonatomic,strong) PublicLabel *titles;
@@ -54,6 +56,11 @@
         make.centerY.mas_equalTo(self.bottomView.mas_centerY).offset(0);
     }];
     
+}
+
+- (void)setCurriculumDataModel:(CurriculumViewData *)curriculumDataModel{
+    _curriculumDataModel = curriculumDataModel;
+    _titles.text = curriculumDataModel.cat_name;
 }
 
 @end

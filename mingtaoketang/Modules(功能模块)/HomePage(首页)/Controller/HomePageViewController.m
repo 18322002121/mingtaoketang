@@ -26,6 +26,8 @@
 #import "FlashSaleModel.h"
 #import "InformationClassAssistantModel.h"
 #import "InformationViewModel.h"
+#import "PasswordLoginViewController.h"
+#import "BaseNavigationController.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusBanner = 0,    //banner
@@ -118,6 +120,7 @@ static NSString *const informationViewCell = @"InformationViewCell";
     [super viewDidLoad];
     [self reloadingRefresh];
     [self loadingViews];
+    [self login];
 }
 
 - (void)reloadingRefresh{
@@ -558,6 +561,12 @@ static NSString *const informationViewCell = @"InformationViewCell";
     };
 }
 
+#pragma mark - 登录
+- (void)login{
+    PasswordLoginViewController *passwordLoginView = [[PasswordLoginViewController alloc]init];
+    BaseNavigationController *rootNav = [[BaseNavigationController alloc]initWithRootViewController:passwordLoginView];
+    [self presentViewController:rootNav animated:YES completion:nil];
+}
 
 
 @end

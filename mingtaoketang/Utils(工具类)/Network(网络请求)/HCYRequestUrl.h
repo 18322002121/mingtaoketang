@@ -32,8 +32,8 @@
 #define appCat_id [NSString stringWithFormat:@"%@/api/Index/article",API_HOST]
 /** 免费视频列表 */
 #define taste_video [NSString stringWithFormat:@"%@/api/Index/taste_video",API_HOST]
-
-
+/** 课程套餐分类列表 */
+#define course_list [NSString stringWithFormat:@"%@/api/index/course_list",API_HOST]
 
 
 #endif /* HCYRequestUrl_h */

@@ -7,6 +7,8 @@
 //
 
 #import "CurriculumCell.h"
+#import "CurriculumViewModel.h"
+
 @interface CurriculumCell ()
 @property (nonatomic,strong) UIView *bottomView;
 @property (nonatomic,strong) UIImageView *iconImage;
@@ -36,7 +38,6 @@
     if (!_iconImage) {
         _iconImage = [[UIImageView alloc]init];
         _iconImage.layer.cornerRadius = 25;
-        _iconImage.backgroundColor = kRandomColor;
         [self.bottomView addSubview:_iconImage];
     }
     return _iconImage;
@@ -44,7 +45,7 @@
 
 - (PublicLabel *)titles{
     if (!_titles) {
-        _titles = [PublicLabel labelWithText:@"今日推荐" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:14] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _titles = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:14] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.bottomView addSubview:_titles];
     }
     return _titles;
@@ -69,6 +70,12 @@
         make.centerX.mas_equalTo(self.bottomView.mas_centerX).offset(0);
         make.top.mas_equalTo(self.iconImage.mas_bottom).offset(10);
     }];
+}
+
+- (void)setChildrenModel:(CurriculumViewChildren *)childrenModel{
+    _childrenModel = childrenModel;
+    [_iconImage sd_setImageWithURL:[NSURL URLWithString:childrenModel.cat_icon] placeholderImage:[UIImage imageNamed:@""]];
+    _titles.text = childrenModel.cat_name;
 }
 
 @end
