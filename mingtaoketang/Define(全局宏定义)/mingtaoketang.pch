@@ -34,5 +34,6 @@
 #import "PublicRefreshHeader.h"
 #import "PublicSegmentedControl.h"
 #import "UIView+Animations.h"
+#import "VerificationTool.h"
 
 #endif /* mingtaoketang_pch */

@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) void (^registerButtonClickBlock)(UIButton *sender);
 /** 密码显示与隐藏按钮回调 */
 @property (nonatomic,strong) void (^hideOrShowButtonClickBlock)(UIButton *sender);
+/** 手机号输入框回调 */
+@property (nonatomic,strong) void (^phoneTextfieldClickBlock)(UITextField *sender);
+/** 验证码输入框回调 */
+@property (nonatomic,strong) void (^verificationTextfieldClickBlock)(UITextField *sender);
+/** 密码输入框回调 */
+@property (nonatomic,strong) void (^passwordTextfieldClickBlock)(UITextField *sender);
 
 @end
 

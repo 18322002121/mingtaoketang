@@ -57,6 +57,9 @@
 		213492C9227173B300C68DCA /* PublicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B3227173B300C68DCA /* PublicTableView.m */; };
 		213492CA227173B300C68DCA /* PublicReloadingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B6227173B300C68DCA /* PublicReloadingAnimation.m */; };
 		213492CB227173B300C68DCA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 213492B8227173B300C68DCA /* UIView+Extension.m */; };
+		2136A70C2282AFD700955F98 /* EducationalSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2136A70B2282AFD700955F98 /* EducationalSelectCell.m */; };
+		2136A70F2282EEAE00955F98 /* CourseCatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2136A70E2282EEAE00955F98 /* CourseCatalogueCell.m */; };
+		2136A7122282EECF00955F98 /* CourseIntroductionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2136A7112282EECF00955F98 /* CourseIntroductionCell.m */; };
 		214E8D8A227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214E8D89227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m */; };
 		214E8DCF228023B4008CC8A0 /* RecommendedTodayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214E8DCE228023B4008CC8A0 /* RecommendedTodayModel.m */; };
 		214E8DD2228025E5008CC8A0 /* FlashSaleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214E8DD1228025E5008CC8A0 /* FlashSaleModel.m */; };
@@ -84,6 +87,9 @@
 		21A2A74C2272F9440001BD93 /* CurriculumHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A74B2272F9440001BD93 /* CurriculumHeaderView.m */; };
 		21A2A74F227302780001BD93 /* MineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A74E227302780001BD93 /* MineViewCell.m */; };
 		21A2A752227302C70001BD93 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2A751227302C70001BD93 /* MineHeaderView.m */; };
+		21AA5BAE2283AE590012BCF9 /* CourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AA5BAD2283AE590012BCF9 /* CourseListViewController.m */; };
+		21AA5BB12283BEBC0012BCF9 /* VerificationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AA5BB02283BEBC0012BCF9 /* VerificationTool.m */; };
+		21AA5BB42283C75B0012BCF9 /* CourseListSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AA5BB32283C75B0012BCF9 /* CourseListSelectView.m */; };
 		21B1F6BB227177AA001ADBCD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6BA227177AA001ADBCD /* BaseViewController.m */; };
 		21B1F6BE227177CF001ADBCD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6BD227177CF001ADBCD /* HomePageViewController.m */; };
 		21B1F6C1227177E9001ADBCD /* CurriculumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B1F6C0227177E9001ADBCD /* CurriculumViewController.m */; };
@@ -92,6 +98,7 @@
 		21B25F4D2272A132009060D4 /* LiveBroadcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B25F4C2272A132009060D4 /* LiveBroadcastCell.m */; };
 		21B74FF422803B2F00DEBBDA /* InformationClassAssistantHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */; };
 		21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */; };
+		21C3A27E2283CD0B008E2FA6 /* CourseListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3A27D2283CD0B008E2FA6 /* CourseListViewCell.m */; };
 		21ED7AC7228267630014D178 /* AppDelegate+BootPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7AC6228267630014D178 /* AppDelegate+BootPage.m */; };
 		21ED7ACF22826ACA0014D178 /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 21ED7ACA22826ACA0014D178 /* GuideImage.bundle */; };
 		21ED7AD022826ACA0014D178 /* DHGifImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ACB22826ACA0014D178 /* DHGifImageOperation.m */; };
@@ -102,6 +109,7 @@
 		21ED7ADB228273CB0014D178 /* MessageLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ADA228273CB0014D178 /* MessageLoginView.m */; };
 		21ED7AE022827D480014D178 /* EducationalInstitutionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ADF22827D480014D178 /* EducationalInstitutionsViewController.m */; };
 		21ED7AE322827E3C0014D178 /* EducationalInstitutionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7AE222827E3C0014D178 /* EducationalInstitutionsView.m */; };
+		21ED7AE622828ADA0014D178 /* EducationalSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7AE522828ADA0014D178 /* EducationalSelectView.m */; };
 		21F5B66A2281233600B04D9A /* InformationClassAssistantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B6692281233600B04D9A /* InformationClassAssistantModel.m */; };
 		21F5B670228133FC00B04D9A /* InformationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B66F228133FC00B04D9A /* InformationViewCell.m */; };
 		21F5B673228139E900B04D9A /* InformationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B672228139E900B04D9A /* InformationViewModel.m */; };
@@ -231,6 +239,12 @@
 		213492B7227173B300C68DCA /* PublicReloadingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicReloadingAnimation.h; sourceTree = "<group>"; };
 		213492B8227173B300C68DCA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		213492B9227173B300C68DCA /* UIFont+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+runtime.h"; sourceTree = "<group>"; };
+		2136A70A2282AFD700955F98 /* EducationalSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EducationalSelectCell.h; sourceTree = "<group>"; };
+		2136A70B2282AFD700955F98 /* EducationalSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationalSelectCell.m; sourceTree = "<group>"; };
+		2136A70D2282EEAE00955F98 /* CourseCatalogueCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseCatalogueCell.h; sourceTree = "<group>"; };
+		2136A70E2282EEAE00955F98 /* CourseCatalogueCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseCatalogueCell.m; sourceTree = "<group>"; };
+		2136A7102282EECF00955F98 /* CourseIntroductionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseIntroductionCell.h; sourceTree = "<group>"; };
+		2136A7112282EECF00955F98 /* CourseIntroductionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseIntroductionCell.m; sourceTree = "<group>"; };
 		214E8D88227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LiveBroadcastCourseShowModel.h; path = "mingtaoketang/Modules(功能模块)/HomePage(首页)/Model/LiveBroadcastCourseShowModel.h"; sourceTree = SOURCE_ROOT; };
 		214E8D89227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LiveBroadcastCourseShowModel.m; path = "mingtaoketang/Modules(功能模块)/HomePage(首页)/Model/LiveBroadcastCourseShowModel.m"; sourceTree = SOURCE_ROOT; };
 		214E8DCD228023B4008CC8A0 /* RecommendedTodayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedTodayModel.h; sourceTree = "<group>"; };
@@ -285,6 +299,12 @@
 		21A2A74E227302780001BD93 /* MineViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewCell.m; sourceTree = "<group>"; };
 		21A2A750227302C70001BD93 /* MineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
 		21A2A751227302C70001BD93 /* MineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
+		21AA5BAC2283AE590012BCF9 /* CourseListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseListViewController.h; sourceTree = "<group>"; };
+		21AA5BAD2283AE590012BCF9 /* CourseListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseListViewController.m; sourceTree = "<group>"; };
+		21AA5BAF2283BEBC0012BCF9 /* VerificationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerificationTool.h; sourceTree = "<group>"; };
+		21AA5BB02283BEBC0012BCF9 /* VerificationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerificationTool.m; sourceTree = "<group>"; };
+		21AA5BB22283C75B0012BCF9 /* CourseListSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseListSelectView.h; sourceTree = "<group>"; };
+		21AA5BB32283C75B0012BCF9 /* CourseListSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseListSelectView.m; sourceTree = "<group>"; };
 		21B1F6B9227177AA001ADBCD /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		21B1F6BA227177AA001ADBCD /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		21B1F6BC227177CF001ADBCD /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -301,6 +321,8 @@
 		21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationClassAssistantHeaderView.m; sourceTree = "<group>"; };
 		21B9FE03227FCBE200D6822C /* LiveBroadcastCourseShowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveBroadcastCourseShowCell.h; sourceTree = "<group>"; };
 		21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCourseShowCell.m; sourceTree = "<group>"; };
+		21C3A27C2283CD0B008E2FA6 /* CourseListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseListViewCell.h; sourceTree = "<group>"; };
+		21C3A27D2283CD0B008E2FA6 /* CourseListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseListViewCell.m; sourceTree = "<group>"; };
 		21ED7AC5228267630014D178 /* AppDelegate+BootPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BootPage.h"; sourceTree = "<group>"; };
 		21ED7AC6228267630014D178 /* AppDelegate+BootPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BootPage.m"; sourceTree = "<group>"; };
 		21ED7ACA22826ACA0014D178 /* GuideImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuideImage.bundle; sourceTree = "<group>"; };
@@ -317,6 +339,8 @@
 		21ED7ADF22827D480014D178 /* EducationalInstitutionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationalInstitutionsViewController.m; sourceTree = "<group>"; };
 		21ED7AE122827E3C0014D178 /* EducationalInstitutionsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EducationalInstitutionsView.h; sourceTree = "<group>"; };
 		21ED7AE222827E3C0014D178 /* EducationalInstitutionsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationalInstitutionsView.m; sourceTree = "<group>"; };
+		21ED7AE422828ADA0014D178 /* EducationalSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EducationalSelectView.h; sourceTree = "<group>"; };
+		21ED7AE522828ADA0014D178 /* EducationalSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EducationalSelectView.m; sourceTree = "<group>"; };
 		21F5B6682281233600B04D9A /* InformationClassAssistantModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationClassAssistantModel.h; sourceTree = "<group>"; };
 		21F5B6692281233600B04D9A /* InformationClassAssistantModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationClassAssistantModel.m; sourceTree = "<group>"; };
 		21F5B66E228133FC00B04D9A /* InformationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationViewCell.h; sourceTree = "<group>"; };
@@ -485,6 +509,8 @@
 				2134929D227173B300C68DCA /* 刷新控件 */,
 				213492A7227173B300C68DCA /* Network(网络请求) */,
 				213492B4227173B300C68DCA /* 网络加载动画 */,
+				21AA5BAF2283BEBC0012BCF9 /* VerificationTool.h */,
+				21AA5BB02283BEBC0012BCF9 /* VerificationTool.m */,
 				213492AD227173B300C68DCA /* UIImage+cornerRadius.h */,
 				21349291227173B300C68DCA /* UIImage+cornerRadius.m */,
 				213492AE227173B300C68DCA /* PublicTextfield.h */,
@@ -643,6 +669,10 @@
 				21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */,
 				21F5B66E228133FC00B04D9A /* InformationViewCell.h */,
 				21F5B66F228133FC00B04D9A /* InformationViewCell.m */,
+				2136A70D2282EEAE00955F98 /* CourseCatalogueCell.h */,
+				2136A70E2282EEAE00955F98 /* CourseCatalogueCell.m */,
+				2136A7102282EECF00955F98 /* CourseIntroductionCell.h */,
+				2136A7112282EECF00955F98 /* CourseIntroductionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,6 +684,10 @@
 				21A2A7482272F37C0001BD93 /* CurriculumCell.m */,
 				21A2A74A2272F9440001BD93 /* CurriculumHeaderView.h */,
 				21A2A74B2272F9440001BD93 /* CurriculumHeaderView.m */,
+				21AA5BB22283C75B0012BCF9 /* CourseListSelectView.h */,
+				21AA5BB32283C75B0012BCF9 /* CourseListSelectView.m */,
+				21C3A27C2283CD0B008E2FA6 /* CourseListViewCell.h */,
+				21C3A27D2283CD0B008E2FA6 /* CourseListViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,6 +697,8 @@
 			children = (
 				21B1F6BF227177E9001ADBCD /* CurriculumViewController.h */,
 				21B1F6C0227177E9001ADBCD /* CurriculumViewController.m */,
+				21AA5BAC2283AE590012BCF9 /* CourseListViewController.h */,
+				21AA5BAD2283AE590012BCF9 /* CourseListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -851,6 +887,10 @@
 				21ED7ADA228273CB0014D178 /* MessageLoginView.m */,
 				21ED7AE122827E3C0014D178 /* EducationalInstitutionsView.h */,
 				21ED7AE222827E3C0014D178 /* EducationalInstitutionsView.m */,
+				21ED7AE422828ADA0014D178 /* EducationalSelectView.h */,
+				21ED7AE522828ADA0014D178 /* EducationalSelectView.m */,
+				2136A70A2282AFD700955F98 /* EducationalSelectCell.h */,
+				2136A70B2282AFD700955F98 /* EducationalSelectCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1060,8 +1100,10 @@
 				212A3EB12274046C0027AFEC /* RechargeViewCell.m in Sources */,
 				213492C6227173B300C68DCA /* HCYRequestHandler.m in Sources */,
 				2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */,
+				21AA5BAE2283AE590012BCF9 /* CourseListViewController.m in Sources */,
 				21F5B68122819EA200B04D9A /* RegisterViewController.m in Sources */,
 				214E8DCF228023B4008CC8A0 /* RecommendedTodayModel.m in Sources */,
+				21AA5BB12283BEBC0012BCF9 /* VerificationTool.m in Sources */,
 				218477BE2275AD330048CAE9 /* PersonalInformationViewCell.m in Sources */,
 				213492C9227173B300C68DCA /* PublicTableView.m in Sources */,
 				2134924E2271561B00C68DCA /* main.m in Sources */,
@@ -1073,6 +1115,7 @@
 				21F5B67E22818FF100B04D9A /* CurriculumViewModel.m in Sources */,
 				212A3EBA227425280027AFEC /* LearningRecordViewController.m in Sources */,
 				214E8DD2228025E5008CC8A0 /* FlashSaleModel.m in Sources */,
+				21C3A27E2283CD0B008E2FA6 /* CourseListViewCell.m in Sources */,
 				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
 				2113C6A622744B1200E5F83B /* ChangePasswordeViewController.m in Sources */,
@@ -1085,6 +1128,7 @@
 				21A1FEEC2271B42900245453 /* FlashSaleCellHeaderView.m in Sources */,
 				213492C2227173B300C68DCA /* PublicRefreshHeader.m in Sources */,
 				21226FED227EDE2300AE5EEA /* HomeBannerModel.m in Sources */,
+				21ED7AE622828ADA0014D178 /* EducationalSelectView.m in Sources */,
 				21B1F6C722717812001ADBCD /* MineViewController.m in Sources */,
 				21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */,
 				21F5B673228139E900B04D9A /* InformationViewModel.m in Sources */,
@@ -1108,6 +1152,7 @@
 				21B1F6BB227177AA001ADBCD /* BaseViewController.m in Sources */,
 				2113C6A02274486200E5F83B /* AboutUsViewCell.m in Sources */,
 				2113C697227433CE00E5F83B /* TransactionRecordCell.m in Sources */,
+				2136A70F2282EEAE00955F98 /* CourseCatalogueCell.m in Sources */,
 				21A1FEE022718C8D00245453 /* LiveBroadcastCourseCell.m in Sources */,
 				2113C6A322744ACB00E5F83B /* ClearCacheViewController.m in Sources */,
 				213492C1227173B300C68DCA /* UIView+Animations.m in Sources */,
@@ -1132,12 +1177,15 @@
 				21226FE7227ED3AA00AE5EEA /* PasswordLoginViewController.m in Sources */,
 				21A1FED722717C8600245453 /* BaseNavigationBar.m in Sources */,
 				214E8D8A227FDE42008CC8A0 /* LiveBroadcastCourseShowModel.m in Sources */,
+				21AA5BB42283C75B0012BCF9 /* CourseListSelectView.m in Sources */,
 				21A1FEE92271B3FC00245453 /* RecommendedTodayHeaderView.m in Sources */,
 				21B74FF422803B2F00DEBBDA /* InformationClassAssistantHeaderView.m in Sources */,
 				213492C5227173B300C68DCA /* UIFont+runtime.m in Sources */,
+				2136A7122282EECF00955F98 /* CourseIntroductionCell.m in Sources */,
 				21F5B67A22815E3C00B04D9A /* PasswordLoginView.m in Sources */,
 				21226FEA227ED3F200AE5EEA /* MessageLoginViewController.m in Sources */,
 				213492BB227173B300C68DCA /* MBProgressHUD+Add.m in Sources */,
+				2136A70C2282AFD700955F98 /* EducationalSelectCell.m in Sources */,
 				21A2A7462272E4A60001BD93 /* IntervalView.m in Sources */,
 				21A1FEE62271916900245453 /* FlashSaleCell.m in Sources */,
 				213492C8227173B300C68DCA /* PublicLabel.m in Sources */,

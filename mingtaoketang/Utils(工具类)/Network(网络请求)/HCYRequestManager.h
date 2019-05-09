@@ -50,4 +50,10 @@ typedef void (^failureBlock)(NSError * errorMessage);
 /** 课程套餐分类列表 */
 + (void)appCourse_listSuccess:(successBlock)success failure:(failureBlock)failure;
 
+/** 注册 */
++ (void)appMobile:(NSString *)mobile password:(NSString *)password campus_id:(NSString *)campus_id sms_code:(NSString *)sms_code success:(successBlock)success failure:(failureBlock)failure;
+
+
+
+
 @end

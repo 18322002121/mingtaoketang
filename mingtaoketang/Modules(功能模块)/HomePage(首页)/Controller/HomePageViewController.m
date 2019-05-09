@@ -120,7 +120,7 @@ static NSString *const informationViewCell = @"InformationViewCell";
     [super viewDidLoad];
     [self reloadingRefresh];
     [self loadingViews];
-    [self login];
+//    [self login];
 }
 
 - (void)reloadingRefresh{

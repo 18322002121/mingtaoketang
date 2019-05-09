@@ -82,6 +82,7 @@
                                                    NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}
                                                  ];
         _phoneTextfield.attributedPlaceholder = attrString;
+        [_phoneTextfield addTarget:self action:@selector(phoneTextfieldClick:) forControlEvents:UIControlEventEditingChanged];
         [self.phoneView addSubview:_phoneTextfield];
     }
     return _phoneTextfield;
@@ -114,6 +115,7 @@
                                                    NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}
                                                  ];
         _verificationTextfield.attributedPlaceholder = attrString;
+        [_verificationTextfield addTarget:self action:@selector(verificationTextfieldClick:) forControlEvents:UIControlEventEditingChanged];
         [self.verificationView addSubview:_verificationTextfield];
     }
     return _verificationTextfield;
@@ -147,12 +149,13 @@
 
 - (PublicTextfield *)passwordTextfield{
     if (!_passwordTextfield) {
-        _passwordTextfield = [PublicTextfield textFieldBackground:[UIImage imageNamed:@""] secureTextEntry:NO placeholder:@"" clearsOnBeginEditing:NO];
+        _passwordTextfield = [PublicTextfield textFieldBackground:[UIImage imageNamed:@""] secureTextEntry:YES placeholder:@"" clearsOnBeginEditing:NO];
         NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"密码" attributes:
                                                  @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#A7A7A7"],
                                                    NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}
                                                  ];
         _passwordTextfield.attributedPlaceholder = attrString;
+        [_passwordTextfield addTarget:self action:@selector(passwordTextfieldClick:) forControlEvents:UIControlEventEditingChanged];
         [self.passwordView addSubview:_passwordTextfield];
     }
     return _passwordTextfield;
@@ -265,6 +268,18 @@
 
 - (void)hideOrShowButtonClick:(UIButton *)sender{
     !_hideOrShowButtonClickBlock ? : _hideOrShowButtonClickBlock(sender);
+}
+
+- (void)phoneTextfieldClick:(UITextField *)textFields{
+    !_phoneTextfieldClickBlock ? : _phoneTextfieldClickBlock(textFields);
+}
+
+- (void)verificationTextfieldClick:(UITextField *)textFields{
+    !_verificationTextfieldClickBlock ? : _verificationTextfieldClickBlock(textFields);
+}
+
+- (void)passwordTextfieldClick:(UITextField *)textFields{
+    !_passwordTextfieldClickBlock ? : _passwordTextfieldClickBlock(textFields);
 }
 
 @end

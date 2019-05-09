@@ -100,4 +100,24 @@
     [[HCYRequestHandler shareManager]sendRequestServerUrl:course_list requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
 }
 
+/** 注册 */
++ (void)appMobile:(NSString *)mobile password:(NSString *)password campus_id:(NSString *)campus_id sms_code:(NSString *)sms_code success:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setValue:mobile forKey:@"mobile"];
+    [dict setValue:password forKey:@"password"];
+    [dict setValue:campus_id forKey:@"campus_id"];
+    [dict setValue:sms_code forKey:@"sms_code"];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:zhuce requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
+}
+
+
+
+
+
+
+
+
+
+
+
 @end

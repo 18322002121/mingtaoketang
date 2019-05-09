@@ -10,6 +10,7 @@
 #import "CurriculumCell.h"
 #import "CurriculumHeaderView.h"
 #import "CurriculumViewModel.h"
+#import "CourseListViewController.h"
 
 @interface CurriculumViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)UICollectionView *collectionView;
@@ -141,6 +142,8 @@ static NSString *const curriculumHeaderView = @"CurriculumHeaderView";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    CourseListViewController *courseListView = [[CourseListViewController alloc]init];
+    [self.navigationController pushViewController:courseListView animated:YES];
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 

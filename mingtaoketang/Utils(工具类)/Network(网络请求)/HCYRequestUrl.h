@@ -34,6 +34,7 @@
 #define taste_video [NSString stringWithFormat:@"%@/api/Index/taste_video",API_HOST]
 /** 课程套餐分类列表 */
 #define course_list [NSString stringWithFormat:@"%@/api/index/course_list",API_HOST]
-
+/** 注册 */
+#define zhuce [NSString stringWithFormat:@"%@/api/index/zhuce",API_HOST]
 
 #endif /* HCYRequestUrl_h */
