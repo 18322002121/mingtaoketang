@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PersonalInformationViewController : BaseViewController
-
+/** 修改昵称回调按钮 */
+@property (nonatomic,strong) void (^onClickedOKbtnBlock)(UIButton *sender);
 @end
 
 NS_ASSUME_NONNULL_END

@@ -32,8 +32,6 @@
     
     BaseNavigationController *two=[[BaseNavigationController alloc]initWithRootViewController:[[CurriculumViewController alloc]init]];
     
-    //    BaseNavigationController *three=[[BaseNavigationController alloc]initWithRootViewController:[[InformationViewController alloc]init]];
-    
     BaseNavigationController *three=[[BaseNavigationController alloc]initWithRootViewController:[[LiveBroadcastViewController alloc]init]];
     
     BaseNavigationController *four=[[BaseNavigationController alloc]initWithRootViewController:[[MineViewController alloc]init]];
@@ -52,13 +50,13 @@
     
     NSDictionary *secondTabBarItemsAttributes = @{
                                                   @"TabBarItemTitle" : @"课程",
-                                                  @"TabBarItemImage" : @"subject1",
-                                                  @"TabBarItemSelectedImage" : @"subject2",
+                                                  @"TabBarItemImage" : @"class1",
+                                                  @"TabBarItemSelectedImage" : @"class2",
                                                   };
     NSDictionary *thirdTabBarItemsAttributes = @{
                                                  @"TabBarItemTitle" : @"直播",
-                                                 @"TabBarItemImage" : @"livebroadcast1",
-                                                 @"TabBarItemSelectedImage" : @"livebroadcast2",
+                                                 @"TabBarItemImage" : @"video1",
+                                                 @"TabBarItemSelectedImage" : @"video2",
                                                  };
     NSDictionary *fourthTabBarItemsAttributes = @{
                                                   @"TabBarItemTitle" : @"我的",
@@ -77,8 +75,10 @@
         obj.tabBarItem.image = [UIImage imageNamed:tabBarItemsAttributes[idx][@"TabBarItemImage"]];
         obj.tabBarItem.selectedImage = [UIImage imageNamed:tabBarItemsAttributes[idx][@"TabBarItemSelectedImage"]];
         obj.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -3);
+        
+        obj.tabBarItem.image = [obj.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        obj.tabBarItem.selectedImage = [obj.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }];
-    
-    self.tabBar.tintColor = [UIColor colorWithHexString:@"#AF1D36"];
+
 }
 @end

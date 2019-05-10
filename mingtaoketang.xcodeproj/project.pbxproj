@@ -102,6 +102,7 @@
 		21B74FF422803B2F00DEBBDA /* InformationClassAssistantHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B74FF322803B2F00DEBBDA /* InformationClassAssistantHeaderView.m */; };
 		21B9FE05227FCBE300D6822C /* LiveBroadcastCourseShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */; };
 		21C3A27E2283CD0B008E2FA6 /* CourseListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3A27D2283CD0B008E2FA6 /* CourseListViewCell.m */; };
+		21C4BA8B2285895200479865 /* HomePage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C4BA8A2285895200479865 /* HomePage.xcassets */; };
 		21ED7AC7228267630014D178 /* AppDelegate+BootPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7AC6228267630014D178 /* AppDelegate+BootPage.m */; };
 		21ED7ACF22826ACA0014D178 /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 21ED7ACA22826ACA0014D178 /* GuideImage.bundle */; };
 		21ED7AD022826ACA0014D178 /* DHGifImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED7ACB22826ACA0014D178 /* DHGifImageOperation.m */; };
@@ -123,6 +124,9 @@
 		21F5B6842281A54A00B04D9A /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F5B6832281A54A00B04D9A /* RegisterView.m */; };
 		21FE7B962285194700022509 /* PasswordLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FE7B952285194700022509 /* PasswordLoginModel.m */; };
 		21FE7B9A22851D9D00022509 /* PublicUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FE7B9922851D9D00022509 /* PublicUserDefaults.m */; };
+		21FE7B9D22853A4D00022509 /* PersonalInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FE7B9C22853A4D00022509 /* PersonalInformationModel.m */; };
+		21FE7BA02285568800022509 /* ModifyNicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FE7B9F2285568800022509 /* ModifyNicknameViewController.m */; };
+		21FE7BA22285786600022509 /* LoginOrRegister.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21FE7BA12285786600022509 /* LoginOrRegister.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,6 +338,7 @@
 		21B9FE04227FCBE300D6822C /* LiveBroadcastCourseShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveBroadcastCourseShowCell.m; sourceTree = "<group>"; };
 		21C3A27C2283CD0B008E2FA6 /* CourseListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseListViewCell.h; sourceTree = "<group>"; };
 		21C3A27D2283CD0B008E2FA6 /* CourseListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseListViewCell.m; sourceTree = "<group>"; };
+		21C4BA8A2285895200479865 /* HomePage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HomePage.xcassets; sourceTree = "<group>"; };
 		21ED7AC5228267630014D178 /* AppDelegate+BootPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BootPage.h"; sourceTree = "<group>"; };
 		21ED7AC6228267630014D178 /* AppDelegate+BootPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BootPage.m"; sourceTree = "<group>"; };
 		21ED7ACA22826ACA0014D178 /* GuideImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuideImage.bundle; sourceTree = "<group>"; };
@@ -372,6 +377,11 @@
 		21FE7B952285194700022509 /* PasswordLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordLoginModel.m; sourceTree = "<group>"; };
 		21FE7B9822851D9D00022509 /* PublicUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicUserDefaults.h; sourceTree = "<group>"; };
 		21FE7B9922851D9D00022509 /* PublicUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicUserDefaults.m; sourceTree = "<group>"; };
+		21FE7B9B22853A4D00022509 /* PersonalInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalInformationModel.h; sourceTree = "<group>"; };
+		21FE7B9C22853A4D00022509 /* PersonalInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalInformationModel.m; sourceTree = "<group>"; };
+		21FE7B9E2285568800022509 /* ModifyNicknameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyNicknameViewController.h; sourceTree = "<group>"; };
+		21FE7B9F2285568800022509 /* ModifyNicknameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyNicknameViewController.m; sourceTree = "<group>"; };
+		21FE7BA12285786600022509 /* LoginOrRegister.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginOrRegister.xcassets; sourceTree = "<group>"; };
 		7B9B0C9AC483CB012A7D3B08 /* Pods-mingtaoketang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.release.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.release.xcconfig"; sourceTree = "<group>"; };
 		83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mingtaoketang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D764184BF4CC0816015E77 /* Pods-mingtaoketang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mingtaoketang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -608,6 +618,7 @@
 				214E8DCC2280237B008CC8A0 /* Model */,
 				213492D42271750100C68DCA /* View */,
 				213492D3227174F300C68DCA /* Controller */,
+				21C4BA8A2285895200479865 /* HomePage.xcassets */,
 			);
 			path = "HomePage(首页)";
 			sourceTree = "<group>";
@@ -774,6 +785,8 @@
 				2113C6A822744B5700E5F83B /* FeedbackViewController.m */,
 				218477B92275AAC40048CAE9 /* PersonalInformationViewController.h */,
 				218477BA2275AAC40048CAE9 /* PersonalInformationViewController.m */,
+				21FE7B9E2285568800022509 /* ModifyNicknameViewController.h */,
+				21FE7B9F2285568800022509 /* ModifyNicknameViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -818,6 +831,8 @@
 			children = (
 				212A3EA62273FEF40027AFEC /* SettingModel.h */,
 				212A3EA72273FEF40027AFEC /* SettingModel.m */,
+				21FE7B9B22853A4D00022509 /* PersonalInformationModel.h */,
+				21FE7B9C22853A4D00022509 /* PersonalInformationModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -880,6 +895,7 @@
 				21FE7B932285192700022509 /* Model */,
 				21F5B67722815E1B00B04D9A /* View */,
 				21ED7ADD22827CD70014D178 /* Controller */,
+				21FE7BA12285786600022509 /* LoginOrRegister.xcassets */,
 			);
 			path = "loginOrRegister(登陆注册)";
 			sourceTree = "<group>";
@@ -1061,8 +1077,10 @@
 				213492C3227173B300C68DCA /* Refresh.xcassets in Resources */,
 				21ED7AD622826D450014D178 /* guideImage2.png in Resources */,
 				21ED7AD722826D450014D178 /* guideImage3.png in Resources */,
+				21FE7BA22285786600022509 /* LoginOrRegister.xcassets in Resources */,
 				2134924B2271561B00C68DCA /* LaunchScreen.storyboard in Resources */,
 				21ED7ACF22826ACA0014D178 /* GuideImage.bundle in Resources */,
+				21C4BA8B2285895200479865 /* HomePage.xcassets in Resources */,
 				21ED7AD822826D450014D178 /* guideImage1.png in Resources */,
 				213492482271561B00C68DCA /* Assets.xcassets in Resources */,
 			);
@@ -1146,6 +1164,7 @@
 				21F5B68122819EA200B04D9A /* RegisterViewController.m in Sources */,
 				214E8DCF228023B4008CC8A0 /* RecommendedTodayModel.m in Sources */,
 				21AA5BB12283BEBC0012BCF9 /* VerificationTool.m in Sources */,
+				21FE7BA02285568800022509 /* ModifyNicknameViewController.m in Sources */,
 				218477BE2275AD330048CAE9 /* PersonalInformationViewCell.m in Sources */,
 				213492C9227173B300C68DCA /* PublicTableView.m in Sources */,
 				219D616722841FC20070BD73 /* HeadPortraitCell.m in Sources */,
@@ -1205,6 +1224,7 @@
 				21A2A74F227302780001BD93 /* MineViewCell.m in Sources */,
 				21ED7AE022827D480014D178 /* EducationalInstitutionsViewController.m in Sources */,
 				212A3EBD2274254A0027AFEC /* MyCourseViewController.m in Sources */,
+				21FE7B9D22853A4D00022509 /* PersonalInformationModel.m in Sources */,
 				21ED7AE322827E3C0014D178 /* EducationalInstitutionsView.m in Sources */,
 				213492BD227173B300C68DCA /* PublicTextfield.m in Sources */,
 				2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */,

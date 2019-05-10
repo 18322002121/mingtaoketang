@@ -9,10 +9,14 @@
 #import "PersonalInformationViewController.h"
 #import "PersonalInformationViewCell.h"
 #import "HeadPortraitCell.h"
+#import "PersonalInformationModel.h"
+#import "ModifyNicknameViewController.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusHeadPortrait = 0,    //头像cell
-    ShowSectionStatusNormal          //正常cell
+    ShowSectionStatusNickName,          //昵称
+    ShowSectionStatusPhoneNumber,          //手机号
+    ShowSectionStatusSex                   //性别
 };
 
 @interface PersonalInformationViewController ()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -20,6 +24,11 @@ typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
 @property(nonatomic,strong)HeadPortraitCell *cell;
 @property(nonatomic,strong)NSData *imageData;
 @property(nonatomic,strong)UIImage *upImage;
+/** 列表左侧标题 */
+@property (nonatomic,strong) NSMutableArray *listTitlesArray;
+/** 初始化模型数组 */
+@property (nonatomic,strong) NSMutableArray *personalInformationArray;
+
 @end
 
 static NSString *const personalInformationViewCell =@"PersonalInformationViewCell";
@@ -27,19 +36,72 @@ static NSString *const headPortraitCell =@"HeadPortraitCell";
 
 @implementation PersonalInformationViewController
 
+- (NSMutableArray *)listTitlesArray{
+    if (!_listTitlesArray) {
+        _listTitlesArray = [NSMutableArray arrayWithObjects:@"头像",@"昵称",@"手机号码",@"性别", nil];
+    }
+    return _listTitlesArray;
+}
+
+- (NSMutableArray *)personalInformationArray{
+    if (!_personalInformationArray) {
+        _personalInformationArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _personalInformationArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.title = @"我的信息";
+    [self reloadingRefresh];
+}
+
+- (void)reloadingRefresh{
+    self.tableView.mj_header = [PublicRefreshHeader headerWithRefreshingBlock:^{
+        //        [self.datas removeAllObjects];
+        //        NSArray *datas = [self hn_modelArrayWithCategory:self.model.category fromModel:x];
+        //        [self.datas addObjectsFromArray:datas];
+        //        [self.tableView reloadData];
+        [self networkRequest];
+        [self.tableView.mj_header endRefreshing];
+    }];
 }
 
 - (void)networkRequest{
     [HCYRequestManager app_user_detail_uid:([PublicUserDefaults valueForKey:@"user_id"] ? [PublicUserDefaults valueForKey:@"user_id"] : @"") success:^(id responseObject) {
         NSLog(@"%@",responseObject);
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.personalInformationArray removeAllObjects];
+                PersonalInformationModel *model = [PersonalInformationModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(PersonalInformationData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    PersonalInformationData *dataModel = obj;
+//                    self.user_money = dataModel.user_money;
+//                    self.userName = dataModel.nickname;
+                    if ([dataModel.sex isEqualToString:@"1"]) {
+                        dataModel.sex = @"男";
+                    }else if ([dataModel.sex isEqualToString:@"2"]){
+                        dataModel.sex = @"女";
+                    }
+                    [self.personalInformationArray addObjectsFromArray:@[dataModel.avatar,dataModel.nickname,dataModel.mobile,dataModel.sex]];
+                }];
+                [self.tableView reloadData];
+            }
+        }
     } failure:^(NSError *errorMessage) {
         NSLog(@"%@",errorMessage);
     }];
 }
+
+//- (void)setPersonalInformationArray:(NSMutableArray *)personalInformationArray{
+//    _personalInformationArray = personalInformationArray;
+//}
+
+
 
 - (PublicTableView *)tableView{
     if (!_tableView) {
@@ -69,6 +131,9 @@ static NSString *const headPortraitCell =@"HeadPortraitCell";
             normalCell = self.cell;
         }else{
             PersonalInformationViewCell *cell =[tableView dequeueReusableCellWithIdentifier:personalInformationViewCell forIndexPath:indexPath];
+            [cell setLeftTitles:self.listTitlesArray[indexPath.row]];
+            kArrayIsEmpty(self.personalInformationArray) ? : [cell setRightTitles:self.personalInformationArray[indexPath.row]];
+            
             normalCell = cell;
         }
         
@@ -108,6 +173,18 @@ static NSString *const headPortraitCell =@"HeadPortraitCell";
             sheet.tag = 2550;
             //显示消息框
             [sheet showInView:self.view];
+        }else if (indexPath.row == ShowSectionStatusNickName){
+            ModifyNicknameViewController *modifyNicknameView = [[ModifyNicknameViewController alloc]init];
+            modifyNicknameView.onClickedOKbtnBlock = ^(UIButton * _Nonnull sender) {
+                [self networkRequest];
+                !self.onClickedOKbtnBlock ? : self.onClickedOKbtnBlock(sender);
+            };
+            [self.navigationController pushViewController:modifyNicknameView animated:YES];
+            
+        }else if (indexPath.row == ShowSectionStatusPhoneNumber){
+            
+        }else if (indexPath.row == ShowSectionStatusSex){
+            
         }
     };
     

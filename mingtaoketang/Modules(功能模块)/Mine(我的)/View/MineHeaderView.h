@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) void (^SetTingClickBlock)(UIButton *sender);
 @property (nonatomic,strong) void (^EducationalInstitutionsClickBlock)(UIButton *sender);
 @property (nonatomic,strong) void (^PersonalInformationClickBlock)(UIButton *sender);
+
+- (void)setUser_Money:(NSString *)userMoney userName:(NSString *)userName;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -68,7 +68,7 @@
 - (UIImageView *)phoneIcon{
     if (!_phoneIcon) {
         _phoneIcon = [[UIImageView alloc]init];
-        _phoneIcon.backgroundColor = kRandomColor;
+        _phoneIcon.image = [UIImage imageNamed:@"phone2"];
         [self.phoneView addSubview:_phoneIcon];
     }
     return _phoneIcon;
@@ -101,7 +101,7 @@
 - (UIImageView *)verificationIcon{
     if (!_verificationIcon) {
         _verificationIcon = [[UIImageView alloc]init];
-        _verificationIcon.backgroundColor = kRandomColor;
+        _verificationIcon.image = [UIImage imageNamed:@"verification2"];
         [self.verificationView addSubview:_verificationIcon];
     }
     return _verificationIcon;
@@ -141,7 +141,7 @@
 - (UIImageView *)passwordIcon{
     if (!_passwordIcon) {
         _passwordIcon = [[UIImageView alloc]init];
-        _passwordIcon.backgroundColor = kRandomColor;
+        _passwordIcon.image = [UIImage imageNamed:@"password2"];
         [self.passwordView addSubview:_passwordIcon];
     }
     return _passwordIcon;

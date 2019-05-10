@@ -28,6 +28,7 @@
 #import "InformationViewModel.h"
 #import "MessageLoginViewController.h"
 #import "BaseNavigationController.h"
+#import "SettingModel.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusBanner = 0,    //banner
@@ -42,8 +43,9 @@ typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
 @property(nonatomic,strong)UICollectionView *collectionView;
 /** banner数组 */
 @property (nonatomic,strong) NSMutableArray *bannerArray;
-/** banner数组2 */
-@property (nonatomic,strong) NSMutableArray *bannerArray2;
+@property(nonatomic,strong)NSArray *tempArray;
+/** 免费课程和推荐课程数组 */
+@property (nonatomic,strong) NSMutableArray *moduleSelectionArray;
 /** 首页直播数组 */
 @property (nonatomic,strong) NSMutableArray *liveBroadcastaArray;
 /** 今日推荐数组 */
@@ -74,11 +76,11 @@ static NSString *const informationViewCell = @"InformationViewCell";
     return _bannerArray;
 }
 
-- (NSMutableArray *)bannerArray2{
-    if (!_bannerArray2) {
-        _bannerArray2 = [NSMutableArray arrayWithCapacity:0];
+- (NSMutableArray *)moduleSelectionArray{
+    if (!_moduleSelectionArray) {
+        _moduleSelectionArray = [NSMutableArray arrayWithCapacity:0];
     }
-    return _bannerArray2;
+    return _moduleSelectionArray;
 }
 
 - (NSMutableArray *)liveBroadcastaArray{
@@ -120,7 +122,19 @@ static NSString *const informationViewCell = @"InformationViewCell";
     [super viewDidLoad];
     [self reloadingRefresh];
     [self loadingViews];
+    [self moduleSelection];
 //    [self login];
+}
+
+- (void)moduleSelection{
+    NSArray *dataArray = @[@{@"iconImage":@"free",@"gridTitle":@""},
+                           @{@"iconImage":@"recommend",@"gridTitle":@""},
+                           ];
+    _tempArray = dataArray;
+    self.moduleSelectionArray = [NSMutableArray arrayWithCapacity:0];
+    [dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.moduleSelectionArray  addObject:[SettingModel initWithDict:obj]];
+    }];
 }
 
 - (void)reloadingRefresh{
@@ -168,25 +182,25 @@ static NSString *const informationViewCell = @"InformationViewCell";
         NSLog(@"%@",errorMessage);
     }];
     
-    /** 获取banner图2 */
-    [HCYRequestManager banner_type:@"5" success:^(id responseObject) {
-        NSDictionary *dict = responseObject;
-        if (kDictIsEmpty(dict)) {
-            
-        }else{
-            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
-                [self.bannerArray2 removeAllObjects];
-                HomeBannerModel *model = [HomeBannerModel yy_modelWithJSON:responseObject];
-                [model.data enumerateObjectsUsingBlock:^(HomeData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    HomeData *dataModel = obj;
-                    [self.bannerArray2 addObject:dataModel];
-                }];
-                [self.collectionView reloadData];
-            }
-        }
-    } failure:^(NSError *errorMessage) {
-        
-    }];
+//    /** 获取banner图2 */
+//    [HCYRequestManager banner_type:@"5" success:^(id responseObject) {
+//        NSDictionary *dict = responseObject;
+//        if (kDictIsEmpty(dict)) {
+//
+//        }else{
+//            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+//                [self.bannerArray2 removeAllObjects];
+//                HomeBannerModel *model = [HomeBannerModel yy_modelWithJSON:responseObject];
+//                [model.data enumerateObjectsUsingBlock:^(HomeData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                    HomeData *dataModel = obj;
+//                    [self.bannerArray2 addObject:dataModel];
+//                }];
+//                [self.collectionView reloadData];
+//            }
+//        }
+//    } failure:^(NSError *errorMessage) {
+//
+//    }];
     
     /** 直播 */
     [HCYRequestManager uid:@"33487" success:^(id responseObject) {
@@ -365,7 +379,7 @@ static NSString *const informationViewCell = @"InformationViewCell";
     if (section == ShowSectionStatusBanner) {
         return 1;
     }else if (section == ShowSectionStatusFree){
-        return self.bannerArray2.count;
+        return self.moduleSelectionArray.count;
     }else if(section == ShowSectionStatusLive){
         return 1;
     }else if(section == ShowSectionStatusRecommend){
@@ -390,7 +404,7 @@ static NSString *const informationViewCell = @"InformationViewCell";
         goodsCell = cell;
     }else if (indexPath.section ==ShowSectionStatusFree){
             FreeAndRecommendationCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:freeAndRecommendationCell forIndexPath:indexPath];
-        [cell setBannerModel:self.bannerArray2[indexPath.row]];
+        [cell setFreeModel:self.moduleSelectionArray[indexPath.row]];
             goodsCell = cell;
         }else if (indexPath.section == ShowSectionStatusLive){
             LiveBroadcastCourseCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:liveBroadcastCourseCell forIndexPath:indexPath];
@@ -420,7 +434,7 @@ static NSString *const informationViewCell = @"InformationViewCell";
     if (indexPath.section == ShowSectionStatusBanner) {
         return CGSizeMake(KScreenWidth - 26, 168);
     }else if (indexPath.section ==ShowSectionStatusFree){
-        return CGSizeMake((KScreenWidth - 36)/2, 115);
+        return CGSizeMake((KScreenWidth - 36)/2, 95);
     }else if (indexPath.section == ShowSectionStatusLive){
         return CGSizeMake(KScreenWidth - 26, 90);
     }else if (indexPath.section == ShowSectionStatusRecommend){

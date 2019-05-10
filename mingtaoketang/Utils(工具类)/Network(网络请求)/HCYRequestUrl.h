@@ -42,7 +42,8 @@
 #define app_login [NSString stringWithFormat:@"%@/api/index/login",API_HOST]
 /** 获取个人信息 */
 #define app_user_detail [NSString stringWithFormat:@"%@/api/index/user_detail",API_HOST]
-
+/** 修改昵称 */
+#define edit_nickname [NSString stringWithFormat:@"%@/api/index/edit_nickname",API_HOST]
 
 
 #endif /* HCYRequestUrl_h */

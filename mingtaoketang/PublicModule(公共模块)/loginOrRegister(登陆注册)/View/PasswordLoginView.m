@@ -9,6 +9,8 @@
 #import "PasswordLoginView.h"
 
 @interface PasswordLoginView ()
+/** 程序icon视图 */
+@property (nonatomic,strong) UIView *iconView;
 /** 程序icon */
 @property (nonatomic,strong) UIImageView *iconImage;
 /** 程序描述 */
@@ -44,6 +46,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor colorWithHexString:@"#2393EE"];
+        [self iconView];
         [self iconImage];
         [self description];
         [self phoneView];
@@ -62,12 +65,24 @@
     return self;
 }
 
+- (UIView *)iconView{
+    if (!_iconView) {
+        _iconView = [[UIView alloc]init];
+        _iconView.layer.cornerRadius = 25;
+        _iconView.backgroundColor = [UIColor whiteColor];
+        _iconView.layer.borderColor = [UIColor whiteColor].CGColor;
+        _iconView.layer.borderWidth = 2;
+        [self addSubview:_iconView];
+    }
+    return _iconView;
+}
+
 - (UIImageView *)iconImage{
     if (!_iconImage) {
         _iconImage = [[UIImageView alloc]init];
         _iconImage.layer.cornerRadius = 25;
-        _iconImage.backgroundColor = kRandomColor;
-        [self addSubview:_iconImage];
+        _iconImage.image = [UIImage imageNamed:@"yun"];
+        [self.iconView addSubview:_iconImage];
     }
     return _iconImage;
 }
@@ -93,7 +108,7 @@
 - (UIImageView *)phoneIcon{
     if (!_phoneIcon) {
         _phoneIcon = [[UIImageView alloc]init];
-        _phoneIcon.backgroundColor = kRandomColor;
+        _phoneIcon.image = [UIImage imageNamed:@"phone1"];
         [self.phoneView addSubview:_phoneIcon];
     }
     return _phoneIcon;
@@ -126,7 +141,7 @@
 - (UIImageView *)verificationIcon{
     if (!_verificationIcon) {
         _verificationIcon = [[UIImageView alloc]init];
-        _verificationIcon.backgroundColor = kRandomColor;
+        _verificationIcon.image = [UIImage imageNamed:@"password1"];
         [self.verificationView addSubview:_verificationIcon];
     }
     return _verificationIcon;
@@ -148,7 +163,8 @@
 
 - (PublicButton *)hideOrShowButton{
     if (!_hideOrShowButton) {
-        _hideOrShowButton = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:12] backgroundColor:kRandomColor addView:self target:self action:@selector(hideOrShowButtonClick:)];
+        _hideOrShowButton = [PublicButton buttonWithImage:@"eye1" backgroundImageImage:@"" title:@"" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:12] backgroundColor:[UIColor clearColor] addView:self target:self action:@selector(hideOrShowButtonClick:)];
+        [_hideOrShowButton setImage:[UIImage imageNamed:@"eye2"] forState:UIControlStateSelected];
     }
     return _hideOrShowButton;
 }
@@ -177,24 +193,31 @@
 
 - (PublicButton *)educationalLoginButton{
     if (!_educationalLoginButton) {
-        _educationalLoginButton = [PublicButton buttonWithFrame:CGRectMake(0, 0, 0, 0) buttonEdgeInsetsStyle:(UIButtonEdgeInsetsStyleBottom) image:@"" backgroundImageImage:@"" title:@"院校登录" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:13] backgroundColor:[UIColor greenColor] addView:self target:self action:@selector(educationalLoginButtonClick:)];
+        _educationalLoginButton = [PublicButton buttonWithFrame:CGRectMake(0, 0, 0, 0) buttonEdgeInsetsStyle:(UIButtonEdgeInsetsStyleTop) image:@"school" backgroundImageImage:@"" title:@"院校登录" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:13] backgroundColor:[UIColor clearColor] addView:self target:self action:@selector(educationalLoginButtonClick:)];
     }
     return _educationalLoginButton;
 }
 
 - (PublicButton *)countyLoginButton{
     if (!_countyLoginButton) {
-        _countyLoginButton = [PublicButton buttonWithFrame:CGRectMake(0, 0, 0, 0) buttonEdgeInsetsStyle:(UIButtonEdgeInsetsStyleBottom) image:@"" backgroundImageImage:@"" title:@"区县登陆" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:13] backgroundColor:[UIColor greenColor] addView:self target:self action:@selector(countyLoginButtonClick:)];
+        _countyLoginButton = [PublicButton buttonWithFrame:CGRectMake(0, 0, 0, 0) buttonEdgeInsetsStyle:(UIButtonEdgeInsetsStyleTop) image:@"district" backgroundImageImage:@"" title:@"区县登陆" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:13] backgroundColor:[UIColor clearColor] addView:self target:self action:@selector(countyLoginButtonClick:)];
     }
     return _countyLoginButton;
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.mas_top).offset(112);
         make.centerX.mas_equalTo(self.mas_centerX).offset(0);
         make.size.mas_equalTo(CGSizeMake(80, 80));
+    }];
+    
+    [_iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.iconView.mas_left).offset(0);
+        make.top.mas_equalTo(self.iconView.mas_top).offset(0);
+        make.right.mas_equalTo(self.iconView.mas_right).offset(0);
+        make.bottom.mas_equalTo(self.iconView.mas_bottom).offset(0);
     }];
     
     [_descriptions mas_makeConstraints:^(MASConstraintMaker *make) {

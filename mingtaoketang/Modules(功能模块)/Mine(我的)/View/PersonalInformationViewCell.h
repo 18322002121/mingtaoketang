@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PersonalInformationViewCell : UITableViewCell
-
+- (void)setLeftTitles:(NSString *)leftTitles;
+- (void)setRightTitles:(NSString *)rightTitles;
 @end
 
 NS_ASSUME_NONNULL_END

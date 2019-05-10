@@ -21,6 +21,7 @@
 #import "PersonalInformationViewController.h"
 #import "MessageLoginViewController.h"
 #import "BaseNavigationController.h"
+#import "PersonalInformationModel.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusCollection = 0,    //我的收藏
@@ -35,6 +36,12 @@ typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
 @property(nonatomic,strong)UICollectionView *collectionView;
 @property(nonatomic,strong)NSMutableArray *moduleSelectionArray;
 @property(nonatomic,strong)NSArray *tempArray;
+/** 初始化模型数组 */
+@property (nonatomic,strong) NSMutableArray *personalInformationArray;
+/** 金币个数 */
+@property (nonatomic,strong) NSString *user_money;
+/** 用户昵称 */
+@property (nonatomic,strong) NSString *userName;
 @end
 
 static NSString *const mineViewCell = @"MineViewCell";
@@ -45,6 +52,54 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     [super viewDidLoad];
     [self loadingViews];
     [self moduleSelection];
+    [self reloadingRefresh];
+}
+
+- (void)reloadingRefresh{
+    self.collectionView.mj_header = [PublicRefreshHeader headerWithRefreshingBlock:^{
+        //        [self.datas removeAllObjects];
+        //        NSArray *datas = [self hn_modelArrayWithCategory:self.model.category fromModel:x];
+        //        [self.datas addObjectsFromArray:datas];
+        //        [self.tableView reloadData];
+        [self networkRequest];
+        [self.collectionView.mj_header endRefreshing];
+    }];
+}
+
+- (NSMutableArray *)personalInformationArray{
+    if (!_personalInformationArray) {
+        _personalInformationArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _personalInformationArray;
+}
+
+- (void)networkRequest{
+    [HCYRequestManager app_user_detail_uid:([PublicUserDefaults valueForKey:@"user_id"] ? [PublicUserDefaults valueForKey:@"user_id"] : @"") success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+        NSDictionary *dict = responseObject;
+        if (kDictIsEmpty(dict)) {
+            
+        }else{
+            if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                [self.personalInformationArray removeAllObjects];
+                PersonalInformationModel *model = [PersonalInformationModel yy_modelWithJSON:responseObject];
+                [model.data enumerateObjectsUsingBlock:^(PersonalInformationData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    PersonalInformationData *dataModel = obj;
+                    self.user_money = dataModel.user_money;
+                    self.userName = dataModel.nickname;
+                    if ([dataModel.sex isEqualToString:@"1"]) {
+                        dataModel.sex = @"男";
+                    }else if ([dataModel.sex isEqualToString:@"2"]){
+                        dataModel.sex = @"女";
+                    }
+                    [self.personalInformationArray addObjectsFromArray:@[dataModel.avatar,dataModel.nickname,dataModel.mobile,dataModel.sex]];
+                }];
+                [self.collectionView reloadData];
+            }
+        }
+    } failure:^(NSError *errorMessage) {
+        NSLog(@"%@",errorMessage);
+    }];
 }
 
 #pragma mark - 请求数据
@@ -165,6 +220,7 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     UICollectionReusableView *reusableview = nil;
     if (kind ==UICollectionElementKindSectionHeader) {
         MineHeaderView * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:mineHeaderView forIndexPath:indexPath];
+        [headerView setUser_Money:self.user_money userName:self.userName];
         [self mineHeaderClick:headerView];
         reusableview = headerView;
     }
@@ -196,6 +252,9 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     headerView.PersonalInformationClickBlock = ^(UIButton * _Nonnull sender) {
         if ([PublicUserDefaults valueForKey:@"user_id"]) {
             PersonalInformationViewController *personalInformationView = [[PersonalInformationViewController alloc]init];
+            personalInformationView.onClickedOKbtnBlock = ^(UIButton * _Nonnull sender) {
+                [self networkRequest];
+            };
             [self.navigationController pushViewController:personalInformationView animated:YES];
         }else{
             MessageLoginViewController *messageLoginView = [[MessageLoginViewController alloc]init];

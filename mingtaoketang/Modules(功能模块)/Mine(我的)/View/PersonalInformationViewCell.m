@@ -27,9 +27,17 @@
     return self;
 }
 
+- (void)setLeftTitles:(NSString *)leftTitles{
+    _leftTitle.text = leftTitles;
+}
+
+- (void)setRightTitles:(NSString *)rightTitles{
+    _rightContent.text = rightTitles;
+}
+
 - (PublicLabel *)leftTitle{
     if (!_leftTitle) {
-        _leftTitle = [PublicLabel labelWithText:@"头像" textColor:[UIColor colorWithHexString:@"#272727"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _leftTitle = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#272727"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.contentView addSubview:_leftTitle];
     }
     return _leftTitle;
@@ -37,7 +45,7 @@
 
 - (PublicLabel *)rightContent{
     if (!_rightContent) {
-        _rightContent = [PublicLabel labelWithText:@"13011188822" textColor:[UIColor colorWithHexString:@"#272727"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _rightContent = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#272727"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.contentView addSubview:_rightContent];
     }
     return _rightContent;

@@ -133,7 +133,13 @@
     [[HCYRequestHandler shareManager]sendRequestServerUrl:app_user_detail requestheaderType:HCYRequestheaderTypePost parameters:dict success:success failure:failure];
 }
 
-
+/** 修改昵称 */
++ (void)app_edit_nicknameUid:(NSString *)uid nickname:(NSString *)nickname success:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setValue:uid forKey:@"uid"];
+    [dict setValue:nickname forKey:@"nickname"];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:edit_nickname requestheaderType:HCYRequestheaderTypePost parameters:dict success:success failure:failure];
+}
 
 
 @end

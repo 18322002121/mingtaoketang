@@ -7,7 +7,7 @@
 //
 
 #import "FreeAndRecommendationCell.h"
-#import "HomeBannerModel.h"
+#import "SettingModel.h"
 
 @interface FreeAndRecommendationCell ()
 @property (nonatomic,strong) UIView *bottomView;
@@ -58,9 +58,9 @@
     }];
 }
 
-- (void)setBannerModel:(HomeData *)bannerModel{
-    _bannerModel = bannerModel;
-    [_curriculumIcon sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",bannerModel.path]] placeholderImage:[UIImage imageNamed:@""]];
+- (void)setFreeModel:(SettingModel *)freeModel{
+    _freeModel = freeModel;
+    _curriculumIcon.image = [UIImage imageNamed:freeModel.iconImage];
 }
 
 @end

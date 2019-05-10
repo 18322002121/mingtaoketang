@@ -88,7 +88,7 @@
 
 - (PublicLabel *)userName{
     if (!_userName) {
-        _userName = [PublicLabel labelWithText:@"王小明" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _userName = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:15] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.bottomView addSubview:_userName];
     }
     return _userName;
@@ -115,9 +115,14 @@
     return _moneyIcon;
 }
 
+- (void)setUser_Money:(NSString *)userMoney userName:(NSString *)userName{
+    _moneyBalance.text = [NSString stringWithFormat:@"%@金币",userMoney];
+    _userName.text = userName;
+}
+
 - (PublicLabel *)moneyBalance{
     if (!_moneyBalance) {
-        _moneyBalance = [PublicLabel labelWithText:@"50金币" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:14] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _moneyBalance = [PublicLabel labelWithText:@"" textColor:[UIColor colorWithHexString:@"#333333"] font:[UIFont systemFontOfSize:14] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
         [self.rechargebottomView addSubview:_moneyBalance];
     }
     return _moneyBalance;
