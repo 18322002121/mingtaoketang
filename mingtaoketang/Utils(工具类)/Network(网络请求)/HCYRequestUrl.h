@@ -36,5 +36,13 @@
 #define course_list [NSString stringWithFormat:@"%@/api/index/course_list",API_HOST]
 /** 注册 */
 #define zhuce [NSString stringWithFormat:@"%@/api/index/zhuce",API_HOST]
+/** 头像上传 */
+#define user_img [NSString stringWithFormat:@"%@/api/index/user_img",API_HOST]
+/** 账号密码登录 */
+#define app_login [NSString stringWithFormat:@"%@/api/index/login",API_HOST]
+/** 获取个人信息 */
+#define app_user_detail [NSString stringWithFormat:@"%@/api/index/user_detail",API_HOST]
+
+
 
 #endif /* HCYRequestUrl_h */

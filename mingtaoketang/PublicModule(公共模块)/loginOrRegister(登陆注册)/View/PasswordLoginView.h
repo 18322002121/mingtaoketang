@@ -23,7 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) void (^countyLoginButtonClickBlock)(UIButton *sender);
 /** 密码展示与隐藏按钮回调 */
 @property (nonatomic,strong) void (^hideOrShowButtonClickBlock)(UIButton *sender);
-
+/** 手机号输入框回调 */
+@property (nonatomic,strong) void (^phoneTextfieldClickBlock)(UITextField *sender);
+/** 密码输入框回调 */
+@property (nonatomic,strong) void (^passwordTextfieldClickBlock)(UITextField *sender);
 @end
 
 NS_ASSUME_NONNULL_END

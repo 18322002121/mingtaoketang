@@ -19,6 +19,8 @@
 #import "OnlineConsultationViewController.h"
 #import "InviteCourtesyViewController.h"
 #import "PersonalInformationViewController.h"
+#import "MessageLoginViewController.h"
+#import "BaseNavigationController.h"
 
 typedef NS_ENUM(NSUInteger, ShowSectionStatus) {
     ShowSectionStatusCollection = 0,    //我的收藏
@@ -192,8 +194,15 @@ static NSString *const mineHeaderView = @"MineHeaderView";
     };
     
     headerView.PersonalInformationClickBlock = ^(UIButton * _Nonnull sender) {
-        PersonalInformationViewController *personalInformationView = [[PersonalInformationViewController alloc]init];
-        [self.navigationController pushViewController:personalInformationView animated:YES];
+        if ([PublicUserDefaults valueForKey:@"user_id"]) {
+            PersonalInformationViewController *personalInformationView = [[PersonalInformationViewController alloc]init];
+            [self.navigationController pushViewController:personalInformationView animated:YES];
+        }else{
+            MessageLoginViewController *messageLoginView = [[MessageLoginViewController alloc]init];
+            BaseNavigationController *rootNav = [[BaseNavigationController alloc]initWithRootViewController:messageLoginView];
+            [self presentViewController:rootNav animated:YES completion:nil];
+        }
+        
     };
 }
 

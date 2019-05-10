@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "mingtaoketang/Utils(&#x5de5;&#x5177;&#x7c7b;)/Network(&#x7f51;&#x7edc;&#x8bf7;&#x6c42;)/HCYRequestHandler.m"
-            timestampString = "578892030.9611419"
+            filePath = "mingtaoketang/Modules(&#x529f;&#x80fd;&#x6a21;&#x5757;)/Mine(&#x6211;&#x7684;)/Controller/PersonalInformationViewController.m"
+            timestampString = "579153786.952603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-POST:parameters:success:failure:"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-unloadImageRequest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +35,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "mingtaoketang/Utils(&#x5de5;&#x5177;&#x7c7b;)/Network(&#x7f51;&#x7edc;&#x8bf7;&#x6c42;)/HCYRequestHandler.m"
-            timestampString = "578892030.961229"
+            filePath = "mingtaoketang/Modules(&#x529f;&#x80fd;&#x6a21;&#x5757;)/Mine(&#x6211;&#x7684;)/Controller/PersonalInformationViewController.m"
+            timestampString = "579153786.953339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-POST:parameters:success:failure:"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "-unloadImageRequest"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mingtaoketang/Modules(&#x529f;&#x80fd;&#x6a21;&#x5757;)/Mine(&#x6211;&#x7684;)/Controller/PersonalInformationViewController.m"
+            timestampString = "579153786.953904"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-networkRequest"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mingtaoketang/Modules(&#x529f;&#x80fd;&#x6a21;&#x5757;)/Mine(&#x6211;&#x7684;)/Controller/PersonalInformationViewController.m"
+            timestampString = "579153786.954443"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-networkRequest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

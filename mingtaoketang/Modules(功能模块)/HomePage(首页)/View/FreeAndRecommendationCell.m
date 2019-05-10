@@ -60,7 +60,7 @@
 
 - (void)setBannerModel:(HomeData *)bannerModel{
     _bannerModel = bannerModel;
-    [_curriculumIcon sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",bannerModel.www,bannerModel.path]] placeholderImage:[UIImage imageNamed:@""]];
+    [_curriculumIcon sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",bannerModel.path]] placeholderImage:[UIImage imageNamed:@""]];
 }
 
 @end

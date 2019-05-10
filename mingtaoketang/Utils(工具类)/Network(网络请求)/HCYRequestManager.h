@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 typedef void (^successBlock)(id responseObject);
 typedef void (^failureBlock)(NSError * errorMessage);
-
+typedef void (^requestProgress)(NSProgress *progress);
 @interface HCYRequestManager : NSObject
 ///** 检查用户名 */
 //+ (void)appCheckNameUsername:(NSString *)username success:(successBlock)success failure:(failureBlock)failure;
@@ -53,7 +53,13 @@ typedef void (^failureBlock)(NSError * errorMessage);
 /** 注册 */
 + (void)appMobile:(NSString *)mobile password:(NSString *)password campus_id:(NSString *)campus_id sms_code:(NSString *)sms_code success:(successBlock)success failure:(failureBlock)failure;
 
+/** 头像上传 */
++ (void)appUid:(NSString *)uid image:(UIImage *)image uploadData:(NSData *)uploadData success:(successBlock)success failure:(failureBlock)failure;
 
+/** 账号密码登录 */
++ (void)user_name:(NSString *)user_name password:(NSString *)password success:(successBlock)success failure:(failureBlock)failure;
 
+/** 获取个人信息 */
++ (void)app_user_detail_uid:(NSString *)uid success:(successBlock)success failure:(failureBlock)failure;
 
 @end

@@ -112,5 +112,31 @@ static HCYRequestHandler *requestManager = nil;
 
 }
 
+/** 单张图片上传 */
+- (void)uploadImagesWithURL:(NSString *)URLString parameters:(id)parameters fileNames:(NSString *)fileNames
+                 uploadData:(NSData *)uploadData success:(HCYHttpRequestSuccess)success
+                    failure:(HCYHttpRequestFailed)failure{
+    [_sessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        // 设置时间格式
+        [formatter setDateFormat:@"yyyyMMddHHmmss"];
+        
+        NSString *dateString = [formatter stringFromDate:[NSDate date]];
+        dateString = [NSString stringWithFormat:@"yyyyMMddHHmmss"];
+        NSString *fileName = [NSString  stringWithFormat:@"%@.jpg", dateString];
+        [formData appendPartWithFileData:uploadData name:@"image" fileName:fileName mimeType:@"image/png/jpg/jpeg"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSLog(@"%@",uploadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 
 @end

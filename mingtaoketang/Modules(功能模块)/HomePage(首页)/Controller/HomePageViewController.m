@@ -159,7 +159,7 @@ static NSString *const informationViewCell = @"InformationViewCell";
                 HomeBannerModel *model = [HomeBannerModel yy_modelWithJSON:responseObject];
                 [model.data enumerateObjectsUsingBlock:^(HomeData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     HomeData *dataModel = obj;
-                    [self.bannerArray addObject:[NSString stringWithFormat:@"%@%@",dataModel.www,dataModel.path]];
+                    [self.bannerArray addObject:[NSString stringWithFormat:@"%@",dataModel.path]];
                 }];
                 [self.collectionView reloadData];
             }

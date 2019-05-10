@@ -110,12 +110,28 @@
     [[HCYRequestHandler shareManager]sendRequestServerUrl:zhuce requestheaderType:(HCYRequestheaderTypePost) parameters:dict success:success failure:failure];
 }
 
+/** 头像上传 */
++ (void)appUid:(NSString *)uid image:(UIImage *)image uploadData:(NSData *)uploadData success:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setValue:uid forKey:@"uid"];
+    [dict setValue:image forKey:@"image"];
+    [[HCYRequestHandler shareManager]uploadImagesWithURL:user_img parameters:dict fileNames:nil uploadData:uploadData success:success failure:failure];
+}
 
+/** 账号密码登录 */
++ (void)user_name:(NSString *)user_name password:(NSString *)password success:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setValue:user_name forKey:@"user_name"];
+    [dict setValue:password forKey:@"password"];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:app_login requestheaderType:HCYRequestheaderTypePost parameters:dict success:success failure:failure];
+}
 
-
-
-
-
+/** 获取个人信息 */
++ (void)app_user_detail_uid:(NSString *)uid success:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setValue:uid forKey:@"uid"];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:app_user_detail requestheaderType:HCYRequestheaderTypePost parameters:dict success:success failure:failure];
+}
 
 
 

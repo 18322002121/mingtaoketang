@@ -10,14 +10,13 @@
 #import "BaseNavigationBar.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
 @interface BaseViewController : UIViewController
 /** 导航栏搜索框 */
 //- (BaseNavigationBar *)showCustomNavBar;
 - (BaseNavigationBar *)showCustomNavBar:(void (^)(UITextField *senders))senderBlock;
-
 /** 异步并发请求 */
 - (void)networkRequest;
+
 @end
 
 NS_ASSUME_NONNULL_END

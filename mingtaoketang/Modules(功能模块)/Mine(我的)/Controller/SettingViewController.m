@@ -136,6 +136,8 @@ static NSString *const settingViewCell =@"SettingViewCell";
 
 - (void)logoutClick{
     NSLog(@"退出登陆");
+    [PublicUserDefaults clearAll];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

@@ -107,6 +107,7 @@
                                                  @{NSForegroundColorAttributeName:[UIColor whiteColor],
                                                    NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}
                                                  ];
+        [_phoneTextfield addTarget:self action:@selector(phoneTextfieldClick:) forControlEvents:UIControlEventEditingChanged];
         _phoneTextfield.attributedPlaceholder = attrString;
     }
     return _phoneTextfield;
@@ -133,12 +134,13 @@
 
 - (PublicTextfield *)passwordTextfield{
     if (!_passwordTextfield) {
-        _passwordTextfield = [PublicTextfield textFieldBackground:[UIImage imageNamed:@""] secureTextEntry:NO placeholder:@"" clearsOnBeginEditing:NO];
+        _passwordTextfield = [PublicTextfield textFieldBackground:[UIImage imageNamed:@""] secureTextEntry:YES placeholder:@"" clearsOnBeginEditing:NO];
         NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"密码" attributes:
                                                  @{NSForegroundColorAttributeName:[UIColor whiteColor],
                                                    NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}
                                                  ];
         _passwordTextfield.attributedPlaceholder = attrString;
+        [_passwordTextfield addTarget:self action:@selector(passwordTextfieldClick:) forControlEvents:UIControlEventEditingChanged];
         [self.verificationView addSubview:_passwordTextfield];
     }
     return _passwordTextfield;
@@ -301,6 +303,14 @@
 
 - (void)hideOrShowButtonClick:(UIButton *)sender{
     !_hideOrShowButtonClickBlock ? : _hideOrShowButtonClickBlock(sender);
+}
+
+- (void)phoneTextfieldClick:(UITextField *)textFields{
+    !_phoneTextfieldClickBlock ? : _phoneTextfieldClickBlock(textFields);
+}
+
+- (void)passwordTextfieldClick:(UITextField *)textFields{
+    !_passwordTextfieldClickBlock ? : _passwordTextfieldClickBlock(textFields);
 }
 
 @end
