@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17D66C5BF4C62AECD5C18531 /* libPods-mingtaoketang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */; };
+		210AB98D22866D5800A093D0 /* Mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210AB98C22866D5800A093D0 /* Mine.xcassets */; };
+		210AB9942286755200A093D0 /* PublicBlankPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210AB9932286755200A093D0 /* PublicBlankPageView.m */; };
 		2113C697227433CE00E5F83B /* TransactionRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C696227433CE00E5F83B /* TransactionRecordCell.m */; };
 		2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69922743F4000E5F83B /* MyCollectionViewCell.m */; };
 		2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69C227446E500E5F83B /* AboutUsViewController.m */; };
@@ -147,6 +149,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210AB98C22866D5800A093D0 /* Mine.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mine.xcassets; sourceTree = "<group>"; };
+		210AB9922286755200A093D0 /* PublicBlankPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicBlankPageView.h; sourceTree = "<group>"; };
+		210AB9932286755200A093D0 /* PublicBlankPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicBlankPageView.m; sourceTree = "<group>"; };
 		2113C695227433CE00E5F83B /* TransactionRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionRecordCell.h; sourceTree = "<group>"; };
 		2113C696227433CE00E5F83B /* TransactionRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionRecordCell.m; sourceTree = "<group>"; };
 		2113C69822743F4000E5F83B /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
@@ -422,6 +427,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		210AB98E2286717D00A093D0 /* BlankPage(空白页面展示) */ = {
+			isa = PBXGroup;
+			children = (
+				210AB9922286755200A093D0 /* PublicBlankPageView.h */,
+				210AB9932286755200A093D0 /* PublicBlankPageView.m */,
+			);
+			path = "BlankPage(空白页面展示)";
+			sourceTree = "<group>";
+		};
 		213492322271561A00C68DCA = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +516,7 @@
 		2134927C2271630B00C68DCA /* PublicModule(公共模块) */ = {
 			isa = PBXGroup;
 			children = (
+				210AB98E2286717D00A093D0 /* BlankPage(空白页面展示) */,
 				21ED7ADC22827CA80014D178 /* loginOrRegister(登陆注册) */,
 				2134928C2271672E00C68DCA /* BaseTabBarController.h */,
 				2134928D2271672E00C68DCA /* BaseTabBarController.m */,
@@ -648,6 +663,7 @@
 				213492DE2271757000C68DCA /* Model */,
 				213492DD2271756800C68DCA /* View */,
 				213492DC2271755F00C68DCA /* Controller */,
+				210AB98C22866D5800A093D0 /* Mine.xcassets */,
 			);
 			path = "Mine(我的)";
 			sourceTree = "<group>";
@@ -1082,6 +1098,7 @@
 				21ED7ACF22826ACA0014D178 /* GuideImage.bundle in Resources */,
 				21C4BA8B2285895200479865 /* HomePage.xcassets in Resources */,
 				21ED7AD822826D450014D178 /* guideImage1.png in Resources */,
+				210AB98D22866D5800A093D0 /* Mine.xcassets in Resources */,
 				213492482271561B00C68DCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1130,6 +1147,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mingtaoketang/Pods-mingtaoketang-resources.sh",
+				"${PODS_ROOT}/BRPickerView/BRPickerView/AddressPickerView/BRPickerView.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/PYSearch/PYSearch/PYSearch.bundle",
 				"${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle",
@@ -1138,6 +1156,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BRPickerView.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYSearch.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SuperPlayer.bundle",
@@ -1221,6 +1240,7 @@
 				213492C1227173B300C68DCA /* UIView+Animations.m in Sources */,
 				213492C4227173B300C68DCA /* PublicRefreshFooter.m in Sources */,
 				21F5B66A2281233600B04D9A /* InformationClassAssistantModel.m in Sources */,
+				210AB9942286755200A093D0 /* PublicBlankPageView.m in Sources */,
 				21A2A74F227302780001BD93 /* MineViewCell.m in Sources */,
 				21ED7AE022827D480014D178 /* EducationalInstitutionsViewController.m in Sources */,
 				212A3EBD2274254A0027AFEC /* MyCourseViewController.m in Sources */,

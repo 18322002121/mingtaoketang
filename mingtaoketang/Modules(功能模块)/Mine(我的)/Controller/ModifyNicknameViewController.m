@@ -81,6 +81,7 @@
         }else{
             if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
                 [self.navigationController popViewControllerAnimated:YES];
+                [MBProgressHUD showMessag:dict[@"msg"] toView:self.view];
                 !self.onClickedOKbtnBlock ? : self.onClickedOKbtnBlock(sender);
             }else{
                 [MBProgressHUD showMessag:dict[@"msg"] toView:self.view];

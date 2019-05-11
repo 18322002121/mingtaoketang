@@ -65,4 +65,7 @@ typedef void (^requestProgress)(NSProgress *progress);
 /** 修改昵称 */
 + (void)app_edit_nicknameUid:(NSString *)uid nickname:(NSString *)nickname success:(successBlock)success failure:(failureBlock)failure;
 
+/** 修改性别 */
++ (void)edit_sexUid:(NSString *)uid sex:(NSString *)sex success:(successBlock)success failure:(failureBlock)failure;
+
 @end

@@ -133,7 +133,6 @@ static NSString *const headPortraitCell =@"HeadPortraitCell";
             PersonalInformationViewCell *cell =[tableView dequeueReusableCellWithIdentifier:personalInformationViewCell forIndexPath:indexPath];
             [cell setLeftTitles:self.listTitlesArray[indexPath.row]];
             kArrayIsEmpty(self.personalInformationArray) ? : [cell setRightTitles:self.personalInformationArray[indexPath.row]];
-            
             normalCell = cell;
         }
         
@@ -184,7 +183,40 @@ static NSString *const headPortraitCell =@"HeadPortraitCell";
         }else if (indexPath.row == ShowSectionStatusPhoneNumber){
             
         }else if (indexPath.row == ShowSectionStatusSex){
-            
+//            [BRStringPickerView showStringPickerWithTitle:@"性别选择" dataSource:@[@"男", @"女"] defaultSelValue:nil isAutoSelect:YES themeColor:[UIColor redColor] resultBlock:^(id selectValue) {
+//                [HCYRequestManager edit_sexUid:([PublicUserDefaults valueForKey:@"user_id"] ? [PublicUserDefaults valueForKey:@"user_id"] : @"") sex:selectValue success:^(id responseObject) {
+//                    NSDictionary *dict = responseObject;
+//                    if (kDictIsEmpty(dict)) {
+//
+//                    }else{
+//                        if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+//                            [MBProgressHUD showMessag:dict[@"msg"] toView:self.view];
+//                            [self networkRequest];
+//                        }else{
+//                            [MBProgressHUD showMessag:dict[@"msg"] toView:self.view];
+//                        }
+//                    }
+//                } failure:^(NSError *errorMessage) {
+//                    NSLog(@"%@",errorMessage);
+//                }];
+//            }];
+            [BRStringPickerView showStringPickerWithTitle:@"性别选择" dataSource:@[@"男", @"女"] defaultSelValue:nil resultBlock:^(id selectValue) {
+                [HCYRequestManager edit_sexUid:([PublicUserDefaults valueForKey:@"user_id"] ? [PublicUserDefaults valueForKey:@"user_id"] : @"") sex:selectValue success:^(id responseObject) {
+                    NSDictionary *dict = responseObject;
+                    if (kDictIsEmpty(dict)) {
+                        
+                    }else{
+                        if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                            [MBProgressHUD showMessag:dict[@"msg"] toView:self.view];
+                            [self networkRequest];
+                        }else{
+                            [MBProgressHUD showMessag:dict[@"msg"] toView:self.view];
+                        }
+                    }
+                } failure:^(NSError *errorMessage) {
+                    NSLog(@"%@",errorMessage);
+                }];
+            }];
         }
     };
     

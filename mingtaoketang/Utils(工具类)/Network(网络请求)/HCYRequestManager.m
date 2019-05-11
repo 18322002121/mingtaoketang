@@ -141,5 +141,12 @@
     [[HCYRequestHandler shareManager]sendRequestServerUrl:edit_nickname requestheaderType:HCYRequestheaderTypePost parameters:dict success:success failure:failure];
 }
 
+/** 修改性别 */
++ (void)edit_sexUid:(NSString *)uid sex:(NSString *)sex success:(successBlock)success failure:(failureBlock)failure{
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setValue:uid forKey:@"uid"];
+    [dict setValue:sex forKey:@"sex"];
+    [[HCYRequestHandler shareManager]sendRequestServerUrl:edit_sex requestheaderType:HCYRequestheaderTypePost parameters:dict success:success failure:failure];
+}
 
 @end

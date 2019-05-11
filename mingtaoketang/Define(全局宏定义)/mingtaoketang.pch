@@ -17,6 +17,7 @@
 #import <MJRefresh.h>
 #import <SuperPlayer.h>
 #import <SDCycleScrollView.h>
+#import <BRPickerView.h>
 #import <UIImageView+WebCache.h>
 #import "MBProgressHUD+Add.h"
 #import "HCYRequestHandler.h"
@@ -36,5 +37,6 @@
 #import "UIView+Animations.h"
 #import "VerificationTool.h"
 #import "PublicUserDefaults.h"
+#import "PublicBlankPageView.h"
 
 #endif /* mingtaoketang_pch */

@@ -8,7 +8,6 @@
 
 #import "PasswordLoginViewController.h"
 #import "RegisterViewController.h"
-#import "MessageLoginViewController.h"
 #import "EducationalInstitutionsViewController.h"
 #import "PasswordLoginView.h"
 #import "PasswordLoginModel.h"
@@ -77,8 +76,7 @@
     /** 短信登录按钮回调 */
     loginView.messageLoginButtonClickBlock = ^(UIButton * _Nonnull sender) {
         NSLog(@"短信登录按钮回调");
-        MessageLoginViewController *messageLoginView = [[MessageLoginViewController alloc]init];
-        [self.navigationController pushViewController:messageLoginView animated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
     };
     /** 院校登录按钮回调 */
     loginView.educationalLoginButtonClickBlock = ^(UIButton * _Nonnull sender) {

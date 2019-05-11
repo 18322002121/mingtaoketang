@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mingtaoketang/Modules(&#x529f;&#x80fd;&#x6a21;&#x5757;)/Mine(&#x6211;&#x7684;)/Controller/PersonalInformationViewController.m"
-            timestampString = "579172993.9535201"
+            timestampString = "579240042.700729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
             landmarkName = "-unloadImageRequest"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mingtaoketang/Modules(&#x529f;&#x80fd;&#x6a21;&#x5757;)/Mine(&#x6211;&#x7684;)/Controller/PersonalInformationViewController.m"
-            timestampString = "579172993.953703"
+            timestampString = "579240042.700866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "-unloadImageRequest"
             landmarkType = "7">
          </BreakpointContent>

@@ -10,4 +10,5 @@ target "mingtaoketang" do
     pod 'MJRefresh'
     pod 'PYSearch'
     pod 'SuperPlayer'
+    pod 'BRPickerView'
 end

@@ -171,7 +171,8 @@
 
 - (PublicButton *)hideOrShow{
     if (!_hideOrShow) {
-        _hideOrShow = [PublicButton buttonWithImage:@"" backgroundImageImage:@"" title:@"" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:13] backgroundColor:kRandomColor addView:self target:self action:@selector(hideOrShowButtonClick:)];
+        _hideOrShow = [PublicButton buttonWithImage:@"eye2" backgroundImageImage:@"" title:@"" titleColor:[UIColor colorWithHexString:@"#FFFFFF"] textFont:[UIFont systemFontOfSize:13] backgroundColor:[UIColor clearColor] addView:self target:self action:@selector(hideOrShowButtonClick:)];
+        [_hideOrShow setImage:[UIImage imageNamed:@"eye1"] forState:UIControlStateSelected];
     }
     return _hideOrShow;
 }

@@ -21,6 +21,9 @@ static NSString *const transactionRecordCell =@"TransactionRecordCell";
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"#F2F6F9"];
     self.title = @"交易记录";
+    PublicBlankPageView *blankView = [[PublicBlankPageView alloc]initWithFrame:self.tableView.bounds];
+    [blankView reloadBlankPageView:@"暂无交易记录"];
+    [self.view addSubview:blankView];
 }
 
 - (PublicTableView *)tableView{
@@ -40,7 +43,7 @@ static NSString *const transactionRecordCell =@"TransactionRecordCell";
     };
     
     tableviews.numberOfRowsInSectionBlock = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
-        return 3;
+        return 0;
     };
     
     tableviews.cellForRowAtIndexPathBlock = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
