@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14F0A7BAFC6D9E85F92EDD7649CC9C98"
+               BlueprintIdentifier = "1211F852048DE7A6512CEDAAE2C33565"
                BuildableName = "libSuperPlayer.a"
                BlueprintName = "SuperPlayer"
                ReferencedContainer = "container:Pods.xcodeproj">

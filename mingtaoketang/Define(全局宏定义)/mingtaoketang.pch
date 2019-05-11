@@ -19,6 +19,8 @@
 #import <SDCycleScrollView.h>
 #import <BRPickerView.h>
 #import <UIImageView+WebCache.h>
+#import <UMShare/UMShare.h>
+#import <UShareUI/UShareUI.h>
 #import "MBProgressHUD+Add.h"
 #import "HCYRequestHandler.h"
 #import "HCYRequestManager.h"

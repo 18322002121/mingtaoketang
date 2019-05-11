@@ -37,6 +37,35 @@ PODS:
     - Masonry (~> 1.1.0)
     - MMLayout
     - SDWebImage (~> 4.4.0)
+  - UMCCommon (2.0.1)
+  - UMCPush (3.2.4):
+    - UMCCommon
+  - UMCShare/Core (6.9.5):
+    - UMCCommon
+  - UMCShare/Social/QQ (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedQQ (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/Sina (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedSina
+  - UMCShare/Social/WeChat (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI (6.9.5):
+    - UMCCommon
+    - UMCShare/Core
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -50,6 +79,11 @@ DEPENDENCIES:
   - SDCycleScrollView
   - SDWebImage
   - SuperPlayer
+  - UMCPush
+  - UMCShare/Social/QQ
+  - UMCShare/Social/Sina
+  - UMCShare/Social/WeChat
+  - UMCShare/UI
   - YYModel
 
 SPEC REPOS:
@@ -65,6 +99,9 @@ SPEC REPOS:
     - SDCycleScrollView
     - SDWebImage
     - SuperPlayer
+    - UMCCommon
+    - UMCPush
+    - UMCShare
     - YYModel
 
 SPEC CHECKSUMS:
@@ -79,8 +116,11 @@ SPEC CHECKSUMS:
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SuperPlayer: bc61a8f692979d0da34fcb99c726d0123a6d1733
+  UMCCommon: 0263a057a2e1ae1da4c8308541e56904a493ce13
+  UMCPush: 1edd856027dcf905333effb4040ace5d236a7316
+  UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 778015c645a66fd093ab41ada8efb72d2cd9aba9
+PODFILE CHECKSUM: a72e7850470cb3653f1f61c7dc52b375b237fa19
 
 COCOAPODS: 1.6.1

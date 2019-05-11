@@ -10,6 +10,9 @@
 		17D66C5BF4C62AECD5C18531 /* libPods-mingtaoketang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FC5E451E7AC5D2B0F5BD2A /* libPods-mingtaoketang.a */; };
 		210AB98D22866D5800A093D0 /* Mine.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210AB98C22866D5800A093D0 /* Mine.xcassets */; };
 		210AB9942286755200A093D0 /* PublicBlankPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210AB9932286755200A093D0 /* PublicBlankPageView.m */; };
+		210AB99722868AB500A093D0 /* InviteCourtesyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210AB99622868AB500A093D0 /* InviteCourtesyViewCell.m */; };
+		210AB99A228696E100A093D0 /* InviteCourtesyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210AB999228696E100A093D0 /* InviteCourtesyHeaderView.m */; };
+		210AB99D22869EA900A093D0 /* PublicShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 210AB99C22869EA900A093D0 /* PublicShare.m */; };
 		2113C697227433CE00E5F83B /* TransactionRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C696227433CE00E5F83B /* TransactionRecordCell.m */; };
 		2113C69A22743F4000E5F83B /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69922743F4000E5F83B /* MyCollectionViewCell.m */; };
 		2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113C69C227446E500E5F83B /* AboutUsViewController.m */; };
@@ -152,6 +155,12 @@
 		210AB98C22866D5800A093D0 /* Mine.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mine.xcassets; sourceTree = "<group>"; };
 		210AB9922286755200A093D0 /* PublicBlankPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicBlankPageView.h; sourceTree = "<group>"; };
 		210AB9932286755200A093D0 /* PublicBlankPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicBlankPageView.m; sourceTree = "<group>"; };
+		210AB99522868AB500A093D0 /* InviteCourtesyViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteCourtesyViewCell.h; sourceTree = "<group>"; };
+		210AB99622868AB500A093D0 /* InviteCourtesyViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteCourtesyViewCell.m; sourceTree = "<group>"; };
+		210AB998228696E100A093D0 /* InviteCourtesyHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteCourtesyHeaderView.h; sourceTree = "<group>"; };
+		210AB999228696E100A093D0 /* InviteCourtesyHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteCourtesyHeaderView.m; sourceTree = "<group>"; };
+		210AB99B22869EA900A093D0 /* PublicShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicShare.h; sourceTree = "<group>"; };
+		210AB99C22869EA900A093D0 /* PublicShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicShare.m; sourceTree = "<group>"; };
 		2113C695227433CE00E5F83B /* TransactionRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionRecordCell.h; sourceTree = "<group>"; };
 		2113C696227433CE00E5F83B /* TransactionRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionRecordCell.m; sourceTree = "<group>"; };
 		2113C69822743F4000E5F83B /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
@@ -436,6 +445,15 @@
 			path = "BlankPage(空白页面展示)";
 			sourceTree = "<group>";
 		};
+		210AB99E22869EB600A093D0 /* share(分享) */ = {
+			isa = PBXGroup;
+			children = (
+				210AB99B22869EA900A093D0 /* PublicShare.h */,
+				210AB99C22869EA900A093D0 /* PublicShare.m */,
+			);
+			path = "share(分享)";
+			sourceTree = "<group>";
+		};
 		213492322271561A00C68DCA = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +562,7 @@
 		21349290227173B300C68DCA /* Utils(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				210AB99E22869EB600A093D0 /* share(分享) */,
 				21FE7B9722851D6900022509 /* 本地化存储 */,
 				21349297227173B300C68DCA /* 视频播放 */,
 				2134929A227173B300C68DCA /* 分页控制 */,
@@ -838,6 +857,10 @@
 				218477BD2275AD330048CAE9 /* PersonalInformationViewCell.m */,
 				219D616522841FC20070BD73 /* HeadPortraitCell.h */,
 				219D616622841FC20070BD73 /* HeadPortraitCell.m */,
+				210AB99522868AB500A093D0 /* InviteCourtesyViewCell.h */,
+				210AB99622868AB500A093D0 /* InviteCourtesyViewCell.m */,
+				210AB998228696E100A093D0 /* InviteCourtesyHeaderView.h */,
+				210AB999228696E100A093D0 /* InviteCourtesyHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1151,6 +1174,8 @@
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/PYSearch/PYSearch/PYSearch.bundle",
 				"${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -1160,6 +1185,8 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYSearch.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SuperPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1181,6 +1208,7 @@
 				2113C69D227446E500E5F83B /* AboutUsViewController.m in Sources */,
 				21AA5BAE2283AE590012BCF9 /* CourseListViewController.m in Sources */,
 				21F5B68122819EA200B04D9A /* RegisterViewController.m in Sources */,
+				210AB99A228696E100A093D0 /* InviteCourtesyHeaderView.m in Sources */,
 				214E8DCF228023B4008CC8A0 /* RecommendedTodayModel.m in Sources */,
 				21AA5BB12283BEBC0012BCF9 /* VerificationTool.m in Sources */,
 				21FE7BA02285568800022509 /* ModifyNicknameViewController.m in Sources */,
@@ -1198,6 +1226,7 @@
 				214E8DD2228025E5008CC8A0 /* FlashSaleModel.m in Sources */,
 				21C3A27E2283CD0B008E2FA6 /* CourseListViewCell.m in Sources */,
 				21A1FEDD2271866400245453 /* FreeAndRecommendationCell.m in Sources */,
+				210AB99D22869EA900A093D0 /* PublicShare.m in Sources */,
 				213492C0227173B300C68DCA /* PublicSegmentedControl.m in Sources */,
 				2113C6A622744B1200E5F83B /* ChangePasswordeViewController.m in Sources */,
 				218477B522755AE80048CAE9 /* LearningRecordHeaderView.m in Sources */,
@@ -1280,6 +1309,7 @@
 				215CF3AB2276A9BC004FD67D /* SearchResultViewController.m in Sources */,
 				21B1F6C4227177FF001ADBCD /* LiveBroadcastViewController.m in Sources */,
 				218477AF227546880048CAE9 /* MyCourseViewCell.m in Sources */,
+				210AB99722868AB500A093D0 /* InviteCourtesyViewCell.m in Sources */,
 				21ED7ADB228273CB0014D178 /* MessageLoginView.m in Sources */,
 				21ED7AD122826ACA0014D178 /* DHGuidePageHUD.m in Sources */,
 			);
