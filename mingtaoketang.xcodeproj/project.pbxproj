@@ -1174,8 +1174,6 @@
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/PYSearch/PYSearch/PYSearch.bundle",
 				"${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle",
-				"${PODS_ROOT}/UMCShare/UMShare/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
-				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -1185,8 +1183,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYSearch.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SuperPlayer.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
